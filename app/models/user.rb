@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  validates :nickname, :email, :password, :last_name, :first_name, :last_name_kana, :first_name_kana, :birth_year, :birth_month, :birth_day, :presence: true
+  validates :nickname, :email, :password, :last_name, :first_name, :last_name_kana, :first_name_kana, presence: true
+  validates :last_name_kana, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: '姓カナ はカナ文字を入力してください'}
+  validates :first_name_kana, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: '名カナ はカナ文字を入力してください'}
 
   has_many :items
   belongs_to :region
-       
 end

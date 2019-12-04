@@ -34,6 +34,9 @@ Things you may want to cover:
 |first_name|string|null: false, unique: true|
 |last_name_kana|string|null: false, unique: true|
 |first_name_kana|string|null: false, unique: true|
+|birth_year|integer||
+|birth_month|integer||
+|birth_day|integer||
 |postcode|string|null: false, unique: true|
 |city|string|null: false, unique: true|
 |block|string|text|
