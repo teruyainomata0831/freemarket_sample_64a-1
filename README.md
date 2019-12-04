@@ -28,6 +28,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |avatar_image_id|string|null: false, unique: true|
+|nickname|string|null: false, unique: true|
 |biography|string|text|
 |last_name|string|null: false, unique: true|
 |first_name|string|null: false, unique: true|
