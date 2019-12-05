@@ -39,55 +39,35 @@ Things you may want to cover:
 |birth_year|integer||
 |birth_month|integer||
 |birth_day|integer||
+|phone_number|string|null: false, unique: true|
+|is_phone_number_authenticated|string|null: false, unique: true|
+
+### Association
+- has_many :items
+- belongs_to :credit
+- belongs_to :address
+
+
+## creditテーブル
+|Column|Type|Options|
+|card_number|integer|null: false, unique: true|
+|exp_month|integer|null: false, unique: true|
+|ep_year|integer|null: false, unique: true|
+
+### Association
+- has_many :user
+
+
+## addressテーブル
+|Column|Type|Options|
 |postcode|string|null: false|
-|prefeture|string|null: false, foreign_key: true|
+|prefeture|string|null: false|
 |city|string|null: false|
 |block|string|text|
 |building|string|text|
-|phone_number|string|null: false, unique: true|
-|is_phone_number_authenticated|string|null: false, unique: true|
-|credit|string|null: false, unique: true|
 
 ### Association
-- has_many :items
-- belongs_to :region
-
-
-## category
-|column|type|options|
-|name|string|text, null false, foreing_key: true|
-
-- has_many: items,thourgh: :categories_items
-- has_many: categories_items
-
-
-### category_item_テーブル
-|column|type|options|
-|------|----|-------|
-|category_id|reference|null: false, foreign_key: true|
-|item_id|reference|null: false, foreign_key: true|
-
-- belongs_to :item
-- belongs_to :category
-
-
-## region
-|colomn|type|options|
-|name|string|null: false, unique :true|
-
-### Association
-- has_many :items
-- has_many :users
-- has_many :regions
-
-
-## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|
-
-### アソシエーション
-- has_many :items
+- has_many :user
 
 
 ## itemsテーブル
@@ -103,8 +83,36 @@ Things you may want to cover:
 |brands_id|integer|null: false|
 |regions_id|integer|null: false|
 
-## アソシエーション
-- has_many :categories, :through :category_items
+## Association
 - belongs_to :user
 - belongs_to :brand
-- belongs_to :region
+- belongs_to :category
+- has_many :image
+
+
+## brandsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
+
+### Association
+- has_many :items
+
+
+## category
+|column|type|options|
+|name|string|text, null false, foreing_key: true|
+
+### Association
+- has_many: items,thourgh: :categories_items
+- has_many: categories_items
+
+
+### category_itemsテーブル
+|column|type|options|
+|------|----|-------|
+|category_id|reference|null: false, foreign_key: true|
+|item_id|reference|null: false, foreign_key: true|
+
+- belongs_to :item
+- belongs_to :category
