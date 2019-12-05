@@ -55,7 +55,7 @@ Things you may want to cover:
 |ep_year|integer|null: false, unique: true|
 
 ### Association
-- has_many :user
+- belongs_to :user
 
 
 ## addressテーブル
@@ -67,7 +67,7 @@ Things you may want to cover:
 |building|string|text|
 
 ### Association
-- has_many :user
+- belongs_to :user
 
 
 ## itemsテーブル
