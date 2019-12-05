@@ -101,7 +101,7 @@ Things you may want to cover:
 
 ## category
 |column|type|options|
-|name|string|text, null false, foreing_key: true|
+|name|string|text, null false|
 
 ### Association
 - has_many: items,thourgh: :categories_items
