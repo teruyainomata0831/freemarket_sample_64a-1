@@ -27,26 +27,26 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|avatar_image_id|string|null: false, unique: true|
-|nickname|string|null: false, unique: true|
+|avatar_image|string||
+|nickname|string|null: false|
 |biography|string|text|
-|last_name|string|null: false, unique: true|
-|first_name|string|null: false, unique: true|
-|last_name_kana|string|null: false, unique: true|
-|first_name_kana|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|encrypted_password|string|null: false, unique: true|
+|last_name|string|null: false|
+|first_name|string|null: false|
+|last_name_kana|string|null: false|
+|first_name_kana|string|null: false|
 |birth_year|integer||
 |birth_month|integer||
 |birth_day|integer||
-|postcode|string|null: false, unique: true|
-|city|string|null: false, unique: true|
+|postcode|string|null: false|
+|prefeture|string|null: false, foreign_key: true|
+|city|string|null: false|
 |block|string|text|
 |building|string|text|
 |phone_number|string|null: false, unique: true|
 |is_phone_number_authenticated|string|null: false, unique: true|
-|credit|string|null: false|
-|email|string|null: false, unique: true|
-|password|string|null: false, unique: true|
-|region_id|reference|null: false, foreign_key: true|
+|credit|string|null: false, unique: true|
 
 ### Association
 - has_many :items
