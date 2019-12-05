@@ -44,8 +44,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- belongs_to :credit
-- belongs_to :address
+- has_many :credit
+- has_many :address
 
 
 ## creditテーブル
