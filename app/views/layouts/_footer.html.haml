@@ -4,6 +4,16 @@
     %div.camera__exhibit--image
       =fa_icon 'camera'
 %footer
+  %div.fBgi
+    %div.fBgi__content
+      %p.subComment スマホでかんたんフリマアプリ
+      %p.mainComment 今すぐ無料ダウンロード！
+      %div.fImage
+        =image_tag "logo_red.svg", size: "50x50", alt: "logo", class: "fImage__logo"
+        -# =link_to "#", image_tag , alt: , size: "80x50",class:"fImage__app"
+        = link_to image_tag("app-store.svg", width: '100', alt: "app", class:"fImage__app"), "#"
+        = link_to image_tag("googleplay.png", width: '100', alt: "app", class: "fImage__google"), "#"
+    =image_tag "smartphone.png", size: "300x263", alt: "smartphone"
   %div.fMain
     %div.fMain__fAbout
       %h2 メルカリについて

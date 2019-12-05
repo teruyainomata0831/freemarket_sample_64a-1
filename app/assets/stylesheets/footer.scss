@@ -3,10 +3,49 @@ footer{
   color: rgb(255, 255, 255);
   padding: 0px 20px 10px;
   
-  width: 1400px;
-  height: 379px;
-  padding: 0 20px 10px;
+  width: 1440px;
+  height: 650px;
+  padding: 0 0 10px;
 }
+
+.fBgi{
+  background-image: url("bgciF.jpg");
+  width: 1440px;
+  height: 260px;
+  display: flex;
+  &__content{
+    margin:50px 0 0 345px;
+  }
+}
+
+
+.subComment{
+  font-size: 24px;
+}
+
+.mainComment{
+  font-size: 35px;
+}
+
+.fImage{
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  border-radius: 15%;
+  display: flex;
+  &__logo{
+    padding:5px;
+  }
+  &__app{
+    margin: 32px 0 0 20px;
+  }
+  &__google{
+    margin:  0 0 0 20px;
+  }
+  
+}
+
 h2{
   color:white;
   font-size: 16px;
