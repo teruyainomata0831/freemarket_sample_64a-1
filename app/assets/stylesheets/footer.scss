@@ -1,0 +1,109 @@
+footer{
+  background-color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  padding: 0px 20px 10px;
+  
+  width: 1400px;
+  height: 379px;
+  padding: 0 20px 10px;
+}
+h2{
+  color:white;
+  font-size: 16px;
+}
+
+li{
+  list-style: none;
+
+  font-size: 12px;
+  width: 168px;
+  height: 16px;
+  margin: 16px 0 0;
+}
+
+a{
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+.fMain{
+  width: 1020px;
+  height: 296px;
+  margin: 0 190px;
+  padding-top: 16px;
+  display: flex;
+  &__fAbout{
+    width: 168px;
+    height: 240px;
+    padding-right: 40px;
+    &--icon{
+      margin-top: 30px;
+    }
+  }
+}
+.fPrivacy{
+  width: 190px;
+  height: 22px;
+  padding-right: 20px;
+}
+.fEtc{
+  width: 190px;
+  height: 144px;
+  padding:22px 40px 0 0;
+}
+.fHelp{
+  width: 190px;
+  height: 120px;
+  padding-right: 40px;
+}
+.fcountry{
+  width: 72px;
+  height: 86px;
+  padding-right: 40px;
+  &__lag{
+    width: 72px;
+    height: 48px;
+  }
+}
+
+.camera{
+  background-color: rgb(234, 53, 45);
+  width: 160px;
+  height: 128px;
+  border-radius:50%;
+  padding-top: 32px;
+  z-index: 1;
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  &__exhibit{
+    text-decoration: none;
+    text-align: center;
+    &--name{
+      font-size: 22px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f030";
+    }
+  }
+}
+
+.fa-camera:before {
+  font-size: 50px;
+}
+.fa-twitter:before {
+  font-size: 30px;
+  margin:0 20px 0 0;
+}
+.fa-facebook-square:before {
+  font-size: 30px;
+}
+
+.fbottom{
+  width: 100vw;
+  display: flex;
+  padding: 25px 190px 20px;
+  &__cr{
+    padding:10px 0 0 400px;
+  }
+}
