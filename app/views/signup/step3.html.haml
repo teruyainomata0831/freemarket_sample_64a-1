@@ -1,0 +1,21 @@
+= form_for @user, url: step4_signup_path, method: :get, html: {class: 'Third-wrapper__box'} do |f|
+  .field
+    = f.label :postcode, '郵便番号'
+    %br/
+    = f.text_field :postcode, placeholder: '例) 123-4567'
+  .field
+    = f.label :prefeture, '都道府県'
+    %br/
+    = f.text_field :prefeture
+  .field
+    = f.label :city, '市区町村'
+    %br/
+    = f.text_field :city, placeholder: '例) 横浜市緑区'
+  .field
+    = f.label :block, '番地'
+    %br/
+    = f.text_field :block, placeholder: '例) 青山1-1-1'
+  .field
+    = f.label :building, '建物名'
+    %br/
+    = f.text_field :building, placeholder: '柳ビル103'

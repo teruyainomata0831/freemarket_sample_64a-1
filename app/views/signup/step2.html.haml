@@ -1,0 +1,6 @@
+= form_for @user, url: step3_signup_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
+  %p 電話番号認証
+  .field
+    = f.label :phone_number, '電話番号'
+    %br/
+    = f.text_field :phone_number, placeholder: '例) 09012345678'
