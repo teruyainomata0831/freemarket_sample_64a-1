@@ -1,0 +1,116 @@
+@import "regist/footer-regist";
+@import "regist/complete";
+
+@mixin hover {
+  opacity:0.7;
+}
+
+
+body{
+  position: relative;
+  background-color: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  height: 100vh;
+}
+
+
+.alpha-header{
+  height: 128px;
+  text-align: center;
+
+  .header-content{
+    margin: 30px 0 0;
+    display: inline-block;
+    cursor: pointer;
+    &:hover{
+      @include hover;
+    }
+  }
+}
+
+main{
+  display: block;
+}
+section{
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.main-header{
+  font-size: 22px;
+  padding: 32px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid 1px #EEEEEE;
+}
+  
+.main-contents{
+  padding: 30px 16px 40px;
+}
+.content{
+  max-width: 343px;
+  margin: 0 auto;
+
+  &__btn-mailaddress{
+    color: #fff;
+    background-color: #ea352d;    
+    position: relative;
+    text-align: center;
+    transition: 0.2s;
+    &:hover{
+      @include hover;
+    }
+    .mail-icon{
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 15px;
+    }
+  }
+  &__btn-facebook{
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+    display: flex;
+    position: relative;
+    .facebook-icon{
+      position: absolute;
+      left: 13px;
+      top:13px;
+    }
+    .facebook-text{
+      display: inline-block;
+    }
+  }
+  &__btn-google{
+    margin: 16px 0 0;
+    background: #fff;
+    border: #979797 solid 1px;
+    color: #333;
+    position: relative;
+    .google-icon{
+      position: absolute;
+      left: 10px;
+      top:20px;
+    }
+    .google-text{
+      display: inline-block;
+    }
+  }
+
+  .btn{
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .btn-btn{
+    position: relative;
+  } 
+}
+
+
+
+
+
