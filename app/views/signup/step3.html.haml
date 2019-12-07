@@ -1,4 +1,4 @@
-= form_for @user, url: step4_signup_path, method: :get, html: {class: 'Third-wrapper__box'} do |f|
+= form_for @user, url: step4_signup_index_path, method: :get, html: {class: 'Third-wrapper__box'} do |f|
   .field
     = f.label :postcode, '郵便番号'
     %br/
@@ -19,3 +19,4 @@
     = f.label :building, '建物名'
     %br/
     = f.text_field :building, placeholder: '柳ビル103'
+    = f.submit 'Continue'

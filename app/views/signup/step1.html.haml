@@ -1,5 +1,4 @@
-= form_for @user, url: step2_signup_path, method: :get, html: {class: 'first-main__box'} do |f|
-  = render "devise/shared/error_messages", resource: resource
+= form_for @user, url: step2_signup_index_path, method: :get, html: {class: 'first-main__box'} do |f|
   .field
     = f.label :nickname, 'ニックネーム'
     %br/
@@ -31,4 +30,5 @@
     = f.text_field :birth_year, placeholder: '--'
     = f.text_field :birth_month, placeholder: '--'
     = f.text_field :birth_day, placeholder: '--'
-  %p ロボット認証
+    %p ロボット認証
+    = f.submit 'Continue'
