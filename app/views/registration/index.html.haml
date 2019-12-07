@@ -4,24 +4,25 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
   %body
-    .contents
-      %header.alpha-header
-        %h1.header-content
-          %a{:class => "mercari", :href => "/jp/"}
-          =image_tag "fmarket_logo_red.svg", size: "160x80", alt: "log"
-      %main
-        %section
-          %h2.main-header 新規会員登録
-          .main-contents
-            .content
-              %a.content__btn-mailaddress.btn{:href => "https://www.mercari.com/jp/signup/registration/"}
-                .mail-icon
-                  %i.far.fa-envelope.fa-lg
-                メールアドレスで登録する
-              %button.content__btn-facebook.btn.btn-btn
-                %i.fab.fa-facebook-square.fa-2x.facebook-icon
-                %p.facebook-text Facebookで登録する
-              %button.content__btn-google.btn.btn-btn
-                %i.fab.fa-google.fa-lg.google-icon
-                %p.google-text Googleで登録する
+    .wrapper
+      .contents
+        %header.alpha-header
+          %h1.header-content
+            %a{:class => "mercari", :href => "/jp/"}
+            =image_tag "fmarket_logo_red.svg", size: "160x80", alt: "log"
+        %main
+          %section
+            %h2.main-header 新規会員登録
+            .main-contents
+              .content
+                %a.content__btn-mailaddress.btn{:href => "https://www.mercari.com/jp/signup/registration/"}
+                  .mail-icon
+                    %i.far.fa-envelope.fa-lg
+                  メールアドレスで登録する
+                %button.content__btn-facebook.btn.btn-btn
+                  %i.fab.fa-facebook-square.fa-2x.facebook-icon
+                  %p.facebook-text Facebookで登録する
+                %button.content__btn-google.btn.btn-btn
+                  %i.fab.fa-google.fa-lg.google-icon
+                  %p.google-text Googleで登録する
       = render partial: "f-regist"

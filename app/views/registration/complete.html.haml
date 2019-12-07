@@ -1,3 +1,25 @@
+
+-# 完了
+%div.heading
+  %div.heading__logo
+    =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+  %div.progress-status
+    %ul.progress
+      %li.is-complete
+        会員情報
+        %div{"data-step" => ""}
+      %li.is-complete
+        電話番号認証
+        %div{"data-step" => ""}
+      %li.is-complete
+        お届け先住所入力
+        %div{"data-step" => ""}
+      %li.is-complete
+        支払い方法
+        %div{"data-step" => ""}
+      %li.is-active
+        完了
+        %div{"data-step" => ""}
 .regist-contents
   .regist-contents__header
     %div.regist-contents__header__text
@@ -10,4 +32,4 @@
   .regist-contents__bottom
     %a{:class => "regist-contents__bottom__btn", :href => "#"}
       メルカリを始める
-
+= render partial: "f-regist"
