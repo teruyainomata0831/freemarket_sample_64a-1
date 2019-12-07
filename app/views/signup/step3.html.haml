@@ -6,7 +6,7 @@
   .field
     = f.label :prefeture, '都道府県'
     %br/
-    = f.text_field :prefeture
+    = f.select :prefeture, JobAdministration.work_locations.keys
   .field
     = f.label :city, '市区町村'
     %br/

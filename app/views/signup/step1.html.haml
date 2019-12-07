@@ -27,8 +27,14 @@
   .field
     = f.label :birth, '生年月日'
     %br/
-    = f.text_field :birth_year, placeholder: '--'
-    = f.text_field :birth_month, placeholder: '--'
-    = f.text_field :birth_day, placeholder: '--'
+    = f.select :birth_year,["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_year"}
+    %label
+    年
+    = f.select :birth_month, ["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_month"}
+    %label
+    月
+    = f.select :birth_day, ["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_day"}
+    %label
+    日
     %p ロボット認証
     = f.submit 'Continue'
