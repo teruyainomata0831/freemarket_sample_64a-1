@@ -139,3 +139,45 @@ $mute: rgb(204,204,204);
   }
 }
 
+.regist-figure{
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+
+ 
+
+  .regist-figure-content{
+    position: absolute;
+    right: 550px;
+    top: 20px;
+    color: white;
+
+    .regist-figure-text-top{
+     font-size: 18px;
+    }
+    .regist-figure-text-main{
+      font-size: 30px;
+    }
+  }
+  .regist-figure-store{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 485px;
+
+    .regist-figure-app{
+      padding-top:33px;
+    }
+   }
+
+  #figure-hidden{
+    overflow: hidden;
+    height: 300px;/* トリミングしたい枠の高さ */
+  }
+
+  &__inner{
+    position: absolute;
+    bottom: 3px;
+    right: 494px;
+  }
+}

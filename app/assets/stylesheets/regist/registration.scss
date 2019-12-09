@@ -1,5 +1,5 @@
 @import "regist/f-regist";
-@import "regist/complete";
+
 
 @mixin hover {
   opacity:0.7;
@@ -16,11 +16,11 @@ body{
   height: 100vh;
 }
 
-.alpha-header{
+.r-top-alpha-header{
   height: 128px;
   text-align: center;
 
-  .header-content{
+  .r-top-header-content{
     margin: 30px 0 0;
     display: inline-block;
     cursor: pointer;
@@ -30,15 +30,15 @@ body{
   }
 }
 
-main{
+.r-top-main{
   display: block;
 }
-section{
+.r-top-main-contents{
   width: 700px;
   margin: 0 auto;
   background-color: #fff;
 }
-.main-header{
+.r-top-main-header{
   font-size: 22px;
   padding: 32px;
   text-align: center;
@@ -46,10 +46,10 @@ section{
   border-bottom: solid 1px #EEEEEE;
 }
   
-.main-contents{
+.r-top-main-content{
   padding: 30px 16px 40px;
 }
-.content{
+.r-top-main-regist{
   max-width: 343px;
   margin: 0 auto;
 
@@ -62,7 +62,7 @@ section{
     &:hover{
       @include hover;
     }
-    .mail-icon{
+    .r-top-main-regist-mail-icon{
       position: absolute;
       margin-top: 2px;
       margin-left: 15px;
@@ -99,7 +99,7 @@ section{
     }
   }
 
-  .btn{
+  .r-top-btn{
     display: block;
     width: 100%;
     line-height: 48px;
@@ -107,7 +107,7 @@ section{
     cursor: pointer;
     border-radius: 4px;
   }
-  .btn-btn{
+  .r-top-btn-btn{
     position: relative;
   } 
 }

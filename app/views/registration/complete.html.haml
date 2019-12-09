@@ -32,4 +32,17 @@
   .regist-contents__bottom
     %a{:class => "regist-contents__bottom__btn", :href => "#"}
       メルカリを始める
+.regist-figure
+  =image_tag "bgciF.jpg",size: "456x456", class: "regist-figure-img"
+  .regist-figure-content
+    .regist-figure-text-top
+      \ スマホでかんたんフリマアプリ /  
+    %h1.regist-figure-text-main
+      今すぐ無料ダウンロード!
+  .regist-figure-store
+    =image_tag "googleplay.png", size: "240x240", class: "regist-figure-google"
+    =image_tag "app-store.svg", size: "210x210", class: "regist-figure-app"
+  .regist-figure__inner#figure-hidden
+    =image_tag "smartphone.png", size: "456x456"
+
 = render partial: "f-regist"
