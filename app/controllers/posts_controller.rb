@@ -6,5 +6,6 @@ class PostsController < ApplicationController
   end
 
   def addcard
+    
   end
 end

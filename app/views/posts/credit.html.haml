@@ -1,5 +1,5 @@
 .c-crum
-.c-contents
+.c-contents.clearfix
   .c-main-content
     %h1.c-content
       支払い方法
@@ -18,4 +18,5 @@
         =link_to "#", class: "explain" do
           %span 支払い方法について
           =fa_icon "chevron-right",class: "chevron"
-
+  .credit-side-bar
+    =render partial: "mypage"

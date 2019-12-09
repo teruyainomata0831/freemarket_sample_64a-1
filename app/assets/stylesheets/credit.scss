@@ -12,7 +12,6 @@
 .c-contents{
   margin: 40px auto 0;
   width: 1020px;
-  height: 100vh;
 
   .c-main-content{
     float: right;
@@ -100,4 +99,9 @@
       }
     }
   }
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
