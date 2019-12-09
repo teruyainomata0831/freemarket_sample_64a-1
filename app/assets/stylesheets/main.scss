@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .slider__page1{
   background-size: cover;
   background-position: center center;
@@ -62,20 +67,15 @@
   padding-left: 15px;
 }
 
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
 .container {
 	background-color: whitesmoke;
+	padding-bottom: 70px;
 }
 
 .category-container {
 	padding: 56px 0 30px;
 	background-color: white;
-	width: 100%;
+	width: 100vw;
 }
 
 .category-title {
