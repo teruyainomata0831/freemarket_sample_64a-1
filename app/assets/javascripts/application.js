@@ -12,5 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//
+// スライドショー表示のため追記し、require turbolinksを削除
+
+
+$(function() {
+  $('.slider').slick({
+      dots: true,
+      accessibility: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+  });
+});
+
+
+
+

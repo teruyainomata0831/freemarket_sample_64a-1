@@ -1,57 +1,67 @@
-.slider {
-  box-sizing: border-box;
+.slider__page1{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.slider__image1{
-  background-image: url("slideimage1");
-  height: 500px;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  
-}
-.slider__image2{
-  background-image: url("slideimage2");
-  position: relative;
-  background-position: center contain;
+.slider__page2{
   background-size: cover;
+  background-position: center;
 }
-.slider__image3{
-  background-image: url("slideimage3");
-  height: 500px;
-  position: ralative;
+
+.slider__page3{
+  position: relative;
+  background-image: url("slide_image");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
 }
 
 .text1 {
   font-size: 60px;
-  padding-top: 20px;
-  padding-left: 50px;
+  font-weight: 550;
+  padding-top: 13px;
+  padding-left: 270px;
 }
 
 .text2 {
   font-size: 60px;
-  padding-left: 50px;
-  position: relative;
+  font-weight: 550;
+  padding-left: 270px;
 }
 
 .text3 {
-  font-size: 60px;
-  padding-left: 50px;
-  z-index: 10;
+  padding-top: 10px;
+  font-size: 18px;
+  padding-left: 270px;
+  font-weight: 270;
 }
 
-.text4 {
-  padding-left: 50px;
-}
-
-.text5 {
-  padding-left: 50px;
-}
-
-.slider__image4 {
+.slider__page3--image {
   position: absolute;
+  top: 0px;
+  right: 280px;
+  height: 400px;
 }
+
+.slider__page3--button {
+  display: flex;
+  padding-left: 270px;  
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+.applestore_button {
+  height: 80px;
+  width: 170px;
+}
+
+.googleplay_button {
+  height: 80px;
+  width: 170px;
+  padding-left: 15px;
+}
+
 
 * {
 	margin: 0;
@@ -241,6 +251,3 @@ figcaption {
 	background-color: white;
 	width: 100%;
 }
-
-
-

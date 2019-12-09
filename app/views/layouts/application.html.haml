@@ -5,9 +5,13 @@
     %title FreemarketSample64a
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{:href => "css/slick.css", :rel => "stylesheet"}/
+    %link{:href => "css /slick-theme.css", :rel => "stylesheet"}/
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
-    
-    = render 'layouts/slide'
-    = render 'layouts/footer'
+    %script{:src => "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", :type => "text/javascript"}
+
+%body
+  = yield
+
+  = render 'layouts/slide'
+  = render 'layouts/footer'
