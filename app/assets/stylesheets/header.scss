@@ -1,0 +1,165 @@
+.main{
+  &-header{
+    background-color: rgb(255, 255, 255);
+    box-shadow: raga(0, 0, 0, 0.18) 0px 2px 4px;
+    position: relative;
+    z-index: 3;
+    .header-center{
+      padding: 8px 0px 0px;
+      width: 1020px;
+      margin: 0 auto;
+      .top-center{
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        .top-left{
+          -webkit-box-align: center;
+          align-items: center;
+          display: flex;
+          height: 40px;
+          margin-right: 45px;
+          .mercari{
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            .height{
+              height: 36px;
+              width: 134px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .under-center{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 8px;
+    .under-left{
+      display: flex;
+      margin-left: -3px;
+      .category{
+        padding-left: 0px;
+        &__search{
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 36px;
+          white-space: nowrap;
+          text-decoration: none;
+          color: black;
+          &--button{
+            max-width: 100%;
+            max-height: 100%;
+            color: rgb(234, 53, 45);
+            height: 12px;
+            margin-right: 4px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+}
+// .home-icon a:hover path{
+
+.brand{
+  padding-right: 0px;
+  cursor: pointer;
+  height: 44px;
+  position: relative;
+  z-index: 3;
+  padding: 0px 10px;
+  &__search{
+    display: block;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    &--button{
+      max-width: 100%;
+      max-height: 100%;
+      color: rgb(234, 53, 45);
+      height: 12px;
+      margin-right: 4px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.under-right{
+  display: flex;
+  .registration{
+    text-align: center;
+    margin: 0 11px 0 0;
+    &-button{
+      background-color: rgb(255, 0, 0);
+      color: rgb(255, 255, 255);
+      display: block;
+      font-size: 14px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(234, 53, 45);
+      border-image: initial;
+      border-radius: 4px;
+      padding: 8px 10px;
+      text-decoration: none;
+    }
+  }
+  .login{
+    vertical-align: baseline;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    &-button{
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 149, 238);
+      display: block;
+      font-size: 14px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(0, 149, 238);
+      border-image: initial;
+      border-radius: 4px;
+      padding: 8px 10px;
+      transition: all 0.3s ease-out 0s;
+      text-decoration: none;
+    }
+    &-button:hover{
+      background-color: rgb(0, 149, 238);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+.intext-box{
+  background-color: rgb(245, 245, 245);
+  font-size: 16px;
+  line-height: 1.4em;
+  -webkit-appearance: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+  border-radius: 4px;
+  outline: none;
+  padding: 0px 50px 0px 10px;
+  transition: all 0.3s ease-out 0s;
+  width: 779px;
+  height: 38px;
+  padding: 0 50px 0 10px;
+  position: relative;
+}
+.botton-center{
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+  padding: 0;
+  right: 225px;
+  border: none;
+  top: 20px;
+}
