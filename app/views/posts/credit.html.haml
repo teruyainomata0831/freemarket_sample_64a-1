@@ -1,0 +1,21 @@
+.c-crum
+.c-contents
+  .c-main-content
+    %h1.c-content
+      支払い方法
+    .c-card-list
+      .c-card-list-head
+        %h3.c-card-list-head__text
+          クレジットカード一覧
+      .c-card-list-add
+        .c-add-setting
+          = link_to "#", class: "c-add-setting-content" do
+            .c-add-setting-content__icon
+              =fa_icon "credit-card"
+            .c-add-setting-content__text
+              クレジットカードを追加する
+      .c-card-exp
+        =link_to "#", class: "explain" do
+          %span 支払い方法について
+          =fa_icon "chevron-right",class: "chevron"
+
