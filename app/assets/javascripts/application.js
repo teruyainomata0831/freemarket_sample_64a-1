@@ -15,7 +15,7 @@
 
 //= require_tree .
 
-// スライドショー導入のため require turbolinks　を削除
+// スライドショー導入のためrequire turbolinksを削除
 
 $(function() {
   $('.slider').slick({
