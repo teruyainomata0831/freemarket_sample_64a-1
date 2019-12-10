@@ -1,4 +1,3 @@
-
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -8,14 +7,14 @@
       .r-top-contents
         %header.r-top-alpha-header
           %h1.r-top-header-content
-            %a{:class => "r-top-mercari", :href => "/jp/"}
-            =image_tag "fmarket_logo_red.svg", size: "160x80", alt: "log"
+            =link_to  "/jp/", class: "r-top-mercari" do
+              =image_tag "fmarket_logo_red.svg", size: "160x80", alt: "log"
         %main.r-top-main
           %section.r-top-main-contents
             %h2.r-top-main-header 新規会員登録
             .r-top-main-content
               .r-top-main-regist
-                %a.r-top-main-regist__btn-mailaddress.r-top-btn{:href => "#"}
+                =link_to "#", class: "r-top-main-regist__btn-mailaddress r-top-btn" do
                   .r-top-main-regist-mail-icon
                     %i.far.fa-envelope.fa-lg
                   メールアドレスで登録する

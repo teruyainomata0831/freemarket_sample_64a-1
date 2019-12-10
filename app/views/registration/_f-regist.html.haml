@@ -3,13 +3,13 @@
     %nav
       %ul.exp
         %li.f-regist
-          %a{:href => "#", class: "f-regist-link"} プライバシーポリシー
+          =link_to " プライバシーポリシー", "#", class: "f-regist-link"
         %li.f-regist
-          %a{:href => "#", class: "f-regist-link"} メルカリ利用規約
+          =link_to " プライバシーポリシー", "#", class: "f-regist-link"
         %li.f-regist
-          %a{:href => "#", class: "f-regist-link"} 特定商取引に関する表記
+          =link_to " プライバシーポリシー", "#", class: "f-regist-link"
     .logo
-      %a{:href => "#", class: "logo-regist-link"}
+      =link_to  "#", class:"logo-regist-link" do
         = image_tag "logo_gray.svg",size: "140x70"
     %p © Mercari, Inc.
 
