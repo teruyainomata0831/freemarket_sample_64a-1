@@ -1,0 +1,252 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.slider__page1{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slider__page2{
+  background-size: cover;
+  background-position: center;
+}
+
+.slider__page3{
+  position: relative;
+  background-image: url("slide_image");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+
+.text1 {
+  font-size: 60px;
+  font-weight: 550;
+  padding-top: 13px;
+  padding-left: 270px;
+}
+
+.text2 {
+  font-size: 60px;
+  font-weight: 550;
+  padding-left: 270px;
+}
+
+.text3 {
+  padding-top: 10px;
+  font-size: 18px;
+  padding-left: 270px;
+  font-weight: 270;
+}
+
+.slider__page3--image {
+  position: absolute;
+  top: 0px;
+  right: 280px;
+  height: 400px;
+}
+
+.slider__page3--button {
+  display: flex;
+  padding-left: 270px;  
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+.applestore_button {
+  height: 80px;
+  width: 170px;
+}
+
+.googleplay_button {
+  height: 80px;
+  width: 170px;
+  padding-left: 15px;
+}
+
+.container {
+	background-color: whitesmoke;
+	padding-bottom: 70px;
+}
+
+.category-container {
+	padding: 56px 0 30px;
+	background-color: white;
+	width: 100vw;
+}
+
+.category-title {
+	text-align: center;
+	margin-bottom: 16px;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+.category-contents-box {
+	display: block;
+	text-align: center;
+}
+
+.category-contents {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	list-style: none;
+	margin: -10px 0 0 -10px;
+}
+
+.content {
+	margin: 10px 0px 10px 0px;
+	display: inline-block;
+}
+
+.content1, .content2, .content3, .content4 {
+	background-color: whitesmoke;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 15px;
+	padding: 8px 16px;
+	margin-right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+}
+
+.item-container {
+	padding: 42px 0px 10px;
+	background-color: whitesmoke;
+}
+
+.items-heading {
+	max-width: 1020px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	background-color: whitesmoke;
+	margin-bottom: 5px;
+}
+
+.items-title {
+	margin-left: 6px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.4em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+.items-detail {
+	font-size: 14px;
+	padding: 15px 16px 5px 5px;
+	color: #0095ee;
+	display: block;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+.items-list {
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+.items {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.item {
+	width: 18%;
+	padding: 10px;
+}
+
+.item-link {
+	border: 1px solid transparent;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+.item-link:hover {
+	border: 1px solid skyblue;
+}
+
+.item-figure {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.item-price {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 0 14px 14px 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	font-size: 17px;
+	height: 32px;
+	height: 28px;
+	letter-spacing: .02em;
+	margin: 0;
+	padding: 0 12px;
+	position: absolute;
+	z-index: 2;
+	bottom: 80px;
+}
+
+.item-img {
+	height: 188px;
+	width: 184px;
+	display: block;
+}
+
+figcaption {
+	box-sizing: border-box;
+	color: #222;
+	font-size: 14px;
+	height: 64px;
+	width: 182px;
+	line-height: 1.4em;
+	padding: 12px;
+	white-space: normal;
+	word-break: break-word;
+	background-color: white;
+}
+
+.item-name {
+	display: inline-block;
+	height: 2.8em;
+	overflow: hidden;
+	position: relative;
+}
+
+.item-name::after {
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 72%);
+	bottom: 0;
+	content: "";
+	height: 50%;
+	position: absolute;
+	right: 0;
+	width: 50%;
+}
+
+.brand-container {
+	margin-top: 80px;
+	padding: 56px 0 30px;
+	background-color: white;
+	width: 100%;
+}
