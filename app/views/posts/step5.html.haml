@@ -1,0 +1,47 @@
+-# 完了
+%div.heading
+  %div.heading__logo
+    =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+  %div.progress-status
+    %ul.progress
+      %li.is-complete
+        会員情報
+        %div{"data-step" => ""}
+      %li.is-complete
+        電話番号認証
+        %div{"data-step" => ""}
+      %li.is-complete
+        お届け先住所入力
+        %div{"data-step" => ""}
+      %li.is-complete
+        支払い方法
+        %div{"data-step" => ""}
+      %li.is-active
+        完了
+        %div{"data-step" => ""}
+.regist-contents
+  .regist-contents__header
+    %div.regist-contents__header__text
+      会員登録完了
+  .regist-contents__center
+    %div.regist-contents__center__text
+      ありがとうございます 
+      %br
+      会員登録が完了しました。
+  .regist-contents__bottom
+    %a{class: "regist-contents__bottom__btn", href: "#"}
+      メルカリを始める
+.regist-figure
+  =image_tag "bgciF.jpg",size: "456x456", class: "regist-figure-img"
+  .regist-figure-content
+    .regist-figure-text-top
+      \ スマホでかんたんフリマアプリ /  
+    %h1.regist-figure-text-main
+      今すぐ無料ダウンロード!
+  .regist-figure-store
+    =image_tag "googleplay.png", size: "240x240", class: "regist-figure-google"
+    =image_tag "app-store.svg", size: "210x210", class: "regist-figure-app"
+  .regist-figure__inner#figure-hidden
+    =image_tag "smartphone.png", size: "456x456"
+= render 'layouts/register-footer'
+

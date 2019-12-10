@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.address-container{
+  background-color: whitesmoke;
+  padding: 25px 0 40px;
+}
+
+.address-content{
+  width: 700px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.address-chapter-container{
+  margin: 0;
+  background: #fff;
+}
+
+.address-chapter-head{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #333;
+  padding: 8px 24px;
+  border-bottom: 1px solid #f5f5f5;
+  text-align: center; 
+
+}
+
+.address-single-inner{
+  border-top: 1px solid #f5f5f5;
+  padding: 24px 16px 40px;
+}
+
+.address-single-content{
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+.form-group{
+  margin: 40px 0 0;
+}
+
+.form-group label{
+  font-weight: 600;
+  display: inline-block;
+}
+
+.form-group select{
+  width: 100%;
+}
+.form-require{
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.input-default{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.select-prefecture{
+  margin: 8px 0 0;
+  position: relative;
+  background: #fff;
+}
+
+.select-default{
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.icon-arrow{
+  font-size: 25px;
+  margin: 0 6px 0 -15px;
+  position: absolute;
+  top: 10px;
+  pointer-events: none;
+  right: 12px;
+  z-index: 2;
+  color: #888;
+  font-style: normal;
+}
+
+.icon-arrow::before{
+  content: '\02228'; 
+}
+
+.form-arbitrary{
+  background: #ccc;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.btn-default{
+  display: block;
+  width: 343px;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  margin: 24px 0 0;
+}
+
+.btn-red{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}

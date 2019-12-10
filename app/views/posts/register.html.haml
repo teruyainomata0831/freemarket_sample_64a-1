@@ -1,0 +1,27 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
+  %body
+    .wrappers
+      .r-top-contents
+        %header.r-top-alpha-header
+          %h1.r-top-header-content
+            %a{class: "r-top-mercari", href: "/jp/"}
+            =image_tag "fmarket_logo_red.svg", size: "160x80", alt: "log"
+        %main.r-top-main
+          %section.r-top-main-contents
+            %h2.r-top-main-header 新規会員登録
+            .r-top-main-content
+              .r-top-main-regist
+                %a.r-top-main-regist__btn-mailaddress.r-top-btn{href: "#"}
+                  .r-top-main-regist-mail-icon
+                    %i.far.fa-envelope.fa-lg
+                  メールアドレスで登録する
+                %button.r-top-main-regist__btn-facebook.r-top-btn.r-top-btn-btn
+                  %i.fab.fa-facebook-square.fa-2x.facebook-icon
+                  %p.facebook-text Facebookで登録する
+                %button.r-top-main-regist__btn-google.r-top-btn.r-top-btn-btn
+                  %i.fab.fa-google.fa-lg.google-icon
+                  %p.google-text Googleで登録する
+= render 'layouts/register-footer'
