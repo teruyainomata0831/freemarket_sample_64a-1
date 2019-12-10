@@ -1,0 +1,69 @@
+%body.mypage-test
+  = render 'layouts/header'
+  %div.l-container
+    .mypage-contents
+      = render 'users/mypage_side'
+      .mypage-l-content
+        .l-content-top
+          %section.mypage-user-icon
+            %a{:href => "#"}
+              %figure
+                %img{:alt => "", :height => "60", :src => "//static.mercdn.net/thumb/members/642436807.jpg?1575390191", :width => "60"}/
+              %h2.bold ""
+              .mypage-number
+                %div
+                  評価
+                  %span.bold ""
+                %div
+                  出品数
+                  %span.bold ""
+          %section.mypage-tab-container
+            %ul.mypage-tabs
+              %li.active
+                %h3
+                  %a{"data-toggle" => "tab", :href => "#"}
+                    お知らせ
+              %li.active
+                %h3
+                  %a.a{"data-toggle" => "tab", :href => "#"}
+                    やることリスト
+            .tab-content
+              %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
+              %li.mypage-list-list
+                %a{:href => "#"}
+                  %fugure
+                    =image_tag "woman.webp", size: "48x48", alt: "img"
+                  .mypage-item-body
+                    .mypage-iten-text
+                    %time
+                      %i.icon-time
+                      %span
+                  %i.mypage-icon-arrow-right
+                  =fa_icon "chevron-right", class: "icon-arrow-right"
+              %li.mypage-go-list
+                %a{:href => "#"} 一覧を見る
+              -# %ul#mypage-tab-todo.mypage-item-list.tab-pane
+              -#   %li.mypage-item-not-fond.bold 現在、やることはありません
+          .l-content-bottom
+            %h2.mypage-tab-head-wrpper 購入した商品
+            %ul.mypage-tabs
+              %li.active
+                %h3
+                  %a{"data-toggle" => "tab", :href => "#"}
+                    取引中
+              %li
+                %h3
+                  %a.a.a{"data-toggle" => "tab", :href => "#"}
+                    過去の取引
+            .tab-content
+              %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+                %li.mypage-item-not-fund.bold 取引中の商品がありません
+              -# %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
+              -#   %li.mypage-item-not-fund.bold 過去に取引した商品がありません
+
+
+
+
+
+
+  = render 'layouts/footer'
