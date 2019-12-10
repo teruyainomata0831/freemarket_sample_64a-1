@@ -1,0 +1,101 @@
+
+body{
+  position: relative;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  height: 100vh;
+}
+.wrappers{
+  background-color: #f5f5f5;
+  height: 100vh;
+}
+.r-top-alpha-header{
+  height: 128px;
+  text-align: center;
+  .r-top-header-content{
+    margin: 30px 0 0;
+    display: inline-block;
+    cursor: pointer;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+}
+.r-top-main{
+  display: block;
+}
+.r-top-main-contents{
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.r-top-main-header{
+  font-size: 22px;
+  padding: 32px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid 1px #EEEEEE;
+}
+  
+.r-top-main-content{
+  padding: 30px 16px 40px;
+}
+.r-top-main-regist{
+  max-width: 343px;
+  margin: 0 auto;
+  &__btn-mailaddress{
+    color: #fff;
+    background-color: #ea352d;    
+    position: relative;
+    text-align: center;
+    transition: 0.2s;
+    &:hover{
+      opacity:0.7;
+    }
+    .r-top-main-regist-mail-icon{
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 15px;
+    }
+  }
+  &__btn-facebook{
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+    display: flex;
+    position: relative;
+    .facebook-icon{
+      position: absolute;
+      left: 13px;
+      top:13px;
+    }
+    .facebook-text{
+      display: inline-block;
+    }
+  }
+  &__btn-google{
+    margin: 16px 0 0;
+    background: #fff;
+    border: #979797 solid 1px;
+    color: #333;
+    position: relative;
+    .google-icon{
+      position: absolute;
+      left: 10px;
+      top:20px;
+    }
+    .google-text{
+      display: inline-block;
+    }
+  }
+  .r-top-btn{
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .r-top-btn-btn{
+    position: relative;
+  } 
+}
