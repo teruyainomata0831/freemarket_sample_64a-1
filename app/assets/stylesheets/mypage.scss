@@ -1,0 +1,114 @@
+.bread-crumbs{
+  position: relative;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  background: #fff;
+  margin: 0;
+  padding: 8px;
+  }
+  .bread-crumbs ul{
+  width: 1020px;
+  display: flex;
+  }
+  .bread-crumbs li{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 210px;
+  }
+  .bread-cumbs a{
+  color: #333;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  }
+  .bread-crumbs .icon-arrow-righ{
+  margin: 0 8px;
+  font-size: 9px;
+  color: #888;
+  display: inline-block;
+  font-family: 'icon-font';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  }
+  .bread-crumbs li:last-child{
+  font-weight: 600;
+  position: absolute;
+  left: 80px;
+  top: 2px;
+  }
+  .bread-crumbs ul {
+  width: 1020px;
+  }
+  // mypage-left-side
+  .mypage{
+    width: 280px;
+    height: 1292px;
+    background-color: rgb(245, 245, 245);
+    // padding: 40px 0 40px;
+  }
+  .mypage-side{
+    // margin-left: 210px;
+  }
+  .l-side{
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  .mypage-nav{
+    background-repeat: no-repeat;
+    display: block;
+  }
+  .mypage-nav-list{
+    &-wrapper{
+      list-style: none;
+      font-size: 12px;
+      border-top: 1px solid #eee;
+      width: 280px;
+      height: 48px;
+      margin: 0;
+    }
+  }
+  .mypage-nav-list-item.active{
+    background-color: rgb(245, 245, 245);
+    font-weight: 600;
+    width: 248px;
+    height: 16px;
+  }
+  .icon-arrow-right{
+    position: absolute;
+    top: 21%;
+    right: 16px;
+    color: #ccc;
+    &:hover{
+      background-color: rgb(245, 245, 245);
+      right: 10px;
+      color: black;
+    }
+  }
+  .mypage-nav-list-item {
+    position: relative;
+    display: block;
+    min-height: 21px;
+    padding: 16px;
+    background: #fff;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    &:hover{
+      background-color: rgb(245, 245, 245);
+    }
+  }
+  //メルカリ
+  .mypage-nav-head{
+    margin: 40px 0 0;
+    width: 280px;
+    height: 16px;
+  }
+  // .mypage-nav-list{
+  //   margin: 8px 0 0;
+  // }
