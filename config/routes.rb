@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   get "registration/index" => "registration#index"
   get "registration/complete" => "registration#complete"
+  get "registration/login" => "registration/login"
 end

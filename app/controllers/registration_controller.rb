@@ -5,4 +5,7 @@ class RegistrationController < ApplicationController
 
   def complete
   end
+
+  def login
+  end
 end
