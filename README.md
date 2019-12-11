@@ -44,15 +44,26 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- belongs_to :region
+- has_many :credit
+- has_many :address
+
+
+## creditテーブル
+|Column|Type|Options|
+|card_number|integer|null: false, unique: true|
+|exp_month|integer|null: false, unique: true|
+|ep_year|integer|null: false, unique: true|
+
+### Association
+- belongs_to :user
 
 
 ## addressテーブル
 |Column|Type|Options|
 |postcode|string|null: false|
 |prefeture|string|null: false|
-|city|string|null: false| 
-block|string|text|
+|city|string|null: false|
+|block|string|text|
 |building|string|text|
 
 ### Association
@@ -92,11 +103,13 @@ block|string|text|
 |column|type|options|
 |name|string|text, null false|
 
+### Association
 - has_many: items,thourgh: :categories_items
 - has_many: categories_items
 
 
-### category_itemテーブル
+### category_itemsテーブル
+
 |column|type|options|
 |------|----|-------|
 |category_id|reference|null: false, foreign_key: true|
@@ -105,6 +118,3 @@ block|string|text|
 ### Association
 - belongs_to :item
 - belongs_to :category
-
-
-

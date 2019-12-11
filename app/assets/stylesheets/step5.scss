@@ -1,0 +1,74 @@
+.regist-contents{
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  .regist-contents__header{
+    height:55px;
+    line-height: 55px;
+    font-size: 1.2rem;
+    border-bottom: solid 1px #eeeeee;
+    
+    &__text{
+      font-weight: bold;
+    }
+  }
+  
+  .regist-contents__center{
+    height: 110px;
+   
+    &__text{
+      padding-top: 30px;
+    }
+  }
+  .regist-contents__bottom{
+    height: 55px;
+    line-height: 55px;
+    &__btn{
+      background-color: #ea352d;
+      padding: 18px 110px;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.regist-figure{
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+ 
+  .regist-figure-content{
+    position: absolute;
+    right: 550px;
+    top: 20px;
+    color: white;
+    .regist-figure-text-top{
+     font-size: 18px;
+    }
+    .regist-figure-text-main{
+      font-size: 30px;
+    }
+  }
+  .regist-figure-store{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 450px;
+    .regist-figure-app{
+      padding-top:33px;
+    }
+   }
+  #figure-hidden{
+    overflow: hidden;
+    height: 300px;/* トリミングしたい枠の高さ */
+  }
+  &__inner{
+    position: absolute;
+    bottom: 3px;
+    right: 455px;
+  }
+}
