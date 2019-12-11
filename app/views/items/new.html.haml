@@ -1,0 +1,162 @@
+%div.itemwrap
+  %header.header-item
+    %div.header-item__logo
+      =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+    %div.item-sell
+      %div.item-sell__title
+        商品の情報を入力
+
+        -# 出品画像
+      %div.item-sell__upload
+        %div.item-sell__upload--head
+          出品画像  
+        %div.item-sell__upload--require
+          必須       
+        %div.item-sell__upload--box
+          最大10枚までアップロードできます
+        %label.drops
+          %div.item-sell__upload--drop
+            ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード
+          %input{:multiple => "", :name => "image1", :style => "display: none;", :type => "file"}/
+        -# 商品名
+      %div.item-content
+        %div.item-content__title
+          %div.item-content__title--lavel
+            商品名
+          %div.item-content__title--require
+            必須       
+        %input{name: "item-name", placeholder: "商品名(必須40字まで)", type: "text", value: "", class: "item-name-place"}  
+          %div.item-content__title
+            %div.item-content__title--lavel
+              商品の説明 
+            %div.item-content__title--require  
+              必須       
+        %textarea{cols: "40", name: "itemcontent", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"} 
+      %div.item-detail
+        %div.item-detail__category
+          %div.item-detail__category--title
+            商品の詳細    
+          %div.item-detail__category__menu
+
+            -# 商品カテゴリ
+            %label
+              カテゴリー
+              %span.form-require 必須
+
+              -# %i.item-arrow-down
+              -#   =fa_icon "chevron-down", class: "item-arrow-down"
+              %div.item-detail__category--selection
+                %select{name: "category", class: "select-category" }
+                  %option{value: "--"} ---
+                  %option{value: "A"} A型
+                  %option{value: "B"} B型
+                  %option{value: "O"} O型
+                  %option{value: "AB"} AB型
+        %div.item-detail__status 
+          %label
+            商品の状態
+            %span.form-require 必須
+          %select{name: "category", class: "select-category" }
+            %option{value: "--"} ---
+            %option{value: "A"} A型
+            %option{value: "B"} B型
+            %option{value: "O"} O型
+            %option{value: "AB"} AB型
+
+            -# 配送について
+      %div.item-fees
+        %div.item-fees__about
+          %div.item-fees__about--title
+            配送について
+            = link_to "#", class: "form-question" do
+              %span.form-question ?
+          %div.item-fees__about--rate
+            %label
+              配送料の負担
+              %span.form-require 必須
+              %select{name: "category", class: "select-category" }
+                %option{value: "--"} ---
+                %option{value: "A"} A型
+                %option{value: "B"} B型
+                %option{value: "O"} O型
+                %option{value: "AB"} AB型
+        %div.item-fees__status 
+          %label
+            発送元の地域
+            %span.form-require 必須
+          %select{name: "category", class: "select-category" }
+            %option{value: "--"} ---
+            %option{value: "A"} A型
+            %option{value: "B"} B型
+            %option{value: "O"} O型
+            %option{value: "AB"} AB型
+        %div.item-detail__status 
+          %label
+            発送までの日数
+            %span.form-require 必須
+          %select{name: "category", class: "select-category" }
+            %option{value: "--"} ---
+            %option{value: "A"} A型
+            %option{value: "B"} B型
+            %option{value: "O"} O型
+            %option{value: "AB"} AB型
+
+            -# 販売価格
+      %div.production-price
+        %div.productionprice__about
+          %h3.production-price__about--title
+            販売価格(300〜9,999,999)
+            = link_to "#", class: "form-question" do
+              %span.form-question ?
+        %div.production-price__rate
+          %div.production-price__rate__text
+            %p.production-price__rate__text--note 
+              価格
+              %span.form-require 必須
+            %div.production-price__rate__text--yen
+              ¥
+              %input{name: "item-price", placeholder: "例)300", type: "text", value: "", class: "production-price-plate"} 
+          -# 消費税
+          %div.production-price__rate__consumption
+            %div.production-price__rate__consumption--text 販売手数料(10%)
+            %div.production-price__rate__consumption--fee -
+            -# 料金入力時に課金
+          %div.production-price__rate__profit
+            %div.production-price__rate__profit--text 販売利益
+            %div.production-price__rate__profit--value -
+
+            -# 料金入力時に利益記載
+      %div.item-content
+        %p.item-content__text
+          = link_to "禁止されている出品","#"
+          、行為を必ずご確認ください。<br>
+          またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であ<br>り処罰される可能性があります。<br>
+          また、出品をもちまして加盟店規約に同意したことになります。
+
+        %input{name: "item-submit", type: "submit", value: "出品する", class: "item-btn"}
+        %input{name: "item-back", type: "submit", value: "出品する", class:"item-back-btn"}
+      %footer.footer-register
+        .footer-contetns
+          %nav
+            %ul.exp
+              %li.exp__list
+                %a{href: "#"} プライバシーポリシー
+              %li.exp__list
+                %a{:href => "#"} メルカリ利用規約
+              %li.exp__list
+                %a{:href => "#"} 特定商取引に関する表記
+          .logo
+            %a{:href => "#"}
+              =image_tag "logo_gray.svg",  size: "140x70", alt: "logo"
+            %p © Mercari, Inc.
+
+      
+
+
+
+
+
+        
+
+
+

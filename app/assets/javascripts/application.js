@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery-fileupload/basic
 //= require_tree .
-
 // スライドショー導入のためrequire turbolinksを削除
 
 $(function() {
@@ -25,3 +24,7 @@ $(function() {
       autoplaySpeed: 4000,
   });
 });
+
+
+
+

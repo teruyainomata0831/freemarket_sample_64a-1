@@ -1,0 +1,32 @@
+
+%label.drops
+  %section#main
+  %p ドラッグアンドドロップで1つから複数のファイルのプロパティを取得します。
+  #drop{:ondragover => "onDragOver(event)", :loadImage => "loadImage(event)", :style => "width:700px; height:150px; padding:10px; border:3px solid", type: "file"} ここにドロップしたファイルのプロパティを読み込みます。
+  %input.sell-upload-drop-file{:multiple => "", :name => "image1", :style => "display: none;", :type => "file", accept: "image/*"}/
+
+  %p#preview
+  
+
+
+  
+  ■画像ファイルを選択してください。
+  %br/
+  %input{:accept => "image/*", :multiple => "multiple", :onchange => "loadImage(this);", :type => "file"}/
+%p#preview
+:css
+  #preview img {
+  	width:100px;
+  	border:1px solid #cccccc;
+  }
+
+
+
+%input{:onchange => "previewFile()", :type => "file"}/
+%br/
+%img{:alt => "Image preview...", :height => "200", :src => ""}/
+
+
+
+%input#browse{:multiple => "multiple", :onchange => "previewFiles()", :type => "file"}/
+#preview
