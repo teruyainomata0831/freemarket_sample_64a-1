@@ -111,8 +111,19 @@
   background-repeat: no-repeat;
   border-style: solid;
   border-width: 0;
+  display: none;
+}
+.tab-content.show{
+  display: block;
 }
 .tab-content .tab-pane.active {
+  display: block;
+}
+.tabs-content{
+  display: none;
+}
+.tabs-content.show{
+  background-color: #fff;
   display: block;
 }
 .mypage-go-list{
@@ -166,18 +177,14 @@
   font-size: 0;
 }
 .mypage-tabs a{
-  // border-top: 2px solid #ea352d;
+  border-top: 2px solid #ea352d;
   position: relative;
   display: block;
   color: #333;
   font-size: 16px;
   line-height: 72px;
   text-decoration: none;
-  background-color: rgb(245, 245, 245);
-}
-.mypage-tabs a:hover{
-  border-top: 2px solid #ea352d;
-  background-color: #fff;
+  // background-color: rgb(245, 245, 245);
 }
 .mypage-tabs a.a{
   // border-top: 2px solid #ea352d;
@@ -188,10 +195,7 @@
   text-decoration: none;
   background-color: rgb(245, 245, 245);
 }
-.mypage-tabs a.a:hover{
-  border-top: 2px solid #ea352d;
-  background-color: #fff;
-}
+
 .mypage-item-not-fund.bold{
   position: relative;
   border-bottom: 1px solid #eee;

@@ -23,11 +23,11 @@
                 %h3
                   %a{"data-toggle" => "tab", :href => "#"}
                     お知らせ
-              %li.active
+              %li
                 %h3
                   %a.a{"data-toggle" => "tab", :href => "#"}
                     やることリスト
-            .tab-content
+            .tab-content.show
               %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
               %li.mypage-list-list
                 %a{:href => "#"}
@@ -42,24 +42,26 @@
                   =fa_icon "chevron-right", class: "icon-arrow-right"
               %li.mypage-go-list
                 %a{:href => "#"} 一覧を見る
-              -# %ul#mypage-tab-todo.mypage-item-list.tab-pane
-              -#   %li.mypage-item-not-fond.bold 現在、やることはありません
+            .tab-content
+              %ul#mypage-tab-todo.mypage-item-list.tab-pane
+                %li.mypage-item-not-fond.bold 現在、やることはありません
           .l-content-bottom
             %h2.mypage-tab-head-wrpper 購入した商品
             %ul.mypage-tabs
-              %li.active
+              %li.transaction.active
                 %h3
                   %a{"data-toggle" => "tab", :href => "#"}
                     取引中
-              %li
+              %li.transaction
                 %h3
                   %a.a{"data-toggle" => "tab", :href => "#"}
                     過去の取引
-            .tab-content
-              %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-                %li.mypage-item-not-fund.bold 取引中の商品がありません
-              -# %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
-              -#   %li.mypage-item-not-fund.bold 過去に取引した商品がありません
+              .tabs-content.show
+                %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+                  %li.mypage-item-not-fund.bold 取引中の商品がありません
+              .tabs-content
+                %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
+                  %li.mypage-item-not-fund.bold 過去に取引した商品がありません
 
 
 
