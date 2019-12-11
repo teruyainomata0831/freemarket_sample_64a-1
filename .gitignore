@@ -18,3 +18,5 @@
 
 public/uploads/*
 # image auto update
+
+config/secrets.yml
