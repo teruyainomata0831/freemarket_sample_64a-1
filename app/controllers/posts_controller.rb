@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
   def index
-    render 'editprofile'
-  end
-
-  def editprofile
   end
 
   def step1
