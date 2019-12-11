@@ -1,15 +1,18 @@
 class SignupController < Devise::UsersController
 
   def index
+  end
+
+  def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to done_signup_index_path
+      redirect_to signup_index_path
     else
-      render '/signup'
+      render '/signup/new'
     end
   end
 
