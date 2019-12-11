@@ -166,22 +166,31 @@
   font-size: 0;
 }
 .mypage-tabs a{
-  border-top: 2px solid #ea352d;
+  // border-top: 2px solid #ea352d;
   position: relative;
   display: block;
   color: #333;
   font-size: 16px;
   line-height: 72px;
   text-decoration: none;
+  background-color: rgb(245, 245, 245);
+}
+.mypage-tabs a:hover{
+  border-top: 2px solid #ea352d;
+  background-color: #fff;
 }
 .mypage-tabs a.a{
-  border-top: 2px solid #ea352d;
+  // border-top: 2px solid #ea352d;
   position: relative;
   display: block;
   font-size: 16px;
   line-height: 72px;
   text-decoration: none;
-  background: #f5f5f5;
+  background-color: rgb(245, 245, 245);
+}
+.mypage-tabs a.a:hover{
+  border-top: 2px solid #ea352d;
+  background-color: #fff;
 }
 .mypage-item-not-fund.bold{
   position: relative;
