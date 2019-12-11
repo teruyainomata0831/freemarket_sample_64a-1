@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    render 'register'
+    render 'userConfirm'
   end
 
   def step1
