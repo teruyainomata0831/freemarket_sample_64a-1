@@ -1,15 +1,17 @@
-.bread-crumbs {
-  height: 50px;
-  width: 100%;
-  background-color: red;
+.contents-space {
+  background-color: #eee;
+  top: 0px;
+  height: 1332px;
 }
 
 .main-contents {
-  z-index: 1;
-  background-color:red;
+  background-color: #eee;
+  justify-content: space-between;
+  padding-top: 40px;
+  display: flex;
   width: 1020px;
   height: 1000px;
-  margin: 40px auto 0;
+  margin: 0 auto;
 }
 
 .profile-contents {
