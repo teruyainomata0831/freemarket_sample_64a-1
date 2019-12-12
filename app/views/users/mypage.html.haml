@@ -44,6 +44,7 @@
               %li.mypage-go-list
                 %a{:href => "#"} 一覧を見る
             .tab-content
+              =image_tag "logo_white.svg", size: "80x80", alt: "logo"
               %ul#mypage-tab-todo.mypage-item-list.tab-pane
                 %li.mypage-item-not-fond.bolds 現在、やることはありません
           .l-content-bottom
@@ -58,9 +59,11 @@
                   %a.a{"data-toggle" => "tab",}
                     過去の取引
               .tabs-content.show
+                =image_tag "logo_white.svg", size: "80x80", alt: "logo"
                 %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
                   %li.mypage-item-not-fund.bold 取引中の商品がありません
               .tabs-content
+                =image_tag "logo_white.svg", size: "80x80", alt: "logo"
                 %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
                   %li.mypage-item-not-fund.bold 過去に取引した商品がありません
 
