@@ -321,3 +321,12 @@ span.form-question:hover{
 .item-back-btn:hover{
   opacity: 0.8;
 }
+
+.item_images{
+  color: #AAAAAA; /* ラベルテキストの色を指定する */
+  font-size: 13px; /* ラベルテキストのサイズを指定する */
+  background-color: #006DD9;/* ラベルの背景色を指定する */
+  padding: 6px; /* ラベルとテキスト間の余白を指定する */
+  border-radius: 10px; /* ラベルボックスの角丸を指定する */
+  cursor:pointer; 
+}

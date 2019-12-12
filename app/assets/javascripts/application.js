@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery-fileupload/basic
 //= require_tree .
+//= require dropzone
 // スライドショー導入のためrequire turbolinksを削除
 
 $(function() {

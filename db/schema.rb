@@ -14,12 +14,15 @@ ActiveRecord::Schema.define(version: 20191210093227) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
+    t.integer  "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id", using: :btree
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
+    t.string   "description"
     t.string   "size"
     t.string   "status"
     t.string   "method"
@@ -33,7 +36,6 @@ ActiveRecord::Schema.define(version: 20191210093227) do
     t.string   "shipping_method"
     t.string   "shipping_fee"
     t.integer  "profit"
-    t.string   "sales_commision"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -43,4 +45,5 @@ ActiveRecord::Schema.define(version: 20191210093227) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "images", "items"
 end
