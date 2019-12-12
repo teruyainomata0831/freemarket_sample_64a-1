@@ -1,16 +1,17 @@
 crumb :root do
-  link "Home", root_path
-end
-
-# ルート
-crumb :root do
   link "Fmarket", root_path
 end
 
-# マイページ
 crumb :mypage do
-  link "マイページ", mypage_users_path
+  link "マイページ", root_path
+  parent :root
 end
+
+# crumb :mypage do
+#   link "お知らせ", root_path
+#   parent :mypage
+# end
+
 
 
 # crumb :projects do
