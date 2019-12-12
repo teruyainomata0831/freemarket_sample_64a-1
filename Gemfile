@@ -77,3 +77,5 @@ gem 'carrierwave'
 gem 'fog-aws'
 
 gem 'mini_magick'
+
+gem "gretel"

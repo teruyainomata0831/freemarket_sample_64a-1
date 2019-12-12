@@ -1,5 +1,8 @@
 %body.mypage-test
   = render 'layouts/header'
+  - breadcrumb :mypage
+  = render "layouts/breadcrumbs"
+  -# = breadcrumbs pretext: "You are here:",separator: " &rsaquo; "
   %div.l-container
     .mypage-contents
       = render 'users/mypage_side'
