@@ -1,0 +1,14 @@
+%footer.footer-register
+  .footer-contetns
+    %nav
+      %ul.exp
+        %li.exp__list
+          = link_to('プライバシーポリシー', {})
+        %li.exp__list
+          = link_to('メルカリ利用規約', {})
+        %li.exp__list
+          = link_to('特定取引に関する表記', {})
+    .logo
+      %a{:href => "#"}
+        =image_tag "logo_gray.svg",  size: "140x70", alt: "logo"
+      %p © Mercari, Inc.
