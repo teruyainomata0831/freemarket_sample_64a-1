@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    render 'goodsDetail'
   end
 
   def step1
@@ -18,5 +19,8 @@ class PostsController < ApplicationController
   end
 
   def register
+  end
+
+  def goodsDetail
   end
 end
