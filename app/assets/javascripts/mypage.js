@@ -1,7 +1,7 @@
 jQuery(function($){
   $('.notice').click(function(){
-      $('.active').removeClass('active');
-      $(this).addClass('active');
+      $('.active-test').removeClass('active-test');
+      $(this).addClass('active-test');
       $('.test').removeClass('test');
       // クリックしたタブからインデックス番号を取得
       const index = $(this).index();

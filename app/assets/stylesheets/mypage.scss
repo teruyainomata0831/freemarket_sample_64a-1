@@ -1,7 +1,7 @@
 .mypage-test {
   width: 100%;
   height: 100%;
-background-color: #eee;
+  background-color: #eee;
 }
 .mypage-contents{
   margin: 40px auto 0 auto;
@@ -92,6 +92,15 @@ background-color: #eee;
   height: 72px;
   border-top: 2px solid #ea352d;
 }
+
+.mypage-tabs li.active-test{
+  background-color: #fff;
+  margin: 0;
+  width: 350px;
+  height: 72px;
+  border-top: 2px solid #ea352d;
+}
+
 .mypage-tabs li.active a.a{
   background-color: #fff;
   margin: 0;
@@ -124,9 +133,10 @@ background-color: #eee;
 .tab-content.test{
   display: block;
 }
-.tab-content .tab-pane.active {
+.tab-content .tab-pane.active-test {
   display: block;
 }
+
 .tabs-content{
   display: none;
 }
