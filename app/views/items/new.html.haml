@@ -1,4 +1,4 @@
-= form_for @item, enctype: "multipart/form-data" do |f|
+= form_for @item, enctype: "multipart/form-data" , html: { multipart: true } do |f|
   .itemwrap
     .header-item
       .header-item__logo
@@ -14,25 +14,21 @@
             必須       
           .item-sell__upload--box
             最大10枚までアップロードできます
-          = f.fields_for :images do |image_field|
-            = image_field.label :image do
-              %p.item-sell__upload--drop
-            = image_field.file_field :image,type: "file" , style: "display:none;"
-
-
-          -# = f.fields_for :images do |image_field|
-          -#   .dropzone-container.clearfix
-          -#     #preview
-          -#     .item-sell__upload--drop
-          -#       = image_field.label :image, class: "dropzone-box", for: "upload-image" do
-          -#         .input_area
-          -#           = image_field.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
-          -#         %p ここをクリックしてください
-          -#     #preview2
-          -#     .item-sell__upload--drop
-          -#       = image_field.label :image, class: "dropzone-box", for: "upload-image" do
-          -#         %p ここをクリックしてください
-
+          .item-sell__upload--drop#click-btn
+            .item-sell__upload--drop--post
+              = f.fields_for :images do |image_field|
+                .dropzone-container
+                  #preview
+                  .dropzone-area
+                    = image_field.label :image, class: "dropzone-box", for: "upload-image__btn" do
+                      .input_area
+                        = image_field.file_field :image, id: "upload-image__btn", class: "upload-image", 'data-image': 0, type: "file", multiple: "true"
+                        %p
+                          ドラッグアンドドロップ
+                          %br
+                          またはクリックしてファイルをダウンロード
+                        -# .item-sell__upload--drop
+          
           -# 商品名
         .item-content
           .item-content__title

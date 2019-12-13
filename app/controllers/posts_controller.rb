@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   def index
-    render 'goodsBuy'
   end
 
   def step1

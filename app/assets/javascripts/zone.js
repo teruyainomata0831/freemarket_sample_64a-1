@@ -1,47 +1,42 @@
 // // // 投稿確認
 
 
-// // Drop領域にドロップした際のファイルのプロパティ情報読み取り処理
-// function loadImage(event) {
-//   // （1）ドロップされたファイルのfilesプロパティを参照
-//   var files = event.dataTransfer.files;
-//   // var disp = document.getElementById("disp");
+// Drop領域にドロップした際のファイルのプロパティ情報読み取り処理
+function loadImage(event) {
+  // （1）ドロップされたファイルのfilesプロパティを参照
+  var files = event.dataTransfer.files;
+  // var disp = document.getElementById("disp");
   
-//   // disp.innerHTML = "";
-//   for (var i = 0; i < 10; i++) {
-//     var f = files[i];
-//     var fileReader = new FileReader();
-//     fileReader.onload = (function (e) {
+  // disp.innerHTML = "";
+  for (var i = 0; i < 10; i++) {
+    var f = files[i];
+    var fileReader = new FileReader();
+    fileReader.onload = (function (e) {
       
-//       document.getElementById('preview').innerHTML += '<img src="' + e.target.result + '">';
-//     });
-//     fileReader.readAsDataURL(f[i]);
+      document.getElementById('preview').innerHTML += '<img src="' + e.target.result + '">';
+    });
+    fileReader.readAsDataURL(f[i]);
     
-//     // // （2）ファイル名とサイズを表示
-//     disp.innerHTML += "ファイル名 :" + f.name + "ファイルの型:" + f.type + "ファイルサイズ:" + f.size / 1000 + " KB " + "<br />";
-//   }
-//   // （3）ブラウザ上でファイルを展開する挙動を抑止
-//   event.preventDefault();
+    // // （2）ファイル名とサイズを表示
+    // disp.innerHTML += "ファイル名 :" + f.name + "ファイルの型:" + f.type + "ファイルサイズ:" + f.size / 1000 + " KB " + "<br />";
+  }
+  // （3）ブラウザ上でファイルを展開する挙動を抑止
+  event.preventDefault();
 
-// }
+}
 
-// function printFile(file) {
-//   var reader = new FileReader();
-//   reader.onload = function(evt) {
-//     console.log(evt.target.result);
-//   };
-//   reader.readAsText(file);
-// }
+function printFile(file) {
+  var reader = new FileReader();
+  reader.onload = function(evt) {
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
+}
 
-
-
-
-
-
-// function onDragOver(event) {
-//   // （4）ブラウザ上でファイルを展開する挙動を抑止
-//   event.preventDefault();
-// }
+function onDragOver(event) {
+  // （4）ブラウザ上でファイルを展開する挙動を抑止
+  event.preventDefault();
+}
 
 
 
