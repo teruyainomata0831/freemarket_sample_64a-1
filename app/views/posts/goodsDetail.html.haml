@@ -4,20 +4,20 @@
     .item-main-content-detail
       .item-photo-detail
         .item-photo-content
-          %img.main-img{alt: "ジャスティンデイビス チェルシー リング", src: "https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551", style: "opacity: 1;"}/
+          = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551',class: 'main-img', alt: 'ジャスティンデイビス チェルシー リング', style: 'opacity: 1;'
         .item-dots
           .item-dot.is-active
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
           .item-dot
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m16654911626_2.jpg?1575785829"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
           .item-dot
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m16654911626_2.jpg?1575785829"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
           .item-dot
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m16654911626_2.jpg?1575785829"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
           .item-dot
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m16654911626_2.jpg?1575785829"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
           .item-dot
-            %img{src: "https://static.mercdn.net/item/detail/orig/photos/m16654911626_2.jpg?1575785829"}/
+            = image_tag 'https://static.mercdn.net/item/detail/orig/photos/m94710231276_1.jpg?1576032551'
       %table.item-detail-table
         %tbody.table-body
           %tr
@@ -117,7 +117,7 @@
             = link_to "https://www.mercari.com/jp/u/610527816/", class: "message-user-detail" do
               %figure
                 .face-detail
-                  %img{alt: "", src: "//static.mercdn.net/images/member_photo_noimage_thumb.png"}/
+                  = image_tag '//static.mercdn.net/images/member_photo_noimage_thumb.png"', alt: ''
                 %figcaption
                   マシュマシュ
             .message-body-detail
@@ -172,7 +172,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -183,7 +183,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -194,7 +194,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -205,7 +205,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -221,7 +221,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -232,7 +232,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
@@ -243,7 +243,7 @@
       %section.items-box-detail
         = link_to "#" do
           %figure.items-box-photo-detail
-            %img.lazyloaded.is-higher-width{alt: "冬ウールスカート", "data-src": "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481", src: "https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481"}/
+            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
           .items-box-body-detail
             %h3.items-box-name-detail 冬ウールスカート
             .items-box-num-detail
