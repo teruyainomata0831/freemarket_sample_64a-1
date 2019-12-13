@@ -14,8 +14,7 @@
 //= require jquery_ujs
 
 //= require_tree .
-
-// スライドショー導入のためrequire turbolinksを削除
+//= require turbolinks
 
 $(function() {
   $('.slider').slick({

@@ -10,7 +10,8 @@ class SignupController < Devise::UsersController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to signup_index_path
+      redirect_to 'step2.html.haml'
+                  
     else
       render '/signup/new'
     end
@@ -23,7 +24,7 @@ class SignupController < Devise::UsersController
       :email,
       :password,
       :last_name, 
-      :first_name, 
+      :first_name,
       :last_name_kana, 
       :first_name_kana,
       :birth_year,
@@ -31,5 +32,4 @@ class SignupController < Devise::UsersController
       :birth_day,
     )
   end
-
 end
