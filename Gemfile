@@ -64,9 +64,21 @@ group :production do
 end
 
 gem "haml-rails"
-gem "font-awesome-rails"
-gem 'font-awesome-sass'
-gem 'carrierwave'
-gem 'dropzonejs-rails'
+
 gem 'jquery-fileupload-rails'
-gem 'gon'
+
+gem 'devise'
+
+gem 'haml-rails'
+
+gem 'font-awesome-rails'
+
+gem 'font-awesome-sass'
+
+gem 'pry-rails'
+
+gem 'carrierwave'
+
+gem 'fog-aws'
+
+gem 'mini_magick'

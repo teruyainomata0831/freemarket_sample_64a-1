@@ -3,69 +3,62 @@
 	padding: 0;
 }
 
-.slider__page1{
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.slider__page3 {
+	position: relative;
 }
 
-.slider__page2{
-  background-size: cover;
-  background-position: center;
-}
-
-.slider__page3{
-  position: relative;
-  background-image: url("slide_image");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-}
-
-.text1 {
+.slider__page3--text1 {
+	position: absolute;
   font-size: 60px;
   font-weight: 550;
-  padding-top: 13px;
-  padding-left: 270px;
+  top: 25px;
+  left: 320px;
 }
 
-.text2 {
+.slider__page3--text2 {
+	position: absolute;
+	top: 110px;
   font-size: 60px;
   font-weight: 550;
-  padding-left: 270px;
+  padding-left: 320px;
 }
 
-.text3 {
-  padding-top: 10px;
+.slider__page3--text3 {
+	position: absolute;
+  top: 210px;
   font-size: 18px;
-  padding-left: 270px;
+  padding-left: 320px;
   font-weight: 270;
 }
 
-.slider__page3--image {
+.slider__page3--button {
+	position: absolute;
+	display: flex;
+	top: 260px;
+	padding-left: 330px;  
+	padding-top: 25px;
+	padding-bottom: 28px;
+	z-index: 2;
+}
+
+.applestore_button {
+	height: 80px;
+	width: 170px;
+}
+
+.googleplay_button {
+	height: 80px;
+	width: 170px;
+	padding-left: 12px;
+}
+
+.slider__page3--image--hund {
   position: absolute;
   top: 0px;
   right: 280px;
   height: 400px;
 }
 
-.slider__page3--button {
-  display: flex;
-  padding-left: 270px;  
-  padding-top: 25px;
-  padding-bottom: 28px;
-}
-
-.applestore_button {
-  height: 80px;
-  width: 170px;
-}
-
-.googleplay_button {
-  height: 80px;
-  width: 170px;
-  padding-left: 15px;
-}
 
 .container {
 	background-color: whitesmoke;

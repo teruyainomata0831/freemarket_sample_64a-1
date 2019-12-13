@@ -45,3 +45,22 @@
         %a{:href => "#"}
           =image_tag "logo_gray.svg",  size: "140x70", alt: "logo"
         %p © Mercari, Inc.
+= form_for @user, url: step2_signup_index_path, method: :post, html: {class: 'second-wrapper__box'} do |f|
+  %p 電話番号認証
+  .field
+    = f.label :phone_number, '携帯電話の番号'
+    %br/
+    = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
+    %p
+      本人確認のため、携帯電話のSMS(ショートメッセ
+      %br/
+      ージサービス)を利用して認証を行います。
+    = f.submit 'SMSを送信する'
+    %p
+      ※電話番号は本人確認や不正利用防止のために利用
+      %br/
+      します。他のユーザーに公開されることはありま
+      %br/
+      せん。
+    %a{ href: '#', target: '_blank' }
+      電話番号の確認が必要な理由>

@@ -1,0 +1,22 @@
+.mypage-tabs
+  %input#tab-1{:checked => "checked", :name => "tab-radio", :type => "radio"}/
+  %label.tab-label{:for => "tab-1"} ページ1
+  %input#tab-2{:name => "tab-radio", :type => "radio"}/
+  %label.tab-label{:for => "tab-2"} ページ2
+  .tab-content.tab-1-content
+     %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
+              %li.mypage-list-list
+                %a{:href => "#"}
+                  %fugure
+                    =image_tag "woman.webp", size: "48x48", alt: "img"
+                  .mypage-item-body
+                    .mypage-iten-text
+                    %time
+                      %i.icon-time
+                      %span
+                  %i.mypage-icon-arrow-right
+                  =fa_icon "chevron-right", class: "icon-arrow-right"
+              %li.mypage-go-list
+                %a{:href => "#"} 一覧を見る
+  .tab-content.tab-2-content
+    現在、やることはありません
