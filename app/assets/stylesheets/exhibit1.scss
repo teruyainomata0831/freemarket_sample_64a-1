@@ -1,0 +1,41 @@
+.exhibit-content{
+  float: right;
+  width: 700px;
+  height: 1573px;
+  &-tab-container{
+    height: 1479px;
+  }
+}
+
+.exhibit-tab-top{
+  width: 700px;
+  height: 72px;
+  padding: 0 16px;
+  &-listing{
+    width: 700px;
+    height: 74px;
+    border: 0;
+    background: #eee;
+    display: flex;
+    .active{
+      width: 233.09px;
+      height: 74px;
+      background-color: #fff;
+      font-size: 22px;
+    }
+    li{
+      width: 233.09px;
+      height: 74px;
+      font-size: 22px;
+    }
+  }
+}
+
+.tab-content{
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.exhibit-tab-transaction-now.exhibit-item-list {
+  border-bottom: 1px solid #eee;
+}

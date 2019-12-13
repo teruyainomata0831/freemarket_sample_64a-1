@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   def mypage_list
   end
 
+  def exhibit1
+  end
+
   def show
   end
 
