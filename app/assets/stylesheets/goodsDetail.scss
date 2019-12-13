@@ -225,12 +225,13 @@
 
 .item-detail-message{
   width: 700px;
-  margin: 8px auto;;
+  margin: 8px auto;
 }
 
 .message-content-detail{
   padding: 24px;
   background: #fff;
+  font-size: 14px;
 }
 
 .message-items-detail{
@@ -278,7 +279,6 @@
   top: -10px;
   left: 40px;
   max-width: 100%;
-  height: 1.2em;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: 600;
@@ -328,12 +328,6 @@
   background-color: whitesmoke;
 }
 
-.message-content-detail{
-  padding: 24px;
-  background: #fff;
-  font-size: 14px;
-}
-
 .message-form-detail p{
   padding: 8px;
   font-size: 14px;
@@ -369,9 +363,9 @@
 }
 
 .message-submit-detail span{
+  color: white;
   font-size: 14px;
   vertical-align: middle;
-  font: white;
 }
 
 .nav-item-link-prev-next{
