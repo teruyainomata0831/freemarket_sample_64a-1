@@ -12,6 +12,24 @@
 
 ActiveRecord::Schema.define(version: 20191210093227) do
 
+  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "postcode",   null: false
+    t.integer  "prefeture"
+    t.string   "city"
+    t.string   "block"
+    t.string   "building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "card_number", null: false
+    t.integer  "exp_month",   null: false
+    t.integer  "ep_year",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
     t.integer  "item_id"
@@ -38,24 +56,6 @@ ActiveRecord::Schema.define(version: 20191210093227) do
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-ActiveRecord::Schema.define(version: 20191209073215) do
-
-  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "postcode",   null: false
-    t.integer  "prefeture"
-    t.string   "city"
-    t.string   "block"
-    t.string   "building"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number", null: false
-    t.integer  "exp_month",   null: false
-    t.integer  "ep_year",     null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "job_administrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

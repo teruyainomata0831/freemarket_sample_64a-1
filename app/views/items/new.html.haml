@@ -15,8 +15,23 @@
           .item-sell__upload--box
             最大10枚までアップロードできます
           = f.fields_for :images do |image_field|
-            = image_field.label :image 
-            = image_field.file_field :image,type: "file" , class: "item-sell__upload--drop"
+            = image_field.label :image do
+              %p.item-sell__upload--drop
+            = image_field.file_field :image,type: "file" , style: "display:none;"
+
+
+          -# = f.fields_for :images do |image_field|
+          -#   .dropzone-container.clearfix
+          -#     #preview
+          -#     .item-sell__upload--drop
+          -#       = image_field.label :image, class: "dropzone-box", for: "upload-image" do
+          -#         .input_area
+          -#           = image_field.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+          -#         %p ここをクリックしてください
+          -#     #preview2
+          -#     .item-sell__upload--drop
+          -#       = image_field.label :image, class: "dropzone-box", for: "upload-image" do
+          -#         %p ここをクリックしてください
 
           -# 商品名
         .item-content
