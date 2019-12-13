@@ -3,7 +3,7 @@
     %section.exhibit-tab-container
       %h2.exhibit-tab-top 出品した商品
       %ul.exhibit-tab-top-listing
-        %li.active
+        %li.active.active
           %h3
             %a{:href => "#"}
               出品中
@@ -15,6 +15,9 @@
           %h3
             %a{:href => "#"}
               売却済み
+      .exhibit-content-box
+        %ul#exhibit-tab-transaction-old.exhibit-item-list.tab-pane.active
+          %li.exhibit-item-not-found.bold 取引中の商品がありません
       .tab
         %ul.exhibit-tab-transaction-now.exhibit-item-list
           %li
