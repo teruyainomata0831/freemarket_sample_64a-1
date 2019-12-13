@@ -1,10 +1,7 @@
 .exhibit-content{
   float: right;
   width: 700px;
-  height: 1573px;
-  &-tab-container{
-    height: 1479px;
-  }
+  margin: 40px auto 0;
 }
 
 .exhibit-tab-top{
@@ -30,12 +27,37 @@
     }
   }
 }
-
-.tab-content{
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
+.tab{
+  .exhibit-tab-transaction-now.exhibit-item-list{
+    display: block;
+    .exhibit-item-link{
+      display: block;
+      width: 668px;
+      height: 51px;
+      padding: 16px;
+      color: #333;
+    }
+  }
 }
-.exhibit-tab-transaction-now.exhibit-item-list {
-  border-bottom: 1px solid #eee;
+
+.exhibit-history.pager{
+  margin: 40px 0 0;
+  width: 700px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  .pager-prev{
+    left: 0;
+  }
+  .pager-next {
+    right: 0;
+  }
+  .pager-cell a {
+    display: block;
+    color: #333;
+  }
+  .pager-prev i, .pager-next i {
+    position: relative;
+    top: 0.15em;
+  }
 }
