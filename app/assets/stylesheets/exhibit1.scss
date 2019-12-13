@@ -1,13 +1,18 @@
+.exhibit-main{
+  background-color: whitesmoke;
+}
 .exhibit-content{
   float: right;
   width: 700px;
   margin: 40px auto 0;
 }
-
 .exhibit-tab-top{
   width: 700px;
   height: 72px;
   padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
   &-listing{
     width: 700px;
     height: 74px;
@@ -18,12 +23,22 @@
       width: 233.09px;
       height: 74px;
       background-color: #fff;
-      font-size: 22px;
+      font-size: 16px;
+      line-height: 72px;
+      text-align: center;
+      a{
+        color: black;
+      }
     }
     li{
       width: 233.09px;
       height: 74px;
-      font-size: 22px;
+      font-size: 16px;
+      line-height: 72px;
+      text-align: center;
+      a{
+        color: black;
+      }
     }
   }
 }
@@ -36,10 +51,10 @@
       height: 51px;
       padding: 16px;
       color: #333;
+      background-color: #fff;
     }
   }
 }
-
 .exhibit-history.pager{
   margin: 40px 0 0;
   width: 700px;
@@ -60,4 +75,9 @@
     position: relative;
     top: 0.15em;
   }
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
 }

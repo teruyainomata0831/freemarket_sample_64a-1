@@ -1,31 +1,32 @@
-.exhibit-content
-  %section.exhibit-tab-container
-    %h2.exhibit-tab-top 出品した商品
-    %ul.exhibit-tab-top-listing
-      %li.active
-        %h3
-          %a{:href => "#"}
-            出品中
-      %li
-        %h3
-          %a{:href => "#"}
-            取引中
-      %li
-        %h3
-          %a{:href => "#"}
-            売却済み
-    .tab
-      %ul.exhibit-tab-transaction-now.exhibit-item-list
+.exhibit-main.clearfix
+  .exhibit-content
+    %section.exhibit-tab-container
+      %h2.exhibit-tab-top 出品した商品
+      %ul.exhibit-tab-top-listing
+        %li.active
+          %h3
+            %a{:href => "#"}
+              出品中
         %li
-          %a.exhibit-item-link{:href => "#"}
-            %fugure
-              =image_tag "portrait-4638191_1280.jpg", size: "48x48", alt: "img"
-      %ul.exhibit-history.pager
-        %li.pager-prev.pager-call
-          %a{:href => "#"}
-            %i.icon-arrow-left
-              =fa_icon "chevron-left", class: "icon-arrow-left"
-        %li.pager-next.pager-call
-          %a{:href => "#"}
-            %i.icon-arrow-rights
-              =fa_icon "chevron-right", class: "icon-arrow-rights"
+          %h3
+            %a{:href => "#"}
+              取引中
+        %li
+          %h3
+            %a{:href => "#"}
+              売却済み
+      .tab
+        %ul.exhibit-tab-transaction-now.exhibit-item-list
+          %li
+            %a.exhibit-item-link{:href => "#"}
+              %fugure
+                =image_tag "portrait-4638191_1280.jpg", size: "48x48", alt: "img"
+        %ul.exhibit-history.pager
+          %li.pager-prev.pager-call
+            %a{:href => "#"}
+              %i.icon-arrow-left
+                =fa_icon "chevron-left", class: "icon-arrow-left"
+          %li.pager-next.pager-call
+            %a{:href => "#"}
+              %i.icon-arrow-rights
+                =fa_icon "chevron-right", class: "icon-arrow-rights"
