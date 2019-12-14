@@ -89,8 +89,41 @@
     }
   }
 }
+.intext-box{
+  background-color: rgb(245, 245, 245);
+  font-size: 16px;
+  line-height: 1.4em;
+  -webkit-appearance: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+  border-radius: 4px;
+  outline: none;
+  padding: 0px 50px 0px 10px;
+  transition: all 0.3s ease-out 0s;
+  width: 779px;
+  height: 38px;
+  position: relative;
+}
+.botton-center{
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+  padding: 0;
+  // left:1160px;
+  border: none;
+  top: 20px;
+  left: 1202px;
+}
+//いいね！一覧、お知らせ、やることリスト、マイページ
 .login-bottom-main{
   position: relative;
+  * {
+    color: #333;
+    &:hover{
+      color: skyblue;
+    }
+  }
   &-content{
     display: flex;
     &-left{
@@ -171,29 +204,4 @@
 //       color: rgb(255, 255, 255);
 //     }
 //   }
-// }
-// .intext-box{
-//   background-color: rgb(245, 245, 245);
-//   font-size: 16px;
-//   line-height: 1.4em;
-//   -webkit-appearance: none;
-//   border-width: 1px;
-//   border-style: solid;
-//   border-color: rgb(204, 204, 204);
-//   border-image: initial;
-//   border-radius: 4px;
-//   outline: none;
-//   padding: 0px 50px 0px 10px;
-//   transition: all 0.3s ease-out 0s;
-//   width: 779px;
-//   height: 38px;
-//   position: relative;
-// }
-// .botton-center{
-//   background-color: rgb(245, 245, 245);
-//   position: absolute;
-//   padding: 0;
-//   left:1160px;
-//   border: none;
-//   top: 20px;
 // }
