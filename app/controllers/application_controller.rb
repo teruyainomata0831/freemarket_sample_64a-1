@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth, if: :production?
-  # before_action :authenticate_user! ログインしてなかった場合、サインアップページに遷移する記述
   # before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :authenticate_user! ログインしてなかった場合、サインアップページに遷移する記述
   protect_from_forgery with: :exception
 
   protected

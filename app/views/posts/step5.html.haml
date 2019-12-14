@@ -1,4 +1,3 @@
--# 完了
 %div.heading
   %div.heading__logo
     =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
@@ -29,7 +28,7 @@
       %br
       会員登録が完了しました。
   .regist-contents__bottom
-    %a{class: "regist-contents__bottom__btn", href: "#"}
+    =link_to "#", class: "regist-contents__bottom__btn" do
       メルカリを始める
 .regist-figure
   =image_tag "bgciF.jpg",size: "456x456", class: "regist-figure-img"
@@ -44,4 +43,3 @@
   .regist-figure__inner#figure-hidden
     =image_tag "smartphone.png", size: "456x456"
 = render 'layouts/register-footer'
-
