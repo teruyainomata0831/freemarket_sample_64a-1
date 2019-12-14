@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
   # 1ページ目メールアドレスでの登録時のバリデーションを記述
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable,
+         :recoverable, :rememberable
   devise :validatable, password_length: 7..128
   devise :validatable, email_regexp: /\A[^@\s]+@[^@\s]+\z/
 
