@@ -26,6 +26,7 @@
       font-size: 16px;
       line-height: 72px;
       text-align: center;
+      border-top: 2px solid #ea352d;
       a{
         color: black;
       }
@@ -43,8 +44,21 @@
   }
 }
 .tab{
+  display: none;
+  background-color: #fff;
+  height: 236px;
+  text-align: center;
+  line-height: 236px;
   .exhibit-tab-transaction-now.exhibit-item-list{
     display: block;
+    fieldset, img {
+      border: 0;
+      display: block;
+      text-align: center;
+      position: relative;
+      left: 300px;
+      top: 60px;
+    }
     .exhibit-item-link{
       display: block;
       width: 668px;
@@ -55,10 +69,13 @@
     }
   }
 }
+.show-test-jquery{
+  display: block;
+}
 .exhibit-history.pager{
   margin: 40px 0 0;
   width: 700px;
-  height: 44px;
+  height: 42px;
   display: flex;
   justify-content: space-between;
   .pager-prev{
@@ -73,7 +90,16 @@
   }
   .pager-prev i, .pager-next i {
     position: relative;
-    top: 0.15em;
+    // top: 0.15em;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 42px;
+    text-align: center;
   }
 }
 .clearfix::after{
@@ -81,3 +107,4 @@
   display: block;
   clear: both;
 }
+

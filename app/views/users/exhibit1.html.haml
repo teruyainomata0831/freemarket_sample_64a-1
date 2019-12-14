@@ -3,33 +3,36 @@
     %section.exhibit-tab-container
       %h2.exhibit-tab-top 出品した商品
       %ul.exhibit-tab-top-listing
-        %li.active.active
+        %li.active.active-test
           %h3
             %a{:href => "#"}
               出品中
-        %li
+        %li.active-test
           %h3
             %a{:href => "#"}
               取引中
-        %li
+        %li.active-test
           %h3
             %a{:href => "#"}
               売却済み
-      .exhibit-content-box
-        %ul#exhibit-tab-transaction-old.exhibit-item-list.tab-pane.active
-          %li.exhibit-item-not-found.bold 取引中の商品がありません
+      .tab.show-test-jquery
+        %ul.exhibit-tab-transaction-now.exhibit-item-list
+          =image_tag "logo_white.svg", size: "80x80", alt: "logo"
+          %liexhibit-item-not-found.bold 出品中の商品がありません
       .tab
         %ul.exhibit-tab-transaction-now.exhibit-item-list
-          %li
-            %a.exhibit-item-link{:href => "#"}
-              %fugure
-                =image_tag "portrait-4638191_1280.jpg", size: "48x48", alt: "img"
-        %ul.exhibit-history.pager
-          %li.pager-prev.pager-call
-            %a{:href => "#"}
-              %i.icon-arrow-left
-                =fa_icon "chevron-left", class: "icon-arrow-left"
-          %li.pager-next.pager-call
-            %a{:href => "#"}
-              %i.icon-arrow-rights
-                =fa_icon "chevron-right", class: "icon-arrow-rights"
+          =image_tag "logo_white.svg", size: "80x80", alt: "logo"
+          %liexhibit-item-not-found.bold 取引中の商品がありません
+      .tab
+        %ul.exhibit-tab-transaction-now.exhibit-item-list
+          =image_tag "logo_white.svg", size: "80x80", alt: "logo"
+          %liexhibit-item-not-found.bold 売却済みの商品がありません
+      %ul.exhibit-history.pager
+        %li.pager-prev.pager-call
+          %a{:href => "#"}
+            %i.icon-arrow-left
+              =fa_icon "chevron-left", class: "icon-arrow-left"
+        %li.pager-next.pager-call
+          %a{:href => "#"}
+            %i.icon-arrow-rights
+              =fa_icon "chevron-right", class: "icon-arrow-rights"
