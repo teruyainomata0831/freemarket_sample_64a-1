@@ -144,6 +144,13 @@
 .tabs-content.show{
   background-color: #fff;
   display: block;
+  height: 280px;
+  fieldset, img {
+    border: 0;
+    position: relative;
+    left: 270px;
+    top: 50px;
+}
 }
 .mypage-go-list{
   width: 668px;
@@ -216,5 +223,5 @@
   width: 700px;
   height: 236px;
   text-align: center;
-  top: 155px;
+  top: 50px;
 }
