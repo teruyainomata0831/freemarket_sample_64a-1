@@ -110,10 +110,13 @@
   background-color: rgb(245, 245, 245);
   position: absolute;
   padding: 0;
-  // left:1160px;
+  left: 1200px;
   border: none;
   top: 20px;
-  left: 1202px;
+}
+.Insect.negative{
+  position: relative;
+  left: 40px;
 }
 //いいね！一覧、お知らせ、やることリスト、マイページ
 .login-bottom-main{
