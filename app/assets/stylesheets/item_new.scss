@@ -1,0 +1,356 @@
+.itemwrap{
+  background-color: rgb(245, 245, 245);
+  width: 100vw;
+  height: 2364px;
+  color:#333;
+}
+
+.header-item{
+  height: 128px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  &__logo{
+  text-align: center;
+  padding:50px 0 50px;
+  }
+}
+
+@mixin require{
+  display: inline-block;
+  color:#fff;
+  background-color: red;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 0 0 8px 10px;
+  line-height:15px;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+
+
+.item-sell{
+  width:700px ;
+  height: 1988px;
+  background-color: #fff;
+  margin: 0 auto;
+  &__title{
+    border-bottom: rgb(229, 228, 228) 1px solid;
+    width: 100%;
+    height: 97px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 97px;
+  }
+  &__upload{
+    width: 100%;
+    height: 303px;
+    border-bottom: rgb(229, 228, 228) 1px solid;
+      &--head{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 30px 0 0 40px;
+        display: inline-block;
+      }
+      &--require{
+        font-size: 12px;
+        @include require;
+      }
+      &--box{
+        font-size: 13px;
+        margin: 0 0 10px 40px;
+      }
+      &--drop{
+        width: 620px;
+        // position: relative;
+        height: 162px;
+        background: #f5f5f5;
+        border: 1px dashed #ccc;
+        margin: 0 auto;
+        font-size: 14px;
+        padding: 50px;
+        font-weight: bold;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+  }
+}
+  
+.item-content-new{
+  width: 100%;
+  height: 355px;
+  padding: 35px 0 0 35px;
+  border-bottom: 1px solid #ccc;
+
+  box-sizing: border-box;
+  &__title{
+    &--lavel{
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    &--require{
+      font-size: 13px;
+      @include require;     
+    }
+  }
+  &__discription{
+    margin-top: 30px;
+  }
+}
+
+.item-name-place{
+  width: 330px;
+  height: 50px;
+  border-radius:2%/ 10%;
+  border:1px rgb(207, 207, 207) solid;
+  margin: 0 auto 0;
+  width: 620px;
+  height: 56px;
+  padding: 10px 16px 8px;
+  box-sizing: border-box;
+}
+
+.item-name-content{
+  height: 142px;
+  width: 620px;
+  margin: 8px 0 0;
+  padding: 10px;
+  border:1px rgb(207, 207, 207) solid;
+  box-sizing: border-box;
+}
+
+.item-detail-new{
+  width: 700px;
+  height: 261px;
+  border-bottom: 1px solid #ccc;
+  padding: 40px;
+  box-sizing: border-box;
+
+  &__category{
+    display:flex;
+    font-size: 15px;
+    font-weight: bold;
+    &--title{
+      color: #888;
+      font-size: 14px;
+      margin-right: 150px;
+      
+  
+    }
+    &__menu{
+        height: 70px;
+        &--name{
+        width: 70px;
+        font-size: 13px;
+        &--selection{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__status{
+    font-weight: bold;
+    padding: 25px 0 0 220px;
+    
+  }
+}
+span.form-require{
+  @include require; 
+}
+span.form-question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #018dd3;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+span.form-question:hover{
+  opacity: 0.8;
+}
+
+.select-category{
+  font-weight: normal;
+  height: 48px;
+  width: 400px;
+  padding: 0 16px;
+  box-sizing:border-box;
+  cursor: pointer;
+}
+
+.item-fees{
+  width: 700px;
+  height: 371px;
+  border-bottom: 1px solid #ccc;
+  padding: 40px;
+  box-sizing: border-box;
+
+  &__about{
+    display:flex;
+    font-size: 15px;
+    font-weight: bold;
+    &--title{
+      color: #888;
+      font-size: 14px;
+      width: 150px;
+      margin-right:55px ;
+    }
+    &--rate{
+      height: 70px;
+      margin-left: 60px;
+        &--name{
+        width: 70px;
+        font-size: 13px;
+        &--selection{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__status{
+    font-weight: bold;
+    padding: 40px 0 0 180px;
+    margin-left: 40px;
+  }
+}
+
+// 販売価格
+.production-price{
+  width: 700px;
+  height: 299px;
+  border-bottom: 1px solid #ccc;
+  padding: 40px;
+  display: flex;
+  box-sizing: border-box;
+  &__about{
+    display:flex;
+    font-size: 14px;
+    font-weight: bold;
+    &--title{
+      color: #888;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  &__rate{
+    height: 218px;
+    width: 400px;
+    margin: 0 0 0 auto;
+    &__text{
+      display: flex;
+      padding-bottom:24px;
+
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
+      &--note{
+        font-size: 14px;
+        height: 20px;
+        margin-top: 17px;
+      }
+      &--require{
+        font-size: 13px;
+        color: white;
+        padding: 0px 1px;
+        height: 20px;
+        background-color: red;
+        border-radius: 2px;
+        margin: 17px 0 0 10px
+      }
+      &--yen {
+        font-size: 13px;
+        font-weight: 300;
+        margin:20px 5px 0 140px;
+      }
+    }
+    &__consumption{
+      height: 63px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      font-size: 14px;
+      &--text{
+        line-height: 63px;
+
+      }
+      &--fee{
+        line-height: 63px;
+        margin: 0 0 0 auto;
+      }
+    }
+    &__profit{
+      height: 83px;
+      width: 100%;
+      display:flex;
+      font-size:16px;
+      &--text{
+        line-height: 83px;
+        font-weight: bold;
+      }
+      &--value{
+        line-height: 83px;
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+}
+
+.production-price-plate{
+  width: 140px;
+  height: 30px;
+  border-radius:2%/ 10%;
+  border:1px rgb(207, 207, 207) solid;
+  margin: 0 0 0 auto ;
+  padding: 10px 16px 8px;
+  text-align: end;
+}
+
+// 完了ボタンスペース
+.item-content-new{
+  width: 700px;
+  height: 329px;
+  padding: 40px;
+  font-size: 14px;
+  border-bottom: none;
+}
+
+
+.item-btn{
+  width: 620px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.item-btn:hover{
+  opacity: 0.8;
+}
+
+.item-back-btn{
+  width: 279px;
+  height: 50px;
+  background-color: #aaa;
+  color: white;
+  margin: 24px auto 0;
+  display: block;
+  cursor: pointer;
+}
+.item-back-btn:hover{
+  opacity: 0.8;
+}
+
+.item_images{
+  color: #AAAAAA; /* ラベルテキストの色を指定する */
+  font-size: 13px; /* ラベルテキストのサイズを指定する */
+  background-color: #006DD9;/* ラベルの背景色を指定する */
+  padding: 6px; /* ラベルとテキスト間の余白を指定する */
+  border-radius: 10px; /* ラベルボックスの角丸を指定する */
+  cursor:pointer; 
+}
