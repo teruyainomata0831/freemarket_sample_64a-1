@@ -106,6 +106,7 @@
                     text-align: center;  
                     color: #0099e8;
                     border-left: 1px solid #eee;
+                    cursor: pointer;
                   }
                 }
               }
@@ -215,6 +216,7 @@
   }
         
 
+  
   
   .item-content{
   width: 100%;
@@ -466,3 +468,4 @@ span.form-question:hover{
   border-radius: 10px; /* ラベルボックスの角丸を指定する */
   cursor:pointer; 
 }
+
