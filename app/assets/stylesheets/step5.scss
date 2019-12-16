@@ -56,10 +56,10 @@
   .regist-figure-store{
     display: flex;
     position: absolute;
-    top: 0;
-    left: 450px;
+    top: 5px;
+    left: 490px;
     .regist-figure-app{
-      padding-top:33px;
+      padding-top:15px;
     }
    }
   #figure-hidden{
@@ -68,7 +68,7 @@
   }
   &__inner{
     position: absolute;
-    bottom: 3px;
-    right: 455px;
+    bottom: 0px;
+    right: 490px;
   }
 }
