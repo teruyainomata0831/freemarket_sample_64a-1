@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   def index
-    render "mypageSidebar"
+    render "step1"
   end
 
   def step1
+    render = "new"
   end
 
   def step2
