@@ -1,0 +1,87 @@
+.wrapper-buy
+  = render 'layouts/header'
+  %main.buy-main
+    %section.buy-item-container
+      %h2.buy-head 購入内容の確認
+      %section.buy-item-content
+        .buy-content-inner
+          .buy-item-box
+            %h3.buy-item-image
+              = image_tag 'https://static.mercdn.net/thumb/photos/m38891747402_1.jpg?1511669148', class: 'buy-item-image-detail'
+            .buy-item-detail
+              %p.buy-item-name ラビットファー付きワンピース
+              %p.buy-price-ja.bold
+                %span ¥1,980
+                %span.item-shipping-fee （税込）送料込み
+      %section.buy-item-content
+        .buy-content-inner
+          %form.buy-form{action: "", method: "POST", novalidate: "novalidate"}
+            %ul.buy-price-table
+              %li.buy-price-row.buy-you-pay
+                .buy-price-cell.buy-price-cell-label 支払い金額
+                .buy-price-cell
+                  %span{"data-buy-pay": "1980"} ¥1,980
+            %ul.buy-accordion.buy-not-have-point
+              %li.accordion-parent
+                .buy-use-point
+                  %input{disabled: "disabled", type: "checkbox"}/
+                  %i.fas.fa-square
+                  %label ポイントを使用 (所持ポイント: P0)
+            %section.buy-user-info{"data-buy": "pay-method"}
+              .buy-content-inner
+                %h3 支払い方法
+                = link_to "https://www.mercari.com/jp/transaction/card/m38891747402/" do
+                  %p.buy-user-info-text
+                    %i.fas.fa-plus-circle
+                    %span.buy-register-text 登録してください
+            %section.buy-user-info
+              .buy-content-inner
+                .buy-content-deliver
+                  %h3.l-left 配送先
+                  = link_to "https://www.mercari.com/jp/transaction/address/m38891747402/", class:"l-right.buy-user-info-fix" do
+                    %span 変更する
+                %address.buy-user-info-text
+                  %p
+                    〒111-1111
+                    %br/
+                    兵庫県 伊丹市
+                    伊丹１−１−１
+                    %br/
+                    山田 太郎
+            %input{name: "seller_id", type: "hidden", value: ""}/
+            %input{name: "payment_fee", type: "hidden", value: ""}/
+            %input{name: "payment_amount", type: "hidden", value: ""}/
+            %input{name: "price", type: "hidden", value: ""}/
+            %input{name: "category_id", type: "hidden", value: ""}/
+            %input{name: "item_condition", type: "hidden", value: ""}/
+            %input{name: "size", type: "hidden", value: ""}/
+            %input{name: "shipping_payer", type: "hidden", value: ""}/
+            %input{name: "shipping_method", type: "hidden", value: ""}/
+            %input{name: "shipping_duration", type: "hidden", value: ""}/
+            %input{name: "shipping_class", type: "hidden", value: ""}/
+            %input{name: "zip_code1", type: "hidden", value: ""}/
+            %input{name: "zip_code2", type: "hidden", value: ""}/
+            %input{name: "paid_method", type: "hidden", value: ""}/
+            %input{name: "checksum", type: "hidden", value: ""}/
+            %input{name: "payment_card_sequence_no", type: "hidden", value: ""}/
+            %input{name: "payment_use_last_card_base64", type: "hidden", value: ""}/
+            %input{name: "item_name_base64", type: "hidden", value: ""}/
+            %input{name: "description_base64", type: "hidden", value: ""}/
+            %input{name: "shipping_from_area_base64", type: "hidden", value: ""}/
+            %input{name: "family_name_base64", type: "hidden", value: ""}/
+            %input{name: "first_name_base64", type: "hidden", value: ""}/
+            %input{name: "family_name_kana_base64", type: "hidden", value: ""}/
+            %input{name: "first_name_kana_base64", type: "hidden", value: ""}/
+            %input{name: "prefecture_base64", type: "hidden", value: ""}/
+            %input{name: "city_base64", type: "hidden", value: ""}/
+            %input{name: "address1_base64", type: "hidden", value: ""}/
+            %input{name: "address2_base64", type: "hidden", value: ""}/
+            %input{name: "telephone_base64", type: "hidden", value: ""}/
+            %input{name: "__csrf_value", type: "hidden", value: ""}/
+            %section.buy-content.buy-user-info
+              %button.btn-buy{disabled: "disabled", type: "submit"} 購入する
+              %input#user_info_is_not_complete{type: "hidden"}/
+              
+              
+  = render 'layouts/register-footer'
+  
