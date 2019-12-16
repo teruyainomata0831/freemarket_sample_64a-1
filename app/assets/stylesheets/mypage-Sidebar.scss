@@ -1,17 +1,17 @@
 // mypage-left-side
 .mypage{
-  // width: 490px;
-  // height: 1292px;
-  background-color: rgb(245, 245, 245);
-  // padding: 40px 0 40px;
+  background-color: whitesmoke
+  
 }
 .mypage-side{
-  // margin-left: 210px;
+  margin: 0 auto;
+  width: 1020px;
+  padding: 30px 0 30px 0;
 }
 .l-side{
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  
 }
 .mypage-nav{
   background-repeat: no-repeat;
@@ -20,10 +20,10 @@
 .mypage-nav-list-wrapper{
   list-style: none;
   font-size: 12px;
-  border-top: 1px solid #eee;
+ 
 }
 .mypage-nav-list-item.active{
-  background-color: rgb(245, 245, 245);
+  background: #EEEEEE;
   font-weight: 600;
   width: 248px;
   height: 16px;
@@ -40,6 +40,7 @@
   }
 }
 .mypage-nav-list-item {
+  border-top: 1px solid #eee;
   position: relative;
   display: block;
   min-height: 21px;
@@ -48,6 +49,7 @@
   font-size: 14px;
   color: #333;
   text-decoration: none;
+  width: 248px;
   &:hover{
     background-color: rgb(245, 245, 245);
   }
@@ -57,6 +59,7 @@
   margin: 40px 0 0;
   width: 280px;
   height: 16px;
+  padding-bottom: 10px;
 }
 .mypage-nav-list{
   margin: 0;
