@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-      render 'goodsDetail'
+      render 'step5'
   end
 
   def editprofile
