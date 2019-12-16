@@ -42,7 +42,7 @@
                 商品の説明 
               .item-content__title--require  
                 必須       
-          = f.text_field :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          = f.text_area :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
         .item-detail
           .item-detail__category
             .item-detail__category--title
@@ -69,10 +69,12 @@
               %span.form-require 必須
               = f.select :status, {},{},{class: "select-category"} do
                 %option{value: "--"} ---
-                %option{value: "A"} A型
-                %option{value: "B"} B型
-                %option{value: "O"} O型
-                %option{value: "AB"} AB型
+                %option{value: "1"} 新品、未使用
+                %option{value: "2"} 未使用に近い
+                %option{value: "3"} 目立った傷や汚れなし
+                %option{value: "4"} やや傷や汚れあり
+                %option{value: "5"} 傷や汚れあり
+                %option{value: "6"} 全体的に状態が悪い
 
               -# 配送について
         .item-fees
@@ -87,10 +89,8 @@
                 %span.form-require 必須
                 = f.select :shipping_fee, {},{},{class: "select-category"} do
                   %option{value: "--"} ---
-                  %option{value: "A"} A型
-                  %option{value: "B"} B型
-                  %option{value: "O"} O型
-                  %option{value: "AB"} AB型
+                  %option{value: "2"} 送料込み(出品者負担)
+                  %option{value: "1"} 着払い(購入者負担)
           .item-fees__status 
             %label
               発送元の地域
@@ -107,10 +107,9 @@
               %span.form-require 必須
             = f.select :shipping_date, {},{},{class: "select-category"} do
               %option{value: "--"} ---
-              %option{value: "A"} A型
-              %option{value: "B"} B型
-              %option{value: "O"} O型
-              %option{value: "AB"} AB型
+              %option{value: "1"} 1~2日で発送
+              %option{value: "2"} 2~3日で発送
+              %option{value: "3"} 4~7日で発送d
 
               -# 販売価格
         .production-price

@@ -92,3 +92,8 @@ $('#sell-price').on('keyup', function(){
   }
 })
 })
+
+function onDragOver(event) {
+  // ブラウザ上でファイルを展開する挙動を抑止
+  event.preventDefault();
+}
