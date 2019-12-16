@@ -28,7 +28,6 @@
                           %br
                           またはクリックしてファイルをダウンロード
                         -# .item-sell__upload--drop
-          
           -# 商品名
         .item-content
           .item-content__title
@@ -56,9 +55,9 @@
 
                 -# %i.item-arrow-down
                 -#   =fa_icon "chevron-down", class: "item-arrow-down"
-                .item-detail__category--selection
+                .item-detail__category0selection
                   = f.select :category_id, {},{},{class: "select-category"} do
-                    %option{value: "--"} ---
+                    %option{value: "0"} ---
                     %option{value: "A"} A型
                     %option{value: "B"} B型
                     %option{value: "O"} O型
@@ -68,7 +67,7 @@
               商品の状態
               %span.form-require 必須
               = f.select :status, {},{},{class: "select-category"} do
-                %option{value: "--"} ---
+                %option{value: "0"} ---
                 %option{value: "1"} 新品、未使用
                 %option{value: "2"} 未使用に近い
                 %option{value: "3"} 目立った傷や汚れなし
@@ -88,15 +87,15 @@
                 配送料の負担
                 %span.form-require 必須
                 = f.select :shipping_fee, {},{},{class: "select-category"} do
-                  %option{value: "--"} ---
-                  %option{value: "2"} 送料込み(出品者負担)
-                  %option{value: "1"} 着払い(購入者負担)
+                  %option{value: "0"} ---
+                  %option{value: "1"} 送料込み(出品者負担)
+                  %option{value: "2"} 着払い(購入者負担)
           .item-fees__status 
             %label
               発送元の地域
               %span.form-require 必須
             = f.select :prefecture, {}, {}, {class: "select-category"} do
-              %option{value: "--"} ---
+              %option{value: "0"} ---
               %option{value: "北海道"} 北海道
               %option{value: "青森県"} 青森県
               %option{value: "岩手県"} 岩手県
@@ -149,7 +148,7 @@
               発送までの日数
               %span.form-require 必須
             = f.select :shipping_date, {},{},{class: "select-category"} do
-              %option{value: "--"} ---
+              %option{value: "0"} ---
               %option{value: "1"} 1~2日で発送
               %option{value: "2"} 2~3日で発送
               %option{value: "3"} 4~7日で発送d
