@@ -1,12 +1,15 @@
 class UsersController < ApplicationController
 
+
   def mypage
   end
 
   def mypage_list
   end
 
-  def show
+  def editprofile
+    @user = User.find(params[:id])
+    @posts = @user.posts
   end
 
   def edit
