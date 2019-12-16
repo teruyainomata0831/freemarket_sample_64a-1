@@ -1,0 +1,66 @@
+// mypage-left-side
+.mypage{
+  background-color: whitesmoke
+  
+}
+.mypage-side{
+  margin: 0 auto;
+  width: 1020px;
+  padding: 30px 0 30px 0;
+}
+.l-side{
+  margin: 0;
+  padding: 0;
+  
+}
+.mypage-nav{
+  background-repeat: no-repeat;
+  display: block;
+}
+.mypage-nav-list-wrapper{
+  list-style: none;
+  font-size: 12px;
+ 
+}
+.mypage-nav-list-item.active{
+  background: #EEEEEE;
+  font-weight: 600;
+  width: 248px;
+  height: 16px;
+}
+.icon-arrow-right{
+  position: absolute;
+  top: 21%;
+  right: 16px;
+  color: #ccc;
+  &:hover{
+    background-color: rgb(245, 245, 245);
+    right: 10px;
+    color: black;
+  }
+}
+.mypage-nav-list-item {
+  border-top: 1px solid #eee;
+  position: relative;
+  display: block;
+  min-height: 21px;
+  padding: 16px;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  width: 248px;
+  &:hover{
+    background-color: rgb(245, 245, 245);
+  }
+}
+//メルカリ
+.mypage-nav-head{
+  margin: 40px 0 0;
+  width: 280px;
+  height: 16px;
+  padding-bottom: 10px;
+}
+.mypage-nav-list{
+  margin: 0;
+}

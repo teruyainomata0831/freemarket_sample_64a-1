@@ -39,8 +39,8 @@ Things you may want to cover:
 |birth_year|integer||
 |birth_month|integer||
 |birth_day|integer||
-|phone_number|string|null: false, unique: true|
-|is_phone_number_authenticated|string|null: false, unique: true|
+|seller_id|integer||
+|buyer_id|integer||
 
 ### Association
 - has_many :items
@@ -83,10 +83,10 @@ Things you may want to cover:
 |brands_id|integer|null: false|
 |regions_id|integer|null: false|
 
-## Association
+### Association
 - belongs_to :user
 - belongs_to :brand
-- belongs_to :category
+- habelongs_to :category
 - has_many :image
 
 
@@ -99,7 +99,7 @@ Things you may want to cover:
 - has_many :items
 
 
-## category
+## categoryテーブル
 |column|type|options|
 |name|string|text, null false|
 
@@ -109,10 +109,12 @@ Things you may want to cover:
 
 
 ### category_itemsテーブル
+
 |column|type|options|
 |------|----|-------|
 |category_id|reference|null: false, foreign_key: true|
 |item_id|reference|null: false, foreign_key: true|
 
+### Association
 - belongs_to :item
 - belongs_to :category

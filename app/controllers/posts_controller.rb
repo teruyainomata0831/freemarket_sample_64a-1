@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    render 'step5'
+    render "mypageSidebar"
   end
 
   def step1
@@ -21,6 +21,13 @@ class PostsController < ApplicationController
   def register
   end
 
-  def userConfirm
+  def goodsDetail
   end
+
+  def goodsBuy
+  end
+
+  def mypageSidebar
+  end
+
 end

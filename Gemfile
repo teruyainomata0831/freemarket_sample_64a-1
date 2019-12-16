@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -63,5 +64,19 @@ group :production do
 end
 
 gem "haml-rails"
-gem "font-awesome-rails"
+
+gem 'jquery-fileupload-rails'
+
+gem 'devise'
+
+gem 'font-awesome-rails'
+
 gem 'font-awesome-sass'
+
+gem 'pry-rails'
+
+gem 'carrierwave'
+
+gem 'fog-aws'
+
+gem 'mini_magick'
