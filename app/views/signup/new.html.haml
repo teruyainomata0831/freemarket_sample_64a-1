@@ -19,7 +19,7 @@
         %li.progress__last
           完了
           %div{"data-step" => ""}
-  = form_for @user, url: page2_signup_path, method: :get, html: {class: 'form__box'} do |f|
+  = form_for @user,:url => {:action => :create} do |f|
     - if @user.errors.any?
       %ul
         - @user.errors.full_messages.each do |message|

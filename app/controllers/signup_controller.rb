@@ -1,7 +1,6 @@
 class SignupController < Devise::UsersController
 
   def index
-    render 'page3'
   end
 
   def new
@@ -11,9 +10,9 @@ class SignupController < Devise::UsersController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to signup_index_path
+      redirect_to new_address_path
     else
-      render '/signup/page1'
+      render 'new'
     end
   end
 
