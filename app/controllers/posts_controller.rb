@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-      render 'step5'
+      render 'mypage'
   end
 
   def editprofile
@@ -42,4 +42,9 @@ class PostsController < ApplicationController
   def editprofile
   end
 
+  def mypage
+  end
+
+  def exhibit
+  end 
 end
