@@ -34,12 +34,20 @@
             .item-content-new__title--require
               必須       
             = f.text_field :name,  class: "item-name-place", placeholder:  "商品名(必須40字まで)", row: "1"
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:name).each do |message|
+                  %li= message
             .item-content-new__discription
               .item-content-new__title--lavel
                 商品の説明 
               .item-content-new__title--require  
                 必須       
           = f.text_field :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          - if @item.errors.any?
+            %ul
+              - @item.errors.full_messages_for(:description).each do |message|
+                %li= message
         .item-detail-new
           .item-detail-new__category
             .item-detail-new__category--title
@@ -70,6 +78,10 @@
                 %option{value: "B"} B型
                 %option{value: "O"} O型
                 %option{value: "AB"} AB型
+              - if @item.errors.any?
+                %ul
+                  - @item.errors.full_messages_for(:status).each do |message|
+                    %li= message
               -# 配送について
         .item-fees
           .item-fees__about
@@ -87,6 +99,10 @@
                   %option{value: "B"} B型
                   %option{value: "O"} O型
                   %option{value: "AB"} AB型
+                - if @item.errors.any?
+                  %ul
+                    - @item.errors.full_messages_for(:shipping_fee).each do |message|
+                      %li= message
           .item-fees__status 
             %label
               発送元の地域
@@ -97,6 +113,10 @@
               %option{value: "B"} B型
               %option{value: "O"} O型
               %option{value: "AB"} AB型
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:prefecture).each do |message|
+                  %li= message
           .item-fees__status 
             %label
               発送までの日数
@@ -107,6 +127,10 @@
               %option{value: "B"} B型
               %option{value: "O"} O型
               %option{value: "AB"} AB型
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:shipping_date).each do |message|
+                  %li= message
               -# 販売価格
         .production-price
           .productionprice__about
@@ -122,7 +146,10 @@
               .production-price__rate__text--yen
                 ¥
               = f.text_field :price,  class:"production-price-plate", placeholder:  "例)300", row: "1"
-             
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:shipping_date).each do |message|
+                  %li= message
             -# 消費税
             .production-price__rate__consumption
               .production-price__rate__consumption--text 販売手数料(10%)
