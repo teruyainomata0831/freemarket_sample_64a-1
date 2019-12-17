@@ -86,7 +86,7 @@
 }
 
 
-.mypage-tab-container-exhibit pager {
+.mypage-tab-container-exhibit.pager {
   margin: 40px 0 0;
 }
 
@@ -127,12 +127,6 @@
   line-height: 42px;
 }
 
-.pager-cell-exhibit a{
-  display: block;
-  color: #333;
-  text-decoration: none;
-  touch-action: manipulation;
-}
 
 
 

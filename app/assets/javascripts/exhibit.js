@@ -4,7 +4,7 @@ jQuery(function($){
       $(this).addClass('active');
       $('.show').removeClass('show');
       // クリックしたタブからインデックス番号を取得
-      const index = $(this).index();
+      var index = $(this).index();
       // クリックしたタブと同じインデックス番号をもつコンテンツを表示
       $('.mypage-item-not-found').eq(index).addClass('show');
   });

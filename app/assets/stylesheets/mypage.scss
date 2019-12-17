@@ -35,8 +35,6 @@
   width: 660px;
   position: relative;
   padding: 20px 20px 20px 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center;
   background: url(/assets/girl-4660954_1280.jpg);
 }
@@ -88,7 +86,6 @@
   width: 700px;
   height: 74px;
   cursor:pointer;
-  color: #333;
 }
 .mypage-tabs li.active{
   background-color: #fff;
@@ -218,6 +215,6 @@
   box-sizing: border-box;
 }
 
-.tab-font{
+.tabs-font{
   color: #333;
 }
