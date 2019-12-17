@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require turbolinks
+
 //= require_tree .
+
 
 // スライドショー導入のためrequire turbolinksを削除
 

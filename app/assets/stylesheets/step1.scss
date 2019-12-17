@@ -11,12 +11,11 @@
   }
 .user-text{
   width:700px ;
-  height: 1150px;
+  height: 1250px;
   background-color: #fff;
   margin: 0 auto;
   &__flame{
     width: 100vw;
-    height: 100vh;
     &--small{
       font-size: 15px;
       font-weight: bold;
@@ -97,4 +96,40 @@
     border:1px rgb(207, 207, 207) solid;
     padding: 10px;
   }
+}
+
+.new_user {
+  background-color: whitesmoke;
+}
+
+.user-text__flame--forms {
+  padding-left: 200px;
+}
+
+.birth-year {
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.birth-month {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.birth-day {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.user-registration-footer {
+  background-color:  whitesmoke;
 }
