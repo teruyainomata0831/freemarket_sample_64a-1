@@ -6,8 +6,9 @@ class AddressController < ApplicationController
 
   def create
     @address = Address.new(address_params)
-    if @address.save
-      redirect_to new_credit_path
+    # binding.pry
+    if @address.save!
+      redirect_to credit_index_path
     else
       render 'new'
     end
