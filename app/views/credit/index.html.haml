@@ -1,7 +1,7 @@
-%div.heading
-  %div.heading__logo
+.heading
+  .heading__logo
     =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
-  %div.progress-status
+  .progress-status
     %ul.progress
       %li.is-complete
         会員情報
@@ -22,13 +22,13 @@
   .card-content
     %section.card-chapter-container
       %h2.card-chapter-head 支払い方法
-      %form#add-card-form.registration-form{action: "#", "data-adyen-id" => "card-form", method: "POST", novalidate: "novalidate"}
+      %div#add-card-form.registration-form
         %input.card-input{name: "card-info", type: "hidden", value: "#"}/
         .card-single-content
           .card-form
-            %label{:for => "payment_card_no"} カード番号
+            %label{:for => "card_number"} カード番号
             %span.form-require 必須
-            %input#payment_card_no.input-card-number{"data-input-type" => "card", maxlength: "19", placeholder: "半角数字のみ", type: "text", value: ""}/
+            %input#payment_card_no.input-card-number{"data-input-type" => "card_number", maxlength: "19", placeholder: "半角数字のみ", type: "text", value: ""}/
             %ul#card-no-error-wrapper.has-error-text
             %ul.signup-card-list
               %li
@@ -46,7 +46,7 @@
               %li
                 = image_tag '//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?2356214421', alt: '', height: '20', width: '32'
           .signup-form-expire
-            %label{for: "payment_card_expire"} 有効期限
+            %label{for: "exp_month"} 有効期限
             %span.form-require 必須
             %br/
             .select-mm
@@ -99,5 +99,5 @@
           %input#encrypted_card_data{name: "encrypted_card_data", type: "hidden"}/
           %p#primary-error.has-error-text
           %input{name: "after_save_callback", type: "hidden", value: ""}/
-          %button#submit-button.btn-default.btn-red{type: "button"} 次へ進む
+          %button#submit-button.btn-default.btn-red{type: "button", onclick: "location.href='credit/done'"} 送信
   = render 'layouts/register-footer'
