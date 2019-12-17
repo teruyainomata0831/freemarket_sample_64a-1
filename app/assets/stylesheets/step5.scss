@@ -56,19 +56,19 @@
   .regist-figure-store{
     display: flex;
     position: absolute;
-    top: 0;
-    left: 450px;
+    top: 2px;
+    left: 490px;
     .regist-figure-app{
       padding-top:16px;
     }
    }
   #figure-hidden{
     overflow: hidden;
-    height: 300px;/* トリミングしたい枠の高さ */
+    height: 290px;/* トリミングしたい枠の高さ */
   }
   &__inner{
     position: absolute;
-    bottom: 3px;
-    right: 455px;
+    bottom: 0px;
+    right: 485px;
   }
 }

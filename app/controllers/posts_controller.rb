@@ -7,27 +7,45 @@ class PostsController < ApplicationController
   def editprofile
     @user = User.find(params[:id])
     @posts = @user.posts
+      render 'exhibit'
+  end
+
+  def goodsBuy
+  
+  end
+  
+  def goodsDetail
+
+  end
+  
+  def register
+
   end
 
   def step1
+
   end
 
   def step2
+    
   end
 
   def step3
+
   end
 
   def step4
+    
   end
 
   def step5
+  
   end
 
-  def register
+  def editprofile
   end
 
-  def goodsDetail
+  def mypage
   end
 
   def goodsBuy
@@ -39,4 +57,6 @@ class PostsController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
 
+  def exhibit
+  end 
 end

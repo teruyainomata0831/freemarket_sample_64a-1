@@ -1,3 +1,4 @@
+= render 'layouts/header_login'
 .wrapper-goods-detail
   .item-box-container-detail
     %h1.item-name-detail ジャスティンデイビス  チェルシー  リング
@@ -23,7 +24,7 @@
           %tr
             %th 出品者
             %td
-              = link_to('みつき', {})
+              = link_to('みずき', {})
               %div
                 .item-user-ratings
                   %i.far.fa-smile-beam
@@ -157,7 +158,7 @@
     %ul.social-media-box-detail
       %li
         = link_to "#", class: "share-btn-detail", "data-window-name": "facebook_window", target: "_blank" do
-          %i.fab.fa-facebook-square
+          %i.fab.fa-facebook-square 
       %li
         = link_to "#", class: "share-btn-detail", "data-window-name": "twitter_window", target: "_blank" do
           %i.fab.fa-twitter-square
@@ -251,3 +252,4 @@
               .font-2-detail
                 %i.far.fa-heart.fa-heart2
                 %span 1
+= render 'layouts/footer'

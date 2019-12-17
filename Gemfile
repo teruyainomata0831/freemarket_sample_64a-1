@@ -63,9 +63,11 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
-gem 'devise'
+gem "haml-rails"
 
-gem 'haml-rails'
+gem 'jquery-fileupload-rails'
+
+gem 'devise'
 
 gem 'font-awesome-rails'
 
