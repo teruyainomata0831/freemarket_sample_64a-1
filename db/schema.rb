@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20191212121408) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
-    t.integer  "prefeture"
+    t.string   "prefecture"
     t.string   "city"
     t.string   "block"
     t.string   "building"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20191212121408) do
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number", null: false
-    t.integer  "exp_month",   null: false
-    t.integer  "ep_year",     null: false
+    t.integer  "card_number"
+    t.integer  "exp_month"
+    t.integer  "ep_year"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

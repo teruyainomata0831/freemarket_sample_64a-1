@@ -1,20 +1,23 @@
-%div.heading
-  %div.heading__logo
-    =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
-  %div.progress-status
-    %li.is-active
-      会員登録完了
-      %div{"data-step" => ""}
-.regist-contents
-  .regist-contents__header
-    %div.regist-contents__header__text
-      会員登録完了
-  .regist-contents__center
-    %div.regist-contents__center__text
-      ありがとうございます
-      %br
-      会員登録が完了しました。
-  .regist-contents__bottom
-    %a{:class => "regist-contents__bottom__btn", :href => "#"}
-      メルカリを始める
--# = render partial: "f-regist"
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
+  %body
+    .wrappers
+      = render 'layouts/register-header'
+      %main.r-top-main
+        %section.r-top-main-contents
+          %h2.r-top-main-header 新規会員登録
+          .r-top-main-content
+            .r-top-main-regist
+              = link_to new_signup_path, {class: "r-top-main-regist__btn-mailaddress r-top-btn"} do
+                .r-top-main-regist-mail-icon
+                  %i.far.fa-envelope.fa-lg
+                メールアドレスで登録する
+              = link_to user_facebook_omniauth_authorize_path, method: :post, class: "r-top-main-regist__btn-facebook r-top-btn r-top-btn-btn" do
+                %i.fab.fa-facebook-square.fa-2x.facebook-icon
+                %p.facebook-text Facebookで登録する
+              = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "r-top-main-regist__btn-google r-top-btn r-top-btn-btn" do
+                %i.fab.fa-google.fa-lg.google-icon
+                %p.google-text Googleで登録する
+      = render 'layouts/register-footer'
