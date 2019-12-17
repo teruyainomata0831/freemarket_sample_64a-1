@@ -1,10 +1,6 @@
 class PostsController < ApplicationController
   def index
-      render 'mypage'
-  end
-
-  def editprofile
-
+      render 'exhibit'
   end
 
   def goodsBuy
