@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     resources :signup
   end
+
+  get 'credit/step4' => 'credit#step4'
 end

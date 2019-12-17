@@ -1,4 +1,6 @@
 class CardController < ApplicationController
+  def index
+  end
 
   def new
   end
@@ -8,10 +10,17 @@ class CardController < ApplicationController
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
-    customer = Payjp::Customer.create(
+      # トークンが正常に発行されていたら、顧客情報をPAY.JPに登録します。
+      customer = Payjp::Customer.create(
         description: 'test', # 無くてもOK。PAY.JPの顧客情報に表示する概要です。
         card: params['payjp-token'], # 直前のnewアクションで発行され、送られてくるトークンをここで顧客に紐付けて永久保存します。
       )
+      @card = Card.new( customer_id: customer.id, card_id: customer.default_card)
+      if @card.save
+        redirect_to action: "index"
+      else
+        redirect_to action: "pay"
+      end
     end
   end
 

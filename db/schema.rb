@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.string   "card_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -36,6 +37,34 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.integer  "ep_year",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.integer  "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id", using: :btree
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "size"
+    t.string   "status"
+    t.string   "method"
+    t.string   "date"
+    t.integer  "price"
+    t.integer  "prefecture_id"
+    t.integer  "brand_id"
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.string   "shipping_date"
+    t.string   "shipping_method"
+    t.string   "shipping_fee"
+    t.integer  "profit"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "job_administrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -73,4 +102,6 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "cards", "users"
+  add_foreign_key "images", "items"
 end
