@@ -13,6 +13,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.integer :seller_id
       t.string :shipping_date, null: false
       t.string :shipping_fee, null: false
+      t.string :shipping_method
       t.integer :profit
       t.timestamps
     end

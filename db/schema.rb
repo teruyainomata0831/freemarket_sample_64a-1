@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20191210093227) do
     t.integer  "buyer_id"
     t.integer  "seller_id"
     t.string   "shipping_date",   null: false
-    t.string   "shipping_method"
     t.string   "shipping_fee",    null: false
+    t.string   "shipping_method"
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

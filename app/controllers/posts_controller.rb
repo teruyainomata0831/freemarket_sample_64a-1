@@ -23,6 +23,5 @@ class PostsController < ApplicationController
   def goodsDetail
   end
 
-  def goodsBuy
-  end
+
 end
