@@ -14,9 +14,8 @@ class ItemsController < ApplicationController
     end
   end
 
-
   private
   def create_params
-    params.require(:item).permit(:name, :description, :prefecture_id, :size, :status, :shipping_fee, :prefecture_id, :shipping_date, :price, :shipping_method, images_attributes: [:image, :id, :_destroy])
+    params.require(:item).permit(:name, :description, :prefecture_id, :size, :status, :shipping_fee, :prefecture, :shipping_date, :price, :shipping_method, images_attributes: [:image, :id, :_destroy])
   end
 end

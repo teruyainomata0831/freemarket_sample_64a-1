@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20191210093227) do
     t.string   "method"
     t.string   "date"
     t.integer  "price"
-    t.integer  "prefecture_id"
+    t.integer  "prefecture"
     t.integer  "brand_id"
     t.integer  "category_id"
     t.integer  "user_id"

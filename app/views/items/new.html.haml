@@ -91,7 +91,7 @@
             %label
               発送元の地域
               %span.form-require 必須
-            = f.select :prefecture_id, {},{},{class: "select-category"} do
+            = f.select :prefecture, {},{},{class: "select-category"} do
               %option{value: "--"} ---
               %option{value: "A"} A型
               %option{value: "B"} B型
