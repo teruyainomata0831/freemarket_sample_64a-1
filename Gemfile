@@ -80,3 +80,5 @@ gem 'carrierwave'
 gem 'fog-aws'
 
 gem 'mini_magick'
+
+gem 'rails-i18n'
