@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'items#index'
+  root to: 'posts#index'
     # 出品ページ
   resources :items  do
     collection do
