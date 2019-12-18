@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     collection do
       get 'mypage'
       get 'signout'
+      get 'exhibit'
     end
   end
   

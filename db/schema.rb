@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191212121408) do
+ActiveRecord::Schema.define(version: 20191213050728) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
-    t.string   "prefecture"
+    t.integer  "prefeture"
     t.string   "city"
     t.string   "block"
     t.string   "building"
@@ -22,10 +22,19 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",     null: false
+    t.string   "customer_id", null: false
+    t.string   "card_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
+  end
+
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number"
-    t.integer  "exp_month"
-    t.integer  "ep_year"
+    t.integer  "card_number", null: false
+    t.integer  "exp_month",   null: false
+    t.integer  "ep_year",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -39,19 +48,20 @@ ActiveRecord::Schema.define(version: 20191212121408) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",            null: false
-    t.string   "description",     null: false
+    t.string   "name"
+    t.string   "description"
     t.string   "size"
-    t.string   "status",          null: false
-    t.integer  "price",           null: false
-    t.string   "prefecture",      null: false
+    t.string   "status"
+    t.string   "method"
+    t.string   "date"
+    t.integer  "price"
+    t.integer  "prefecture_id"
     t.integer  "brand_id"
     t.integer  "category_id"
-    t.integer  "buyer_id"
-    t.integer  "seller_id"
-    t.string   "shipping_date",   null: false
-    t.string   "shipping_fee",    null: false
+    t.integer  "user_id"
+    t.string   "shipping_date"
     t.string   "shipping_method"
+    t.string   "shipping_fee"
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -94,5 +104,6 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "cards", "users"
   add_foreign_key "images", "items"
 end
