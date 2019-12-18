@@ -1,7 +1,11 @@
-.user-title{
-  width:700px ;
-  height: 100px;
+.user-registration {
   background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.user-title{
+  height: 100px;
   margin: 0 auto;
   border-bottom: rgb(229, 228, 228) 1px solid;
   font-weight: bold;
@@ -9,21 +13,17 @@
   text-align: center;
   line-height: 100px;
   }
+  
 .user-text{
-  width:700px ;
-  height: 1150px;
-  background-color: #fff;
-  margin: 0 auto;
+  width: 600px;
   &__flame{
-    width: 100vw;
-    height: 100vh;
     &--small{
+      display: inline-block;
       font-size: 15px;
       font-weight: bold;
       padding: 20px 0 0 200px;
-      display: inline-block;
     }
-    &--require{
+    &--require {
       display: inline-block;
       color:#fff;
       background-color: red;
@@ -32,7 +32,7 @@
       border-radius: 2%/ 10%;
       text-align: center;
       margin: 0 0 10px 10px;
-      line-height:20px;
+      line-height: 20px;
     }
     &--text{
       font-size: 13px;
@@ -44,6 +44,7 @@
     }
   }
 }
+
 .g-recaptcha{
   margin: 20px 200px;
 }
@@ -66,7 +67,7 @@
 
 .user-text__note{
   color: rgba(75, 70, 70, 0.596);
-  margin:0 200px 0;
+  padding-left: 200px;
 }
 
 .user-checkbox{
@@ -97,4 +98,91 @@
     border:1px rgb(207, 207, 207) solid;
     padding: 10px;
   }
+}
+
+.new_user {
+  background-color: whitesmoke;
+}
+
+.user-text__flame--forms {
+  padding-left: 200px;
+  display: flex;
+}
+
+.birth-year {
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.birth-month {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.birth-day {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px #cfcfcf solid;
+  padding: 10px;
+}
+
+.user-registration-footer {
+  background-color:  whitesmoke;
+}
+
+.error_message1 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message2 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message3 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message4 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message5 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message6 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message7 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message8 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message9 {
+  color: red;
+  padding-left: 200px;
+}
+
+.error_message10 {
+  color: red;
+  padding-left: 200px;
 }

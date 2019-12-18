@@ -19,80 +19,135 @@
         %li.progress__last
           完了
           %div{"data-step" => ""}
-  = form_for @user,:url => {:action => :create} do |f|
-    - if @user.errors.any?
-      %ul
-        - @user.errors.full_messages.each do |message|
-          %li= message 
+= form_for @user,:url => {:action => :create} do |f|
+  .user-registration
     .user-title
       会員情報入力
-      .user-text
-        .uesr-text__flame
-          .field
-            = f.label :nickname, 'ニックネーム', { class: "user-text__flame--small" }
-            %span.form-require
-              必須
+    .user-text
+      .uesr-text__flame
+        = f.label :nickname, 'ニックネーム', class: "user-text__flame--small"
+        .user-text__flame--require
+          必須
+        %br/
+        = f.text_field :nickname, placeholder: '例) メルカリ太郎', class: "user-place"
+        - if @user.errors.any? 
+          %ul.error_message1
+            - @user.errors.full_messages_for(:nickname).each do |message|
+              = message
+      .uesr-text__flame
+        = f.label :email, 'メールアドレス',class: "user-text__flame--small"
+        .user-text__flame--require
+          必須
+        %br/
+        = f.email_field :email, placeholder: 'PC・携帯どちらでも可', class: "user-place"
+        %p.user-text__note ※ 英字と数字の両方を含めて設定してください
+        - if @user.errors.any?
+          %ul.error_message2
+            - @user.errors.full_messages_for(:email).each do |message|
+              = message
+      .user-text__flame
+        = f.label :password, 'パスワード', class: "user-text__flame--small"
+        .user-text__flame--require
+          必須
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, placeholder: "7文字以上の半角英数字", autocomplete: "new-password",class: "user-place" 
+        %p.user-text__note ※ 英字と数字の両方を含めて設定してください
+        - if @user.errors.any?
+          %ul.error_message3
+            - @user.errors.full_messages_for(:password).each do |message|
+              = message
+        .user-text__flame--small 本人確認
+        .user-text__flame--text
+          安心・安全にご利用いただくために、お客さまの本人
+          %br/
+          情報の登録にご協力ください。他のお客さまに公開さ
+          %br/
+          れることはありません。
+        
+      .uesr-text__flame
+        = f.label :name, 'お名前(全角)', class: "user-text__flame--small"
+        .user-text__flame--require
+          必須
+        %br/
+      .user-name__group1
+        .user-name
+          = f.text_field :last_name, placeholder: '例) 山田',class: "user-name__text1"
+          = f.text_field :first_name, placeholder: '例) 彩',class: "user-name__text2"
+        .user-name__group1__errors
+          - if @user.errors.any?
+            %ul.error_message4
+              - @user.errors.full_messages_for(:last_name).each do |message|
+                = message
+          - if @user.errors.any?
+            %ul.error_message5
+              - @user.errors.full_messages_for(:first_name).each do |message|
+                = message
+      .uesr-text__flame 
+        = f.label :name_kana, 'お名前カナ(全角)', class: "user-text__flame--small"
+        %div.user-text__flame--require
+          必須
+        %br/
+      .user-name__group2
+        .user-name
+          = f.text_field :last_name_kana, placeholder: '例) ヤマダ', class: "user-name__text1"
+          = f.text_field :first_name_kana, placeholder: '例) アヤ', class: "user-name__text2"
+        .user-name___group2__errors
+          - if @user.errors.any?
+            %ul.error_message6
+              - @user.errors.full_messages_for(:last_name_kana).each do |message|
+                = message
+          - if @user.errors.any?
+            %ul.error_message7
+              - @user.errors.full_messages_for(:first_name_kana).each do |message|
+                = message
+      .user-text__flame--small
+        = f.label :birth, '生年月日'
+        %div.user-text__flame--require
+          必須
+        %br/
+      .uesr-text__flame
+        .user-text__flame--forms
+          = f.select :birth_year,["--"], {},{class: "birth-year", id:"select_birth_year"}
+          %label
+          年
+          = f.select :birth_month, ["--"], {},{class: "birth-month", id:"select_birth_month"}
+          %label
+          月
+          = f.select :birth_day, ["--"], {},{class: "birth-day", id:"select_birth_day"}
+          %label
+          日
+        .user-birthday-errors
+          - if @user.errors.any?
+            %ul.error_message8
+              - @user.errors.full_messages_for(:birth_year).each do |message|
+                = message
+          - if @user.errors.any?
+            %ul.error_message9
+              - @user.errors.full_messages_for(:birth_month).each do |message|
+                = message
+          - if @user.errors.any?
+            %ul.error_message10
+              - @user.errors.full_messages_for(:birth_day).each do |message|
+                = message
+        %p.user-text__note
+          ※ 本人情報は正しく入力してください。会員登録後、
+          %br/
+          修正するにはお時間を頂く場合があります。
+          %br/
+          %br/
+          %br/
+          %div.user-text__flame--text
+            「次へ進む」のボタンを押すことにより、
+            = link_to "#" do
+              利用規約
             %br/
-            = f.text_field :nickname, placeholder: '例) メルカリ太郎', html: {class: "user-place"}
-          .field
-            = f.label :email, 'メールアドレス', { class: "user-text__flame--small"}
-            %span.form-require
-              必須
-            %br/
-            = f.email_field :email, placeholder: 'PC・携帯どちらでも可'
-          .field
-            = f.label :password, 'パスワード', { class: "user-text__flame--small"}
-            %span.form-require
-              必須
-            - if @minimum_password_length
-              %em
-                (#{@minimum_password_length} characters minimum)
-            %br/
-            = f.password_field :password, autocomplete: "new-password"
-            %p.form-info-text ※ 英字と数字の両方を含めて設定してください
-            %p パスワードを表示する
-            %h3 本人確認
-            %p.l-single-text
-              安心・安全にご利用いただくために、お客さまの本人
-              %br/
-              情報の登録にご協力ください。他のお客さまに公開さ
-              %br/
-              れることはありません。
-                  
-          .field
-            = f.label :name, 'お名前(全角)', { class: "user-text__flame--small"}
-            %span.form-require
-              必須
-            %br/
-            = f.text_field :last_name, placeholder: '例) 山田'
-            = f.text_field :first_name, placeholder: '例) 彩'
-          .field
-            = f.label :name_kana, 'お名前カナ(全角)', { class: "user-text__flame--small"}
-            %span.form-require
-              必須
-            %br/
-            = f.text_field :last_name_kana, placeholder: '例) ヤマダ'
-            = f.text_field :first_name_kana, placeholder: '例) アヤ'
-          .uesr-text__flame 
-            .field
-              = f.label :birth, '生年月日', { class: "user-text__flame--small"}
-              %span.form-require
-                必須
-              %br/
-              = f.select :birth_year,["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_year"}
-              %label
-              年
-              = f.select :birth_month, ["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_month"}
-              %label
-              月
-              = f.select :birth_day, ["--"], {},{class: "セレクトボックスを修飾するクラスを入れる", id:"select_birth_day"}
-              %label
-              日
-            %p.user-text__note ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-            .g-recaptcha{"data-callback" => "clearcall", "data-sitekey" => "6Lc7ccYUAAAAAFd6H9n4KZ-HTY5_bwk4TfCyOMWo"}
-            .user-text__flame--text 
-              「次へ進む」のボタンを押すことにより、  利用規約に<br>に同意したものとみなします
-            = f.submit '次へ進む', name: "phone-button", class: "user-btn"
-            .user-text__flame--link
-              本人情報の登録について>
-= render 'layouts/register-footer'
+            に同意したものとみなします
+          = f.submit '次へ進む', class: "user-btn"
+          %div.user-text__flame--link
+            本人情報の登録について>
+
+.user-registration-footer
+  = render 'layouts/register-footer'

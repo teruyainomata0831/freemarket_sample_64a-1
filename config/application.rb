@@ -13,6 +13,10 @@ module FreemarketSample64a
       g.javascripts false
       g.helper false
       g.test_framework false
+      
+      config.i18n.default_locale = :ja
+      config.action_view.field_error_proc = proc { |html_tag, instance| html_tag }
+      config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
     end
   end
 end
