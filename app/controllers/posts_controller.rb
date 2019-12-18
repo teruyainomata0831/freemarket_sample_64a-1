@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
+    render 'card/new'
   end
 
   def editprofile
