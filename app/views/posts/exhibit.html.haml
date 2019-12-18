@@ -8,7 +8,10 @@
         %li.active
           %h3
             =link_to "#", "data-toggle": "tab" do
-              出品中
+              .itemName
+                = @item.name
+              .itemDate
+                = @item.created_at
         %li
           %h3
             =link_to "#" do

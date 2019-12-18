@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() { 
 
   //イメージの挿入
   var dropzone = $('.dropzone-area');
@@ -6,7 +6,7 @@ $(function() {
   var inputs  =[];
   var input_area = $('.input_area');
   var preview = $('#preview');
-
+  
   $(document).on('change', 'input[type= "file"].upload-image',function(event){
     var file = $(this).prop('files')[0];
     var reader = new FileReader();
