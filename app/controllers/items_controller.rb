@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_user, :set_image
+  before_action :set_user, :set_image, only: [ :buy, :show ]
 
 
   def index
