@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_user, :set_image
+  before_action :set_user, :set_image, only: [:buy,:show, :edit]
 
 
   def new
@@ -22,6 +22,11 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @images = @images.image
+  end
+
+  def edit
     @item = Item.find(params[:id])
     @images = @images.image
   end
