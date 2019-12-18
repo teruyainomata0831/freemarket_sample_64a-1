@@ -33,6 +33,9 @@ Rails.application.routes.draw do
     collection do
       get 'mypage'
       get 'signout'
+      get 'exhibit'
+      get 'editprofile'
+      
     end
   end
   

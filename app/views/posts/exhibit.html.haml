@@ -6,7 +6,13 @@
       %h2.mypage-tab-head-exhibit 出品した商品
       %ul.listing-tabs-exhibit
         %li.active
-          %span{"data-href" => "#"} 出品中
+          %h3
+            =link_to "#", "data-toggle": "tab" do
+              .itemName
+                = @item.name
+              .itemDate
+                = @item.created_at
+
         %li
           %span{"data-href" => "#"} 取引中
         %li

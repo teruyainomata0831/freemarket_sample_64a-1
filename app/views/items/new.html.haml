@@ -5,8 +5,7 @@
         =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
       .item-sell
         .item-sell__title
-        商品の情報を入力
-        -# 出品画像
+          商品の情報を入力
         .item-sell__upload
           .item-sell__upload--head
             出品画像  
@@ -94,7 +93,7 @@
             %label
               発送元の地域
               %span.form-require 必須
-            = f.select :prefecture, {}, {}, {class: "select-category"} do
+            = f.select :region, {}, {}, {class: "select-category"} do
               %option{value: "0"} ---
               %option{value: "北海道"} 北海道
               %option{value: "青森県"} 青森県
@@ -164,7 +163,7 @@
             .production-price__rate__text
               %p.production-price__rate__text--note 
                 価格
-                %span.form-require 必須
+              %span.form-require 必須
               .production-price__rate__text--yen
                 ¥
               = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
