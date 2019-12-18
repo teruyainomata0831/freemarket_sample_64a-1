@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-      render 'exhibit'
+    render 'exhibit'
   end
 
   def goodsBuy
@@ -43,4 +43,13 @@ class PostsController < ApplicationController
 
   def exhibit
   end 
+
+  def creditInfo
+  end
+
+  def creditAdd
+  end
+
+  def creditConfirm
+  end
 end
