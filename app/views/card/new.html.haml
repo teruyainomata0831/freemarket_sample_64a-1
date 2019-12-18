@@ -6,13 +6,12 @@
     .card-content
       %section.card-chapter-container
         %h2.card-chapter-head クレジットカード情報入力
-        %form#add-card-form.registration-form{action: "#", "data-adyen-id" => "card-form", method: "POST", novalidate: "novalidate"}
-          %input.card-input{name: "card-info", type: "hidden", value: "#"}/
+        = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
           .card-single-content
             .card-form
               %label{for: "payment_card_no"} カード番号
               %span.form-require 必須
-              %input#payment_card_no.input-card-number{"data-input-type" => "card", maxlength: "19", placeholder: "半角数字のみ", type: "text", value: ""}/
+              = text_field_tag "number", "", class: "input-card-number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
               %ul#card-no-error-wrapper.has-error-text
               %ul.signup-card-list
                 %li
