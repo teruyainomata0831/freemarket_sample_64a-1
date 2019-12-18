@@ -7,7 +7,7 @@
       .mypage-l-content
         .l-content-top
           %section.mypage-user-icon
-            = link_to "" do
+            = link_to "#" do
               %figure
                 = image_tag src="/assets/girl-4660954_1280.jpg", size: "60x60"
               %h2.bold ゆきぴろ
@@ -21,17 +21,14 @@
           %section.mypage-tab-container
             %ul.mypage-tabs
               %li.notice.active-test
-                %h3
-                  =link_to "#","data-toggle":"tab",class: "tabs-font" do
-                    お知らせ
+                %span{"data-href" => "#", class: "tabs-font"} お知らせ
               %li.notice
                 %h3
-                  =link_to "#","data-toggle":"tab",class: "tabs-font" do
-                    やることリスト
+                  %span{"data-href" => "#", class: "tabs-font"} やることリスト
             .tab-content.test
               %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
               %li.mypage-list-list
-                =link_to "" do
+                =link_to "#" do
                   %fugure
                     =image_tag "girl-4660954_1280.jpg", size: "48x48", alt: "img"
                   .mypage-item-body
@@ -42,7 +39,7 @@
                   %i.mypage-icon-arrow-right
                   =fa_icon "chevron-right", class: "icon-arrow-right"
               %li.mypage-go-list
-                =link_to "" do
+                =link_to "#" do
                   一覧を見る
             .tab-content
               %ul#mypage-tab-todo.mypage-item-list.tab-pane
@@ -51,13 +48,9 @@
             %h2.mypage-tab-head-wrpper 購入した商品
             %ul.mypage-tabs
               %li.transaction.active
-                %h3
-                  =link_to "#","data-toggle":"tab",class: "tabs-font" do
-                    取引中
+                %span{"data-href" => "#", class: "tabs-font"}取引中
               %li.transaction
-                %h3
-                  =link_to "#","data-toggle":"tab",class: "tabs-font" do
-                    過去の取引
+                %span{"data-href" => "#", class: "tabs-font"}過去の取引
               .tabs-content.show
                 =image_tag "logo_gray.svg", size: "150x150", alt: "logo"
                 %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
