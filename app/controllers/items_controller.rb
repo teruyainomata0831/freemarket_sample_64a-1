@@ -1,6 +1,12 @@
 class ItemsController < ApplicationController
+
   before_action :set_user, :set_image, only: [:buy, :show]
 
+
+
+  def index
+    @items = Item.all
+  end
 
   def new
     @item = Item.new
@@ -41,4 +47,5 @@ class ItemsController < ApplicationController
   def set_image
     @images = Image.find(params[:id])
   end
+  
 end
