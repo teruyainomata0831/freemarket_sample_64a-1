@@ -28,6 +28,13 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
+
+  resources :posts do
+    collection do
+      get 'mypage'
+      get 'signout'
+    end
+  end
   
 
 
