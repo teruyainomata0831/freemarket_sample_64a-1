@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
 
+  def index
+    @items = Item.all
+
   def new
     @item = Item.new
     @item.images.build
