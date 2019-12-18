@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20191212121408) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
-    t.integer  "prefeture"
+    t.string   "prefecture"
     t.string   "city"
     t.string   "block"
     t.string   "building"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20191212121408) do
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number", null: false
-    t.integer  "exp_month",   null: false
-    t.integer  "ep_year",     null: false
+    t.integer  "card_number"
+    t.integer  "exp_month"
+    t.integer  "ep_year"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -39,20 +39,19 @@ ActiveRecord::Schema.define(version: 20191212121408) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "description"
+    t.string   "name",            null: false
+    t.string   "description",     null: false
     t.string   "size"
-    t.string   "status"
-    t.string   "method"
-    t.string   "date"
-    t.integer  "price"
-    t.integer  "prefecture_id"
+    t.string   "status",          null: false
+    t.integer  "price",           null: false
+    t.string   "prefecture",      null: false
     t.integer  "brand_id"
     t.integer  "category_id"
-    t.integer  "user_id"
-    t.string   "shipping_date"
+    t.integer  "buyer_id"
+    t.integer  "seller_id"
+    t.string   "shipping_date",   null: false
+    t.string   "shipping_fee",    null: false
     t.string   "shipping_method"
-    t.string   "shipping_fee"
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
