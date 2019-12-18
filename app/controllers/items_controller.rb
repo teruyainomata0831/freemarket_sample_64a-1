@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+  end
 
   def new
     @item = Item.new
@@ -44,4 +45,5 @@ class ItemsController < ApplicationController
   def set_image
     @images = Image.find(params[:id])
   end
+  
 end
