@@ -37,7 +37,7 @@
             - if @item.errors.any?
               %ul
                 - @item.errors.full_messages_for(:name).each do |message|
-                  %li= message
+                  %li.error-input= "入力してください"
             .item-content-new__discription
               .item-content-new__title--lavel
                 商品の説明 
@@ -47,7 +47,7 @@
           - if @item.errors.any?
             %ul
               - @item.errors.full_messages_for(:description).each do |message|
-                %li= message
+                %li.error-input= "入力してください"
         .item-detail-new
           .item-detail-new__category
             .item-detail-new__category--title
@@ -81,7 +81,7 @@
               - if @item.errors.any?
                 %ul
                   - @item.errors.full_messages_for(:status).each do |message|
-                    %li= message
+                    %li.error-red= "選択してください"
               -# 配送について
         .item-fees
           .item-fees__about
@@ -102,7 +102,7 @@
                 - if @item.errors.any?
                   %ul
                     - @item.errors.full_messages_for(:shipping_fee).each do |message|
-                      %li= message
+                      %li.error-red= "選択してください"
           .item-fees__status 
             %label
               発送元の地域
@@ -116,7 +116,7 @@
             - if @item.errors.any?
               %ul
                 - @item.errors.full_messages_for(:prefecture).each do |message|
-                  %li= message
+                  %li.error-red= "選択してください"
           .item-fees__status 
             %label
               発送までの日数
@@ -130,7 +130,7 @@
             - if @item.errors.any?
               %ul
                 - @item.errors.full_messages_for(:shipping_date).each do |message|
-                  %li= message
+                  %li.error-red= "選択してください"
               -# 販売価格
         .production-price
           .productionprice__about
@@ -149,7 +149,7 @@
             - if @item.errors.any?
               %ul
                 - @item.errors.full_messages_for(:shipping_date).each do |message|
-                  %li= message
+                  %li.error-red= "300以上9999999以下で入力してください"
             -# 消費税
             .production-price__rate__consumption
               .production-price__rate__consumption--text 販売手数料(10%)

@@ -232,12 +232,22 @@
     }
     &--require{
       font-size: 13px;
-      @include require;     
+      @include require;
     }
   }
   &__discription{
     margin-top: 30px;
   }
+}
+
+.error-red{
+  color: red;
+  margin: 8px 0 0 ;
+  font-size: 14px;
+}
+
+.error-input{
+  color:red;
 }
 
 .item-name-place{
@@ -276,8 +286,6 @@
       color: #888;
       font-size: 14px;
       margin-right: 150px;
-      
-  
     }
     &__menu{
         height: 70px;
@@ -293,7 +301,6 @@
   &__status{
     font-weight: bold;
     padding: 25px 0 0 220px;
-    
   }
 }
 span.form-require{
