@@ -4,7 +4,7 @@ jQuery(function($){
       $(this).addClass('active-test');
       $('.test').removeClass('test');
       // クリックしたタブからインデックス番号を取得
-      const index = $(this).index();
+      var index = $(this).index();
       // クリックしたタブと同じインデックス番号をもつコンテンツを表示
       $('.tab-content').eq(index).addClass('test');
   });
@@ -14,7 +14,7 @@ jQuery(function($){
       $(this).addClass('active');
       $('.show').removeClass('show');
       // クリックしたタブからインデックス番号を取得
-      const index = $(this).index();
+      var index = $(this).index();
       // クリックしたタブと同じインデックス番号をもつコンテンツを表示
       $('.tabs-content').eq(index).addClass('show');
   });

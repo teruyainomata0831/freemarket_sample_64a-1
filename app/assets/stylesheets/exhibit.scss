@@ -1,0 +1,132 @@
+.exhibit-container{
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.mypage-tab-container-exhibit{ 
+  background: #fff;
+  margin: 30px 0 0 40px;
+  height: 382px;
+}
+
+.mypage-tab-head-exhibit{
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.listing-tabs-exhibit{  
+  border: 0;
+  background: #eee;
+  font-size: 0;
+}
+
+.listing-tabs-exhibit h3{
+  font-size: 22px;
+}
+
+.listing-tabs-exhibit li{
+  width: 33.3%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.listing-tabs-exhibit li.active{
+  background: #fff;
+}
+
+.listing-tabs-exhibit a{
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+  text-decoration: none;
+}
+
+.listing-tabs-exhibit li.active a{
+  border-top: 2px solid #ea352d;
+}
+
+.tab-content-exibit{
+  display: block;
+}
+
+.tab-content-exibit ul{
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  list-style: none;
+}
+
+.mypage-item-list li.mypage-item-not-found{
+  border: 0;
+}
+
+.mypage-item-list li {
+  position: relative;
+}
+
+.mypage-item-not-found {
+  display: none;
+}
+
+.mypage-item-not-found.show{
+  padding: 100px 0 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 600;
+  display: block;
+  box-sizing: border-box;
+}
+
+
+.mypage-tab-container-exhibit.pager {
+  margin: 40px 0 0;
+}
+
+.mypage-history-exhibit{
+  margin: 40px 0 0;
+  height: 44px;
+  position: relative;
+  font-size: 0;
+  text-align: center;
+}
+
+.pager-prev-exhibit{
+  left: 0;
+  position: absolute;
+  top: 0;
+  margin-left: 40px;
+}
+
+.pager-next-exhibit{
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+
+.pager-prev-exhibit i{
+  position: relative;
+  top: 0.15em;
+}
+
+.pager-cell-exhibit{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 42px;
+}
+
+
+
+

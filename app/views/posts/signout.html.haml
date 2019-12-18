@@ -1,0 +1,14 @@
+= render 'layouts/header' 
+
+.contents-space
+  .main-contents
+    = render 'layouts/mypageSidebar'
+    .lcrum
+
+    .lcontents
+      .lmain-content
+        .lcontent
+          .lbutton
+            = link_to destroy_user_session_path, method: :delete, class: "login-bottom-main-content-right-right-content" do
+              ログアウト
+= render 'layouts/footer'

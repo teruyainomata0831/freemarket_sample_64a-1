@@ -1,0 +1,76 @@
+.credit-container{
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.credit-info-content{
+  width: 700px;
+  margin: 30px 0 0 40px;
+}
+
+.credit-chapter-container{
+  background: #fff;
+}
+
+.credit-chapter-head{
+  font-size: 24px;
+  padding: 8px 24px;
+  border-bottom: 1px solid #f5f5f5;
+  text-align: center;
+}
+
+.credit-chapter-head h2{
+  line-height: 1.4; 
+}
+
+.credit-single-inner{
+  padding: 64px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.credit-single-content{
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.credit-chapter-sub-head{
+  font-size: 16px;
+}
+
+.settings-credit-list{
+  list-style: none;
+}
+
+.settings-credit-list li{
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.settings-credit-list li form{
+  position: relative;
+}
+
+.settings-credit-num{
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.settings-credit-remove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 6px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ea352d;
+  color: #ea352d;
+}
+
+.settings-not-regist-credit a{
+  display: block;
+  margin: 40px 0 0;
+  text-align: right;
+  color: #0099e8;
+  text-decoration: none;
+}

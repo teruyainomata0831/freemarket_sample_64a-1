@@ -9,10 +9,13 @@
             %h3.buy-item-image
               = image_tag 'https://static.mercdn.net/thumb/photos/m38891747402_1.jpg?1511669148', class: 'buy-item-image-detail'
             .buy-item-detail
-              %p.buy-item-name ラビットファー付きワンピース
+              %p.buy-item-name 
+                = @item.name
               %p.buy-price-ja.bold
-                %span ¥1,980
-                %span.item-shipping-fee （税込）送料込み
+                %span 
+                  -# = @item.price
+                %span.item-shipping-fee 
+                  -# = @item.shipping_fee
       %section.buy-item-content
         .buy-content-inner
           %form.buy-form{action: "", method: "POST", novalidate: "novalidate"}
