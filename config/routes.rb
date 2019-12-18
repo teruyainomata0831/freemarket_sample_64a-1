@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :signup do
+    collection do
+      get 'step1'
+      get 'step2'
+      get 'step3'
+      get 'step4'
+    end
+  end
 
-  root 'posts#index'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'posts#index'
+    # 出品ページ
+  resources :items  do
+    collection do
+      get 'buy'
+    end
+  end
   
   # ユーザー登録
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -15,7 +29,7 @@ Rails.application.routes.draw do
     end
   end
   
-  # 出品ページ
-  resources :items
+
+
 
 end

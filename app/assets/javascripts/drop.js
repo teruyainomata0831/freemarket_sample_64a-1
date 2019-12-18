@@ -11,7 +11,7 @@ $(function() {
     var file = $(this).prop('files')[0];
     var reader = new FileReader();
     inputs.push($(this));
-    var img = $('<div class= "img_view"><img></div>');
+    var img = $(`<div class= "img_view"><img></div>`);
     reader.onload = function(e) {
       var btn_wrapper = $('<div class="upload-image__prev--btn"><div class="edit-btn">編集</div><div class="delete-btn">削除</div></div>');
       img.append(btn_wrapper);
@@ -32,7 +32,7 @@ $(function() {
         $(".dropzone-area").attr('id', 'nothing');
       }
     // 新しいインプットの表示
-    var new_image = $(`<input id="upload-image__btn" class="upload-image" data-image= ${images.length} type="file" name="image[images_attributes][${images.length}][image]">`);
+    var new_image = $(`<input id="upload-image__btn" class="upload-image" data-image= ${images.length} type="file" name="item[images_attributes][${images.length}][image]">`);
     input_area.prepend(new_image);
   });
 
@@ -81,13 +81,20 @@ $('#sell-price').on('keyup', function(){
   var price = $(this).val();
   var mercari_fee = Math.floor(price * 0.1)
   var seller_gain = price - mercari_fee
+  var seller_profit = price - mercari_fee
 
   if (price >= 300 && price <= 9999999) {
     $('#mercari_fee').text('¥' + mercari_fee.toLocaleString())
     $('#seller_gain').text('¥' + seller_gain.toLocaleString())
+    $('#seller_profit').val(seller_profit)
   } else {
-    $('#mercari_fee').text('--')
-    $('#seller_gain').text('--')
-  }
+      $('#mercari_fee').text('--')
+      $('#seller_gain').text('--')
+    }
+  })
 })
-})
+
+function onDragOver(event) {
+  // ブラウザ上でファイルを展開する挙動を抑止
+  event.preventDefault();
+}

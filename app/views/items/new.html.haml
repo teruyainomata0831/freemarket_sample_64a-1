@@ -1,11 +1,11 @@
-= form_for @item, enctype: "multipart/form-data" do |f|
+= form_for @item, enctype: "multipart/form-data" , html: { multipart: true } do |f|
   .itemwrap
     .header-item
       .header-item__logo
         =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
       .item-sell
         .item-sell__title
-          商品の情報を入力
+        商品の情報を入力
         -# 出品画像
         .item-sell__upload
           .item-sell__upload--head
@@ -22,54 +22,59 @@
                   .dropzone-area
                     = image_field.label :image, class: "dropzone-box", for: "upload-image__btn" do
                       .input_area
-                        = image_field.file_field :image, id: "upload-image__btn", class: "upload-image", 'data-image': 0, type: "file", multiple: "true"
+                        = image_field.file_field :image, id: "upload-image__btn", class: "upload-image", 'data-image': 0, type: "file"
                         %p
                           ドラッグアンドドロップ
                           %br
+                          またはクリックしてファイルをダウンロード
+                        -# .item-sell__upload--drop
           -# 商品名
-        .item-content-new
-          .item-content-new__title
-            .item-content-new__title--lavel
+        .item-content
+          .item-content__title
+            .item-content__title--lavel
               商品名
-            .item-content-new__title--require
+            .item-content__title--require
               必須       
             = f.text_field :name,  class: "item-name-place", placeholder:  "商品名(必須40字まで)", row: "1"
-            .item-content-new__discription
-              .item-content-new__title--lavel
+            .item-content__title
+              .item-content__title--lavel
                 商品の説明 
-              .item-content-new__title--require  
+              .item-content__title--require  
                 必須       
-          = f.text_field :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-        .item-detail-new
-          .item-detail-new__category
-            .item-detail-new__category--title
+          = f.text_area :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        .item-detail
+          .item-detail__category
+            .item-detail__category--title
               商品の詳細    
-            .item-detail-new__category__menu
+            .item-detail__category__menu
 
-            -# 商品カテゴリ
-            %label
-              カテゴリー
-              %span.form-require 必須
+              -# 商品カテゴリ
+              %label
+                カテゴリー
+                %span.form-require 必須
 
-              -# %i.item-arrow-down
-              -#   =fa_icon "chevron-down", class: "item-arrow-down"
-              .item-detail__category--selection
-                = f.select :category_id, {},{},{class: "select-category"} do
-                  %option{value: "--"} ---
-                  %option{value: "A"} A型
-                  %option{value: "B"} B型
-                  %option{value: "O"} O型
-                  %option{value: "AB"} AB型
-          .item-detail-new__status 
+                -# %i.item-arrow-down
+                -#   =fa_icon "chevron-down", class: "item-arrow-down"
+                .item-detail__category0selection
+                  = f.select :category_id, {},{},{class: "select-category"} do
+                    %option{value: "0"} ---
+                    %option{value: "A"} A型
+                    %option{value: "B"} B型
+                    %option{value: "O"} O型
+                    %option{value: "AB"} AB型
+          .item-detail__status 
             %label
               商品の状態
               %span.form-require 必須
               = f.select :status, {},{},{class: "select-category"} do
-                %option{value: "--"} ---
-                %option{value: "A"} A型
-                %option{value: "B"} B型
-                %option{value: "O"} O型
-                %option{value: "AB"} AB型
+                %option{value: "0"} ---
+                %option{value: "1"} 新品、未使用
+                %option{value: "2"} 未使用に近い
+                %option{value: "3"} 目立った傷や汚れなし
+                %option{value: "4"} やや傷や汚れあり
+                %option{value: "5"} 傷や汚れあり
+                %option{value: "6"} 全体的に状態が悪い
+
               -# 配送について
         .item-fees
           .item-fees__about
@@ -82,31 +87,72 @@
                 配送料の負担
                 %span.form-require 必須
                 = f.select :shipping_fee, {},{},{class: "select-category"} do
-                  %option{value: "--"} ---
-                  %option{value: "A"} A型
-                  %option{value: "B"} B型
-                  %option{value: "O"} O型
-                  %option{value: "AB"} AB型
+                  %option{value: "0"} ---
+                  %option{value: "1"} 送料込み(出品者負担)
+                  %option{value: "2"} 着払い(購入者負担)
           .item-fees__status 
             %label
               発送元の地域
               %span.form-require 必須
-            = f.select :prefecture_id, {},{},{class: "select-category"} do
-              %option{value: "--"} ---
-              %option{value: "A"} A型
-              %option{value: "B"} B型
-              %option{value: "O"} O型
-              %option{value: "AB"} AB型
-          .item-fees__status 
+            = f.select :prefecture, {}, {}, {class: "select-category"} do
+              %option{value: "0"} ---
+              %option{value: "北海道"} 北海道
+              %option{value: "青森県"} 青森県
+              %option{value: "岩手県"} 岩手県
+              %option{value:"宮城県"} 宮城県
+              %option{value:"秋田県"} 秋田県
+              %option{value: "山形県"} 山形県
+              %option{value: "福島県"} 福島県
+              %option{value: "茨城県"} 茨城県
+              %option{value: "栃木県"} 栃木県
+              %option{value: "群馬県"} 群馬県
+              %option{value: "埼玉県"} 埼玉県
+              %option{value: "千葉県"} 千葉県
+              %option{value: "東京都"} 東京都
+              %option{value: "神奈川県"} 神奈川県
+              %option{value: "新潟県"} 新潟県
+              %option{value: "富山県"} 富山県
+              %option{value: "石川県"} 石川県
+              %option{value: "福井県"} 福井県
+              %option{value: "山梨県"} 山梨県
+              %option{value: "長野県"} 長野県
+              %option{value: "岐阜県"} 岐阜県
+              %option{value: "静岡県"} 静岡県
+              %option{value: "愛知県"} 愛知県
+              %option{value: "三重県"} 三重県
+              %option{value: "滋賀県"} 滋賀県
+              %option{value: "京都府"} 京都府
+              %option{value: "大阪府"} 大阪府
+              %option{value: "兵庫県"} 兵庫県
+              %option{value: "奈良県"} 奈良県
+              %option{value: "和歌山県"} 和歌山県
+              %option{value: "鳥取県"} 鳥取県
+              %option{value: "島根県"} 島根県
+              %option{value: "岡山県"} 岡山県
+              %option{value: "広島県"} 広島県
+              %option{value: "山口県"} 山口県
+              %option{value: "徳島県"} 徳島県
+              %option{value: "香川県"} 香川県
+              %option{value: "愛媛県"} 愛媛県
+              %option{value: "高知県"} 高知県
+              %option{value: "福岡県"} 福岡県
+              %option{value: "佐賀県"} 佐賀県
+              %option{value: "長崎県"} 長崎県
+              %option{value: "熊本県"} 熊本県
+              %option{value: "大分県"} 大分県
+              %option{value: "宮崎県"} 宮崎県
+              %option{value: "鹿児島県"} 鹿児島県
+              %option{value: "沖縄県"} 沖縄県
+          .item-detail__status 
             %label
               発送までの日数
               %span.form-require 必須
             = f.select :shipping_date, {},{},{class: "select-category"} do
-              %option{value: "--"} ---
-              %option{value: "A"} A型
-              %option{value: "B"} B型
-              %option{value: "O"} O型
-              %option{value: "AB"} AB型
+              %option{value: "0"} ---
+              %option{value: "1"} 1~2日で発送
+              %option{value: "2"} 2~3日で発送
+              %option{value: "3"} 4~7日で発送d
+
               -# 販売価格
         .production-price
           .productionprice__about
@@ -118,22 +164,22 @@
             .production-price__rate__text
               %p.production-price__rate__text--note 
                 価格
-              %span.production-price__rate__text--require 必須
+                %span.form-require 必須
               .production-price__rate__text--yen
                 ¥
-              = f.text_field :price,  class:"production-price-plate", placeholder:  "例)300", row: "1"
+              = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
              
             -# 消費税
             .production-price__rate__consumption
               .production-price__rate__consumption--text 販売手数料(10%)
-              .production-price__rate__consumption--fee -
+              .production-price__rate__consumption--fee#mercari_fee
               -# 料金入力時に課金
             .production-price__rate__profit
               .production-price__rate__profit--text 販売利益
-              .production-price__rate__profit--value -
-
+              .production-price__rate__profit--value#seller_gain
+              = f.hidden_field :profit, id: "seller_profit", value: ""
               -# 料金入力時に利益記載
-        .item-content-new
+        .item-content
           %p
           = link_to "禁止されている出品", 'https://www.mercari.com/jp/help_center/getting_started/prohibited_items/', class:"link-blue" 
           、
@@ -151,6 +197,8 @@
 
           = f.submit '出品する', class: "item-btn"
           %input{name: "item-back", type: "submit", value: "もどる", class:"item-back-btn"}
+
+
         %footer.footer-register
           .footer-contetns
             %nav
@@ -165,3 +213,4 @@
               %a{:href => "#"}
                 =image_tag "logo_gray.svg",  size: "140x70", alt: "logo"
               %p © Mercari, Inc.
+
