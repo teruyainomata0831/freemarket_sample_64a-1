@@ -42,7 +42,7 @@
                     =fa_icon "fal check", class: "icon-check"
                     %span &#x3084;&#x308B;&#x3053;&#x3068;&#x30EA;&#x30B9;&#x30C8;
               %li{:class => "login-bottom-main-content-right-right"}
-                %a.login-bottom-main-content-right-right-content{:href => "#"}
+                = link_to destroy_user_session_path, method: :delete, class: "login-bottom-main-content-right-right-content" do
                   %figure
                     %div
                       = image_tag src="beauty-fashion-portrait-smiling-young-600w-521684347.webp", size: "32x32"
@@ -52,5 +52,4 @@
             .registration
               = link_to "新規会員登録", signup_index_path, {class: "registration-button"}
             .login
-              = link_to "ログイン","/jp/login/?login callback=%2Fjp%2F",class: "login-button"
-              -# = link_to current_user.nickname, user_path(current_user)
+              = link_to "ログイン", new_user_session_path,class: "login-button"
