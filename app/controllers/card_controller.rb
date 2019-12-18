@@ -6,7 +6,7 @@ class CardController < ApplicationController
   end
 
   def pay
-    Payjp.api_key = 'sk_test_f11178b5365a163734f1d128'
+    Payjp.api_key = 'sk_test_fd8c63589125feb6eb712b1a'
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
@@ -21,9 +21,9 @@ class CardController < ApplicationController
   end
 
   def show
-    # card = Card.where(user_id: current_user.id)
-    # Payjp.api_key = 'sk_test_f11178b5365a163734f1d128'
-    #   customer = Payjp::Customer.retrieve(@card.customer_id)
-    #   @card_information = customer.cards.retrieve(@card.card_id)
+    card = Card.where(user_id: current_user.id)
+    Payjp.api_key = 'sk_test_fd8c63589125feb6eb712b1a'
+      customer = Payjp::Customer.retrieve(@card.customer_id)
+      @card_information = customer.cards.retrieve(@card.card_id)
   end
 end

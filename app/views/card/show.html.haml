@@ -17,12 +17,12 @@
                   %input{name: "__csrf_value", type: "hidden", value: ""}/
                   %input{name: "card_sequence_no", type: "hidden", value: ""}/
                   .settings-credit-num 
-                  -# = "************" + @card_information.to_s
-                  -# .settings-credit-num 
-                  -# - exp_month = @card_information.exp_month.to_s
-                  -# - exp_year = @card_information.exp_year.to_s.slice(2,3)
-                  -# = exp_month + " / " + exp_year
-                -# = form_tag(card_delete_path, method: :post, id: 'charge-form',  name: "inputForm") do
+                  = "************" + @card_information.to_s
+                  .settings-credit-num 
+                  - exp_month = @card_information.exp_month.to_s
+                  - exp_year = @card_information.exp_year.to_s.slice(2,3)
+                  = exp_month + " / " + exp_year
+                = form_tag(card_delete_path, method: :post, id: 'charge-form',  name: "inputForm") do
                   %input{ type: "hidden", name: "card_id", value: "" }
                   %button.settings-credit-remove{type: "submit"}
                     削除する
