@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_user, :set_image, only: [:buy, :show  ]
+  before_action :set_user, :set_image, only: [:buy, :show]
 
 
   def new
@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 
   private
   def create_params
-    params.require(:item).permit(:name, :description, :prefecture, :size, :status, :shipping_fee, :prefecture, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :description, :region, :size, :status, :shipping_fee, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
    
   end
 

@@ -3,6 +3,6 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :images
   belongs_to :user,  optional: true
   
-  validates :name, :description, :price, :prefecture, presence: true
+  validates :name, :description, :price, :region, presence: true
   validates :status,  :shipping_date, :shipping_fee, presence: true, numericality: { greater_than: 0 }
 end
