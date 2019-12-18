@@ -58,4 +58,13 @@ class PostsController < ApplicationController
 
   def exhibit
   end 
+
+  def creditInfo
+  end
+
+  def creditAdd
+  end
+
+  def creditConfirm
+  end
 end

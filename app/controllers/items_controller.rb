@@ -2,6 +2,9 @@ class ItemsController < ApplicationController
   before_action :set_user, :set_image
 
 
+  def index
+    @items = Item.all
+
   def new
     @item = Item.new
     @item.images.build
