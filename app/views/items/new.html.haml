@@ -5,8 +5,7 @@
         =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
       .item-sell
         .item-sell__title
-        商品の情報を入力
-        -# 出品画像
+          商品の情報を入力
         .item-sell__upload
           .item-sell__upload--head
             出品画像  
@@ -164,7 +163,7 @@
             .production-price__rate__text
               %p.production-price__rate__text--note 
                 価格
-                %span.form-require 必須
+              %span.form-require 必須
               .production-price__rate__text--yen
                 ¥
               = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
