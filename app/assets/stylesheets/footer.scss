@@ -123,12 +123,14 @@ li.footer-li{
   font-size: 50px;
   color: white;
 }
-.fa-twitter:before {
+
+.fa-twitter{
   font-size: 30px;
   margin:0 20px 0 0;
 }
-.fa-facebook-square:before {
-  font-size: 30px;
+.fa-facebook-square.footer-icon{
+  font-size: 37px;
+  
 }
 .fbottom{
   width: 100vw;

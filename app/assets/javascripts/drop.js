@@ -1,4 +1,3 @@
-
 $(function() {
 
   //イメージの挿入
@@ -67,7 +66,6 @@ $(function() {
       dropzone.css({
         'display': 'block'
       })
-
       $.each(images, function(index, image) {
         image.attr('data-image', index);
         preview.append(image);

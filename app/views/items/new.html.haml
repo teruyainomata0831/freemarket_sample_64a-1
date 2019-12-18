@@ -167,7 +167,6 @@
                 %span.form-require 必須
               .production-price__rate__text--yen
                 ¥
-              -# = f.text_field :price,  class:"production-price-plate", placeholder:  "例)300", row: "1"
               = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
              
             -# 消費税

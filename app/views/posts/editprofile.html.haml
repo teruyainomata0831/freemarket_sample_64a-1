@@ -2,7 +2,7 @@
 
 .contents-space
   .main-contents
-    = render 'layouts/mypage_side'
+    = render 'layouts/mypageSidebar'
     .profile-contents
       %h2.profile-document
         プロフィール
@@ -16,5 +16,4 @@
           %textarea.textarea-default{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
           %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
           %button.btn-default.btn-red{type: "submit"} 変更する
-
 = render 'layouts/footer'

@@ -70,8 +70,6 @@ gem 'jquery-fileupload-rails'
 
 gem 'devise'
 
-gem 'haml-rails'
-
 gem 'font-awesome-rails'
 
 gem 'font-awesome-sass'
@@ -84,4 +82,8 @@ gem 'fog-aws'
 
 gem 'mini_magick'
 
+gem 'omniauth-facebook'
 
+gem 'omniauth-google-oauth2'
+
+gem "omniauth-rails_csrf_protection"
