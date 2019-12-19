@@ -16,8 +16,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.integer  :birth_month
       t.integer  :birth_day
       t.string   :encrypted_password,             null: false, default: ""
-      t.integer  :seller_id
-      t.integer  :buyer_id
 
       ## Recoverable
       t.string   :reset_password_token

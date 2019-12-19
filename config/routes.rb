@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'posts#index'
+  root to: 'items#index'
     # 出品ページ
   resources :items  do
     collection do
@@ -54,6 +54,8 @@ Rails.application.routes.draw do
       get 'signout'
       get 'exhibit'
       get 'editprofile'
+
+      
     end
   end
   

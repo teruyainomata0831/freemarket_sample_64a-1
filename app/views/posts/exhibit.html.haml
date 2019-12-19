@@ -8,15 +8,15 @@
         %li.active
           %h3
             =link_to "#", "data-toggle": "tab" do
-              出品中
+              .itemName
+                = @item.name
+              .itemDate
+                = @item.created_at
+
         %li
-          %h3
-            =link_to "#" do
-              取引中
+          %span{"data-href" => "#"} 取引中
         %li
-          %h3
-            =link_to "#" do
-              売却済み
+          %span{"data-href" => "#"} 売却済み
       .tab-content-exibit
         %ul#mypage-tab-transaction-now.mypage-item-list
           %li.mypage-item-not-found.show 出品中の商品がありません
