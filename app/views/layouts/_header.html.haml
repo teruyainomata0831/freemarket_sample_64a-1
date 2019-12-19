@@ -17,7 +17,6 @@
               %svg.category__search--button{"aria-hidden" => "true", height: "16", viewbox: "0 0 20 16", width: "20"}
                 %path{d: "M18.799 15.25h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zm0-6h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zm0-6h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zM2 16a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z", fill: "currentColor", "fill-rule" => "nonzero"}
               カテゴリーから探す
-
           .brand
             = link_to "/jp/brand/", {class: "brand__search"} do
               %svg.brand__search--button{"aria-hidden" => "true", height: "16", viewbox: "0 0 23 16", width: "23"}
@@ -42,7 +41,7 @@
                     =fa_icon "fal check", class: "icon-check"
                     %span &#x3084;&#x308B;&#x3053;&#x3068;&#x30EA;&#x30B9;&#x30C8;
               %li{:class => "login-bottom-main-content-right-right"}
-                = link_to destroy_user_session_path, method: :get, class: "login-bottom-main-content-right-right-content" do
+                = link_to mypage_posts_path, method: :get, class: "login-bottom-main-content-right-right-content" do
                   %figure
                     %div
                       = image_tag src="beauty-fashion-portrait-smiling-young-600w-521684347.webp", size: "32x32"

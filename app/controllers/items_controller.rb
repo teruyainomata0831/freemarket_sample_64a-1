@@ -1,9 +1,12 @@
 class ItemsController < ApplicationController
-  before_action :set_user, :set_image
+
+  before_action :set_user, :set_image, only: [:buy, :show]
 
 
-  def index
-    @items = Item.all
+
+    def index
+      @items = Item.all.includes(:images)
+    end
 
   def new
     @item = Item.new
@@ -16,7 +19,7 @@ class ItemsController < ApplicationController
       if @item.save
         redirect_to root_path
       else
-        render "new"
+        redirect_to new_item_path
     end
   end
 
@@ -33,8 +36,8 @@ class ItemsController < ApplicationController
 
   private
   def create_params
-    params.require(:item).permit(:name, :description, :prefecture, :size, :status, :shipping_fee, :prefecture_id, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy])
-    # .merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :description, :region, :size, :status, :shipping_fee, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
+   
   end
 
   def set_user
@@ -44,4 +47,5 @@ class ItemsController < ApplicationController
   def set_image
     @images = Image.find(params[:id])
   end
+  
 end

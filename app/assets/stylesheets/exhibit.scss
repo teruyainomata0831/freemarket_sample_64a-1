@@ -22,8 +22,15 @@
   font-size: 0;
 }
 
-.listing-tabs-exhibit h3{
+.listing-tabs-exhibit span{
   font-size: 22px;
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .listing-tabs-exhibit li{
@@ -37,14 +44,6 @@
   background: #fff;
 }
 
-.listing-tabs-exhibit a{
-  position: relative;
-  display: block;
-  color: #333;
-  font-size: 16px;
-  line-height: 72px;
-  text-decoration: none;
-}
 
 .listing-tabs-exhibit li.active a{
   border-top: 2px solid #ea352d;
