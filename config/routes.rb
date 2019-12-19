@@ -54,7 +54,6 @@ Rails.application.routes.draw do
       get 'signout'
       get 'exhibit'
       get 'editprofile'
-      get 'creditConfirm'
     end
   end
   
