@@ -53,6 +53,7 @@ Rails.application.routes.draw do
       get 'mypage'
       get 'signout'
       get 'exhibit'
+      get 'editprofile'
       get 'creditConfirm'
     end
   end
