@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :items  do
     collection do
       get 'buy'
+      
     end
   end
   
@@ -30,7 +31,7 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-    collection do
+    collection do  
       get 'mypage'
       get 'signout'
       get 'exhibit'
