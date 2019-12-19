@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.string   "size"
     t.string   "status",          null: false
     t.integer  "price",           null: false
-    t.string   "prefecture",      null: false
+    t.string   "region",          null: false
     t.integer  "brand_id"
     t.integer  "category_id"
     t.integer  "buyer_id"
@@ -81,8 +81,6 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.integer  "birth_month"
     t.integer  "birth_day"
     t.string   "encrypted_password",     default: "", null: false
-    t.integer  "seller_id"
-    t.integer  "buyer_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
