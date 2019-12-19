@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",sampleEvent, false);
       var btn = document.getElementById("token_submit");
       btn.addEventListener("click", e => {
         e.preventDefault();
-        let card = {
+        var card = {
           number: document.getElementById("card_number").value,
           cvc: document.getElementById("cvc").value,
           exp_month: document.getElementById("exp_month").value,
