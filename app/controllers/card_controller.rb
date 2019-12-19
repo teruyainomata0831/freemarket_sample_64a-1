@@ -30,19 +30,20 @@ class CardController < ApplicationController
       @card_information = customer.cards.retrieve(card.card_id)
 
       @card_brand = @card_information.brand      
-      if "Visa"
+      case @card_brand
+      when "Visa"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?1215422380"
-      elsif"MasterCard"
+      when "MasterCard"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?2356214421"
-      elsif "JCB"
+      when "JCB"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2356214421"
-      elsif "American Express"
+      when "American Express"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?2356214421"
-      elsif "Diners Club"
+      when "Diners Club"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?2356214421"
-      elsif "Discover"
+      when "Discover"
         @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?2356214421"
-     end
+      end
     end
   end
 
