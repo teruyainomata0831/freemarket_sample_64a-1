@@ -12,6 +12,8 @@ class UsersController < ApplicationController
     @posts = @user.posts
   end
 
+  
+
   def edit
   end
 
@@ -29,6 +31,9 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def sign_out
   end
 
   private

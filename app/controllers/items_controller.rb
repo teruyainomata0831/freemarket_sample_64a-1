@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
 
-  before_action :set_user, :set_image, only: [:buy, :show]
+  before_action :set_user, :set_image, only: [:buy, :show, :exhibit]
+  
 
 
 
@@ -29,11 +30,15 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @images = @images.image
   end
 
+  def exhibit
+    @item = Item.find(params[:id])
+    @items = Item.all.includes(:images)
+  end 
 
-
+  def edit
+  end
   private
   def create_params
     params.require(:item).permit(:name, :description, :region, :size, :status, :shipping_fee, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
@@ -46,6 +51,7 @@ class ItemsController < ApplicationController
 
   def set_image
     @images = Image.find(params[:id])
+    @images = @images.image
   end
   
 end

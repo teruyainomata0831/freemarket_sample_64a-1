@@ -1,25 +1,33 @@
 = render 'layouts/header_login'
 .exhibit-container
-  = render 'layouts/mypageSidebar'
+  = render 'users/mypageSidebar'
   %div
     %section.mypage-tab-container-exhibit
       %h2.mypage-tab-head-exhibit 出品した商品
       %ul.listing-tabs-exhibit
         %li.active
           %h3
-            =link_to "#", "data-toggle": "tab" do
-              .itemName
-                = @item.name
-              .itemDate
-                = @item.created_at
-
+            =link_to "#", "data-toggle": "tab" 
         %li
           %span{"data-href" => "#"} 取引中
         %li
           %span{"data-href" => "#"} 売却済み
       .tab-content-exibit
         %ul#mypage-tab-transaction-now.mypage-item-list
-          %li.mypage-item-not-found.show 出品中の商品がありません
+          %li.mypage-item-not-found.show 
+            - if @item.seller_id.nil?
+              .item-not-found__text
+                出品中の商品がありません
+            - else
+              %ul
+                - @items.each do |item|
+                  %li
+                    .list-item__index
+                      = image_tag @images, class: "index__image" 
+                      .list-item__index--lists
+                        %p.item_index-test #{item.name}
+                        %p.item_index-test #{item.created_at}
+                    
           %li.mypage-item-not-found 取引中の商品がありません
           %li.mypage-item-not-found 売却中の商品がありません
     %ul.mypage-history-exhibit

@@ -2,7 +2,8 @@
   .itemwrap
     .header-item
       .header-item__logo
-        =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+        = link_to root_path do
+          =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
       .item-sell
         .item-sell__title
           商品の情報を入力
