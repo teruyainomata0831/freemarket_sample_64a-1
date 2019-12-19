@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.string   "card_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["card_id"], name: "index_cards_on_card_id", using: :btree
     t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
   end
 
