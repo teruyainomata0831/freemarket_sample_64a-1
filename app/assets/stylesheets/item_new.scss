@@ -1,7 +1,7 @@
 .itemwrap{
   background-color: rgb(245, 245, 245);
   width: 100vw;
-  height: 2364px;
+  height: 2500px;
   color:#333;
 }
 
@@ -34,7 +34,6 @@
 
 .item-sell{
   width:700px ;
-  height: 1988px;
   background-color: #fff;
   margin: 0 auto;
   &__title{
@@ -316,7 +315,7 @@ span.form-question:hover{
  
 .item-fees{
   width: 700px;
-  height: 371px;
+  height: 520px;
   border-bottom: 1px solid #ccc;
   padding: 40px;
 
@@ -467,5 +466,12 @@ span.form-question:hover{
   padding: 6px; /* ラベルとテキスト間の余白を指定する */
   border-radius: 10px; /* ラベルボックスの角丸を指定する */
   cursor:pointer; 
+}
+
+.error-red{
+  color: red;
+  margin: 8px 0 0 ;
+  font-size: 14px;
+  font-weight: normal;
 }
 

@@ -12,7 +12,7 @@
           .item-sell__upload--require
             必須       
           .item-sell__upload--box
-            最大10枚までアップロードできます
+            最大5枚までアップロードできます
           .item-sell__upload--drop#click-btn
             .item-sell__upload--drop--post
               = f.fields_for :images do |image_field|
@@ -22,11 +22,6 @@
                     = image_field.label :image, class: "dropzone-box", for: "upload-image__btn" do
                       .input_area
                         = image_field.file_field :image, id: "upload-image__btn", class: "upload-image", 'data-image': 0, type: "file"
-                        %p
-                          ドラッグアンドドロップ
-                          %br
-                          またはクリックしてファイルをダウンロード
-                        -# .item-sell__upload--drop
           -# 商品名
         .item-content
           .item-content__title
@@ -35,12 +30,20 @@
             .item-content__title--require
               必須       
             = f.text_field :name,  class: "item-name-place", placeholder:  "商品名(必須40字まで)", row: "1"
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:name).each do |message|
+                  %li.error-red= "入力してください"
             .item-content__title
               .item-content__title--lavel
                 商品の説明 
               .item-content__title--require  
                 必須       
           = f.text_area :description, cols: "40", rows: "4", class: "item-name-content", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          - if @item.errors.any?
+            %ul
+              - @item.errors.full_messages_for(:description).each do |message|
+                %li.error-red= "入力してください"
         .item-detail
           .item-detail__category
             .item-detail__category--title
@@ -61,6 +64,10 @@
                     %option{value: "B"} B型
                     %option{value: "O"} O型
                     %option{value: "AB"} AB型
+                  - if @item.errors.any?
+                    %ul
+                      - @item.errors.full_messages_for(:category_id).each do |message|
+                        %li.error-red= "選択してください"
           .item-detail__status 
             %label
               商品の状態
@@ -73,7 +80,10 @@
                 %option{value: "やや傷や汚れあり"} やや傷や汚れあり
                 %option{value: "傷や汚れあり"} 傷や汚れあり
                 %option{value: "全体的に状態が悪い"} 全体的に状態が悪い
-
+              - if @item.errors.any?
+                %ul
+                  - @item.errors.full_messages_for(:status).each do |message|
+                    %li.error-red= "選択してください"
               -# 配送について
         .item-fees
           .item-fees__about
@@ -89,6 +99,23 @@
                   %option{value: "0"} ---
                   %option{value: "送料込み(出品者負担)"} 送料込み(出品者負担)
                   %option{value: "着払い(購入者負担)"} 着払い(購入者負担)
+                - if @item.errors.any?
+                  %ul
+                    - @item.errors.full_messages_for(:shipping_fee).each do |message|
+                      %li.error-red= "選択してください"
+          .item-detail__status 
+            %label
+              発送の方法
+              %span.form-require 必須
+            = f.select :shipping_method, {},{},{class: "select-category"} do
+              %option{value: "0"} ---
+              %option{value: "1~2日で発送"} 未定
+              %option{value: "2~3日で発送"} 黒猫
+              %option{value: "4~7日で発送"} 大和
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:shipping_method).each do |message|
+                  %li.error-red= "選択してください"
           .item-fees__status 
             %label
               発送元の地域
@@ -142,6 +169,10 @@
               %option{value: "宮崎県"} 宮崎県
               %option{value: "鹿児島県"} 鹿児島県
               %option{value: "沖縄県"} 沖縄県
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:region).each do |message|
+                  %li.error-red= "選択してください"
           .item-detail__status 
             %label
               発送までの日数
@@ -151,7 +182,10 @@
               %option{value: "1~2日で発送"} 1~2日で発送
               %option{value: "2~3日で発送"} 2~3日で発送
               %option{value: "4~7日で発送"} 4~7日で発送
-
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:shipping_date).each do |message|
+                  %li.error-red= "選択してください"
               -# 販売価格
         .production-price
           .productionprice__about
@@ -167,6 +201,10 @@
               .production-price__rate__text--yen
                 ¥
               = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
+            - if @item.errors.any?
+              %ul
+                - @item.errors.full_messages_for(:shipping_date).each do |message|
+                  %li.error-red= "300以上9999999以下で入力してください"
              
             -# 消費税
             .production-price__rate__consumption
