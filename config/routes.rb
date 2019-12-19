@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   #payjpで商品購入
   resources :buy, only: [:index] do
     collection do
-      get 'index'
       post 'pay'
       get 'fin'
     end
