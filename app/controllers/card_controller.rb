@@ -1,8 +1,8 @@
 class CardController < ApplicationController
-  def index
-  end
 
   def new
+    card = Card.where(user_id: current_user.id)
+    redirect_to action: "show" if card.exists?
   end
 
   def pay
@@ -21,9 +21,40 @@ class CardController < ApplicationController
   end
 
   def show
-    card = Card.where(user_id: current_user.id)
-    Payjp.api_key = 'sk_test_fd8c63589125feb6eb712b1a'
-      customer = Payjp::Customer.retrieve(@card.customer_id)
-      @card_information = customer.cards.retrieve(@card.card_id)
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+      redirect_to action: "new" 
+    else
+      Payjp.api_key = 'sk_test_fd8c63589125feb6eb712b1a'
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @card_information = customer.cards.retrieve(card.card_id)
+
+      @card_brand = @card_information.brand      
+      if "Visa"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?1215422380"
+      elsif"MasterCard"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?2356214421"
+      elsif "JCB"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2356214421"
+      elsif "American Express"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?2356214421"
+      elsif "Diners Club"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?2356214421"
+      elsif "Discover"
+        @card_src = "//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?2356214421"
+     end
+    end
+  end
+
+  def delete
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+    else
+      Payjp.api_key = 'sk_test_fd8c63589125feb6eb712b1a'
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      customer.delete
+      card.delete
+    end
+      redirect_to action: "new"
   end
 end

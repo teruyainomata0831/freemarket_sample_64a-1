@@ -10,7 +10,7 @@
               = image_tag 'https://static.mercdn.net/thumb/photos/m38891747402_1.jpg?1511669148', class: 'buy-item-image-detail'
             .buy-item-detail
               %p.buy-item-name 
-                = @item.name
+                -# = @item.name
               %p.buy-price-ja.bold
                 %span 
                   -# = @item.price
@@ -81,7 +81,8 @@
             %input{name: "address2_base64", type: "hidden", value: ""}/
             %input{name: "telephone_base64", type: "hidden", value: ""}/
             %input{name: "__csrf_value", type: "hidden", value: ""}/
+          = form_tag(action: :pay, method: :post) do
             %section.buy-content.buy-user-info
-              %button.btn-buy{disabled: "disabled", type: "submit"} 購入する
+              %button.btn-buy 購入する
               %input#user_info_is_not_complete{type: "hidden"}/
   = render 'layouts/register-footer'
