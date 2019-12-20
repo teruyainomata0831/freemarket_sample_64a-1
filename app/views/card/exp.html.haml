@@ -22,7 +22,7 @@
                   - exp_month = @card_information.exp_month.to_s
                   - exp_year = @card_information.exp_year.to_s.slice(2,3)
                   = exp_month + " / " + exp_year
-                = form_tag(delete_card_index_path, method: :destroy, id: 'charge-form',  name: "inputForm") do
+                = form_tag(card_path(@card.id), method: :delete, id: 'charge-form',  name: "inputForm") do
                   %input{ type: "hidden", name: "card_id", value: "" }
                   %button.settings-credit-remove{type: "submit"}
                     削除する

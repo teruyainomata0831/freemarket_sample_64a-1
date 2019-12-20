@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   end
 
   # payjp カード登録
-  resources :card, only: [:new, :show] do
+  resources :card, only: [:new, :destroy] do
     collection do
-      post 'show'
+      get 'exp'
+      post 'exp'
       post 'pay'
-      post 'delete'
     end
   end
 
