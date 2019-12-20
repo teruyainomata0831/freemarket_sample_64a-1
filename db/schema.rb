@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.string   "size"
     t.string   "status",          null: false
     t.integer  "price",           null: false
-    t.string   "prefecture",      null: false
+    t.string   "region",          null: false
     t.integer  "brand_id"
     t.integer  "category_id"
     t.integer  "buyer_id"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["buyer_id"], name: "index_items_on_buyer_id", using: :btree
+    t.index ["seller_id"], name: "index_items_on_seller_id", using: :btree
   end
 
   create_table "job_administrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -95,4 +97,6 @@ ActiveRecord::Schema.define(version: 20191212121408) do
   end
 
   add_foreign_key "images", "items"
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "seller_id"
 end

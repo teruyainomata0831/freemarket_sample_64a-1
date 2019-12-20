@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
 
-  before_action :set_user, :set_image, only: [:buy, :show, :exhibit]
+  before_action :set_item, except: :index
+  # before_action :set_image, only: [:buy, :show, :exhibit]
+
   
 
 
 
     def index
-      @items = Item.all.includes(:images)
+      @items = Item.all.includes(:images).order(id: "DESC")
     end
 
   def new
@@ -17,7 +19,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(create_params)
 
-      if @item.save
+      if @item.save!
         redirect_to root_path
       else
         redirect_to new_item_path
@@ -25,15 +27,15 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    @item = Item.find(params[:id])
+
   end
 
   def show
-    @item = Item.find(params[:id])
+
   end
 
   def exhibit
-    @item = Item.find(params[:id])
+
     @items = Item.all.includes(:images)
   end 
 
@@ -45,13 +47,14 @@ class ItemsController < ApplicationController
    
   end
 
-  def set_user
-    @user = User.find(params[:id])
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def set_image
     @images = Image.find(params[:id])
     @images = @images.image
   end
+  
   
 end

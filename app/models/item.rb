@@ -4,5 +4,5 @@ class Item < ApplicationRecord
   belongs_to :user,  optional: true
   
   validates :name, :description, :price, :region, presence: true
-  validates :status,  :shipping_date, :shipping_fee, presence: true, numericality: { greater_than: 0 }
+  validates :status,  :shipping_date, :shipping_fee, presence: true, exclusion: { in: %w(0) }
 end
