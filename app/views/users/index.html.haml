@@ -1,5 +1,7 @@
 %body.mypage-test
   = render 'layouts/header'
+  - breadcrumb :mypage
+  = render "layouts/breadcrumbs"
   %div.l-container
     .mypage-contents
       = render 'users/mypageSidebar'

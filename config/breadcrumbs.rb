@@ -1,18 +1,14 @@
-# ルート
 crumb :root do
   link "トップページ", root_path
 end
 
-# マイページ
 crumb :mypage do
   link "マイページ", users_path
 end
 
-# プロフィール
-crumb :profile do
-  link "プロフィール", editprofile_posts_path
-  parent :mypage
-end
+# crumb : do
+#   link "マイページ", mypage_users_path
+# end
 
 # crumb :projects do
 #   link "Projects", projects_path
@@ -37,4 +33,4 @@ end
 # can create a folder named `config/breadcrumbs` and put your configuration
 # files there. All *.rb files (e.g. `frontend.rb` or `products.rb`) in that
 # folder are loaded and reloaded automatically when you change them, just like
-# this file (`config/breadcrumbs.rb`).
+# this file (`config/breadcrumbs.rb`)
