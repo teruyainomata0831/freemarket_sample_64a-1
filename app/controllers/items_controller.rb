@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, except: :index
-  # before_action :set_image, only: [:buy, :show, :exhibit]
+  before_action :set_item, except: [:index, :new, :create]
+  before_action :set_image, only: [:buy, :show, :exhibit]
 
   
 
@@ -18,6 +18,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(create_params)
+    # binding.pry
 
       if @item.save!
         redirect_to root_path
@@ -31,7 +32,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-
   end
 
   def exhibit
