@@ -84,8 +84,22 @@
         = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
-    = link_to "#", class: "item-buy-btn" do
-      購入画面に進む
+
+
+    - if current_user.id == @item.seller_id 
+      .edit-and-delete
+        = link_to "", class: "item-edit-button" do
+          編集
+        = link_to "#", class: "item-delete-button" do
+          削除
+    - else
+      = link_to "#", class: "item-buy-btn" do
+        購入画面に進む
+
+
+
+
+
     .item-description
       %p.item-description-inner
         = @item.description
