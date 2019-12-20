@@ -24,6 +24,24 @@ Rails.application.routes.draw do
     end
   end
 
+  # payjp カード登録
+  resources :card, only: [:new, :destroy] do
+    collection do
+      get 'exp'
+      post 'exp'
+      post 'pay'
+    end
+  end
+
+  #payjpで商品購入
+  resources :buy, only: [:index] do
+    collection do
+      post 'pay'
+      get 'fin'
+    end
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     # 出品ページ
   resources :items  do
@@ -46,6 +64,10 @@ Rails.application.routes.draw do
   resources :posts do
     member do
       get 'mypage'
+      get 'signout'
+      get 'editprofile'
+
+      
     end
   end
 

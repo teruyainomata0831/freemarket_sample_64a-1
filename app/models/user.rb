@@ -26,4 +26,5 @@ class User < ApplicationRecord
   has_many :items
   has_many :addresses
   has_many :credits
+  has_many :cards
 end
