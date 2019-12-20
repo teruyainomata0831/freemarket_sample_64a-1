@@ -15,5 +15,5 @@
         .setting-profile-content
           %textarea.textarea-default{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
           %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
-          = link_to "変更する", users_path, {class: "btn-default btn-red"}
+          = link_to "変更する", mypage_users_path, {class: "btn-default btn-red"}
 = render 'layouts/footer'
