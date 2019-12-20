@@ -10,19 +10,19 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'items#index'
+  # resources :items, only: [:index, :show, :new, :create, :edit, :update, :destroy] 
     # 出品ページ
-  resources :items  do
+    resources :items do
     collection do
       get 'buy'
     end
   end
-  
   # ユーザー登録
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   devise_scope :user do
     resources :signup
   end
-  resources :address, only: [ :new, :create ]
+  resources :address, only: [ :new, :create]
   resources :credit, only: :index do
     collection do
       get 'done'
@@ -35,10 +35,8 @@ Rails.application.routes.draw do
       get 'signout'
       get 'exhibit'
       get 'editprofile'
-      
     end
   end
-  
 
 
 end

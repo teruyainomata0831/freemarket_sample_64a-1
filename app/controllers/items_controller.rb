@@ -39,10 +39,8 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    @images = @images.destroy
+    @item.destroy
   end
-
-
 
   private
   def create_params
@@ -56,5 +54,4 @@ class ItemsController < ApplicationController
   def set_image
     @images = Image.find(params[:id])
   end
-  
 end
