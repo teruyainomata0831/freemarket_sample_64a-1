@@ -28,7 +28,7 @@
           %tr
             %th 出品者
             %td
-              = link_to(@user.nickname, {})
+              = link_to(@item.seller.nickname, {})
               %div
                 .item-user-ratings
                   %i.far.fa-smile-beam
@@ -73,7 +73,7 @@
           %tr
             %th 配送元地域
             %td
-              = link_to(@item.prefecture, {})
+              = link_to(@item.region, {})
           %tr
             %th 発送日の目安
             %td

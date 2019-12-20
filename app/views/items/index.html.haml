@@ -40,7 +40,7 @@
               - item.images.each do |img|
                 %li.item
                   %div{style: "visibility: visible; transition: all 0.5s ease 0s; opacity: 1;"}
-                    = link_to "#",class: "item-link" do
+                    = link_to item_path(item.id),class: "item-link" do
                       %figure.item-figure
                         %div{"item-style" => ""}
                           %span.item-price{"aria-label" => "price"}

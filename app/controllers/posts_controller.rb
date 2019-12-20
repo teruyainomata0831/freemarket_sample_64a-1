@@ -11,6 +11,8 @@ class PostsController < ApplicationController
       render 'exhibit'
   end
 
+
+
   def goodsBuy
   
   end
@@ -46,18 +48,9 @@ class PostsController < ApplicationController
   def editprofile
   end
 
-  def mypage
-  end
+
 
   def goodsBuy
-  end
-
-  def exhibit
-  end 
-
-  private
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
   end
 
 
@@ -69,4 +62,11 @@ class PostsController < ApplicationController
 
   def creditConfirm
   end
+
+  private
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
+
+
 end

@@ -34,20 +34,24 @@
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/posts/exhibit"}
-              出品した商品-出品中
+            .mypage-nav-list-item
+              = link_to exhibit_item_path(current_user) do
+                .list-item__name 出品した商品-出品中
+              -# = link_to exhibit_item_path do
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/jp/listings/in/progress"}
-              出品した商品-取引中
+            .mypage-nav-list-item
+              = link_to exhibit_item_path(current_user) do
+                .list-item__name 出品した商品-取引中
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/jp/listings/comleted/"}
-              出品した商品-売却売却済み
+            .mypage-nav-list-item
+              = link_to exhibit_item_path(current_user) do
+                .list-item__name 出品した商品-売却売却済み
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
