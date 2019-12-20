@@ -1,7 +1,8 @@
 %div.stepwrap
   %div.heading
     %div.heading__logo
-      =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+      = link_to root_path, class: "r-top-mercari" do
+        =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
     %div.progress-status
       %ul.progress
         %li.is-active
