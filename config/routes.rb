@@ -8,6 +8,24 @@ Rails.application.routes.draw do
     end
   end
 
+  # payjp カード登録
+  resources :card, only: [:new, :destroy] do
+    collection do
+      get 'exp'
+      post 'exp'
+      post 'pay'
+    end
+  end
+
+  #payjpで商品購入
+  resources :buy, only: [:index] do
+    collection do
+      post 'pay'
+      get 'fin'
+    end
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'items#index'
     # 出品ページ
@@ -35,6 +53,7 @@ Rails.application.routes.draw do
       get 'signout'
       get 'exhibit'
       get 'editprofile'
+
       
     end
   end
