@@ -28,7 +28,7 @@
           %tr
             %th 出品者
             %td
-              = link_to(@item.seller.nickname, {})
+              = link_to("#")
               %div
                 .item-user-ratings
                   %i.far.fa-smile-beam
@@ -86,6 +86,8 @@
       %span.item-shipping-fee 送料込み
     = link_to "#", class: "item-buy-btn" do
       購入画面に進む
+    = link_to "/items/#{@item.id}", class: "item-buy-btn", method: :delete do
+      商品削除
     .item-description
       %p.item-description-inner
         = @item.description
