@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191212121408) do
+ActiveRecord::Schema.define(version: 20191213050728) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.string   "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",     null: false
+    t.string   "customer_id", null: false
+    t.string   "card_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["card_id"], name: "index_cards_on_card_id", using: :btree
+    t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,7 +54,7 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.string   "size"
     t.string   "status",          null: false
     t.integer  "price",           null: false
-    t.string   "prefecture",      null: false
+    t.string   "region",          null: false
     t.integer  "brand_id"
     t.integer  "category_id"
     t.integer  "buyer_id"
@@ -55,6 +65,8 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["buyer_id"], name: "index_items_on_buyer_id", using: :btree
+    t.index ["seller_id"], name: "index_items_on_seller_id", using: :btree
   end
 
   create_table "job_administrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -81,8 +93,6 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.integer  "birth_month"
     t.integer  "birth_day"
     t.string   "encrypted_password",     default: "", null: false
-    t.integer  "seller_id"
-    t.integer  "buyer_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -94,5 +104,8 @@ ActiveRecord::Schema.define(version: 20191212121408) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "cards", "users"
   add_foreign_key "images", "items"
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "seller_id"
 end

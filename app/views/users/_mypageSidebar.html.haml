@@ -35,19 +35,20 @@
 
           %li.mypage-nav-list-wrapper
             = link_to exhibit_posts_path, class: "mypage-nav-list-item" do
-              出品した商品-出品中
+                .list-item__name 出品した商品-出品中
+              -# = link_to exhibit_item_path do
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
             = link_to mypage_posts_path, class: "mypage-nav-list-item" do
-              出品した商品-取引中
+                .list-item__name 出品した商品-取引中
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
             = link_to mypage_posts_path, class: "mypage-nav-list-item" do
-              出品した商品-売却売却済み
+                .list-item__name 出品した商品-売却売却済み
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
