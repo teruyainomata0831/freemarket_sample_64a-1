@@ -5,7 +5,7 @@ end
 
 # マイページ
 crumb :mypage do
-  link "マイページ", mypage_posts_path
+  link "マイページ", users_path
 end
 
 # プロフィール
