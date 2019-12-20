@@ -66,6 +66,9 @@ Rails.application.routes.draw do
       get 'mypage'
       get 'signout'
       get 'editprofile'
+      get 'step4'
+      post 'pay'
+      get 'step5'
 
       
     end
