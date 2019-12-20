@@ -3,7 +3,6 @@
 	padding: 0;
 }
 
-
 .address-container{
   background-color: whitesmoke;
   padding: 25px 0 40px;
@@ -38,6 +37,7 @@
 .address-single-content{
   max-width: 343px;
   margin: 0 auto;
+  padding-bottom: 64px;
 }
 
 .form-group{
@@ -80,7 +80,7 @@
   background: #fff;
 }
 
-.select-default{
+#address_prefecture{
   position: relative;
   z-index: 2;
   height: 48px;

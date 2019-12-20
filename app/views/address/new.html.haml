@@ -18,38 +18,44 @@
       %li.progress__last
         完了
         %div{"data-step" => ""}
-    = form_for @address,:url => {:action => :create} do |f|
-      - if @address.errors.any?
-        %ul
-          - @address.errors.full_messages.each do |message|
-            %li= message 
-      .field
-        = f.label :postcode, '郵便番号'
-        %span.form-require
-          必須
-        %br/
-        = f.text_field :postcode, placeholder: '例) 123-4567'
-      .field
-        = f.label :prefecture, '都道府県'
-        %span.form-require
-          必須
-        %br/
-        = f.select :prefecture, JobAdministration.work_locations.keys
-      .field
-        = f.label :city, '市区町村'
-        %span.form-require
-          必須
-        %br/
-        = f.text_field :city, placeholder: '例) 横浜市緑区'
-      .field
-        = f.label :block, '番地'
-        %span.form-require
-          必須
-        %br/
-        = f.text_field :block, placeholder: '例) 青山1-1-1'
-      .field
-        = f.label :building, '建物名'
-        %br/
-        = f.text_field :building, placeholder: '柳ビル103'
-        = f.submit '次へ進む'
-  = render 'layouts/register-footer'
+.address-container
+  .address-content
+    .address-chapter-container
+      %h2.address-chapter-head お届け先住所入力
+      = form_for @address,:url => {action: :create}, class: "address-single-inner registration-form" do |f|
+        .address-single-content
+          -# - if @address.errors.any?
+          -#   %ul
+          -#     - @address.errors.full_messages.each do |message|
+          -#       %li= message 
+          .form-group
+            = f.label :postcode, '郵便番号'
+            %span.form-require
+              必須
+            %br/
+            = f.text_field :postcode, placeholder: '例) 123-4567', class: "input-default"
+          .select-prefecture
+            .form-group
+              = f.label :prefecture, '都道府県'
+              %span.form-require
+                必須
+              %br/
+              = f.select :prefecture, JobAdministration.work_locations.keys
+          .form-group
+            = f.label :city, '市区町村'
+            %span.form-require
+              必須
+            %br/
+            = f.text_field :city, placeholder: '例) 横浜市緑区', class: "input-default"
+          .form-group
+            = f.label :block, '番地'
+            %span.form-require
+              必須
+            %br/
+            = f.text_field :block, placeholder: '例) 青山1-1-1', class: "input-default"
+          .form-group
+            = f.label :building, '建物名'
+            %br/
+            = f.text_field :building, placeholder: '柳ビル103', class: "input-default"
+          = f.submit '次へ進む', class: "btn-default btn-red"
+= render 'layouts/register-footer'
