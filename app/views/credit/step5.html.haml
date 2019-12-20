@@ -1,6 +1,7 @@
 %div.heading
   %div.heading__logo
-    =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
+    = link_to root_path, class: "r-top-mercari" do
+      =image_tag "fmarket_logo_red.svg", size: "185x49", alt: "logo"
   %div.progress-status
     %ul.progress
       %li.is-complete
@@ -28,7 +29,7 @@
       %br
       会員登録が完了しました。
   .regist-contents__bottom
-    =link_to "#", class: "regist-contents__bottom__btn" do
+    =link_to root_path, class: "regist-contents__bottom__btn" do
       メルカリを始める
 .regist-figure
   =image_tag "bgciF.jpg",size: "456x456", class: "regist-figure-img"
