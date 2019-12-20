@@ -4,86 +4,86 @@
       %nav.mypage-nav
         %ul.mypage-nav-list
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item.active{:href => "/posts/mypage/"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item active" do
               マイページ
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               お知らせ
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               やりことリスト
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               いいね！一覧
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "exhibit"}
+            = link_to exhibit_posts_path, class: "mypage-nav-list-item" do
               出品する
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/posts/exhibit"}
+            = link_to exhibit_posts_path, class: "mypage-nav-list-item" do
               出品した商品-出品中
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/jp/listings/in/progress"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               出品した商品-取引中
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "/jp/listings/comleted/"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               出品した商品-売却売却済み
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               購入した商品-取引中
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               購入した商品-過去の取引
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               ニュース一覧
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               評価一覧
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               ガイド
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
 
           %li.mypage-nav-list-wrapper
-            %a.mypage-nav-list-item{:href => "#"}
+            = link_to mypage_posts_path, class: "mypage-nav-list-item" do
               お問い合わせ
               %i.icon-arrow-right
               =fa_icon "chevron-right", class: "icon-arrow-right"
@@ -91,12 +91,12 @@
       %h3.mypage-nav-head メルペイ
       %ul.mypage-nav-list
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "#"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             残高・振込申請
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "#"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             ポイント
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
@@ -104,37 +104,37 @@
       %h3.mypage-nav-head 設定
       %ul.mypage-nav-list
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/profile/"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             プロフィール
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/deliver/ address"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             発送元・お届け先住所変更
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/card/"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             支払い方法
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/email password/"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             メール/パスワード
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/identification/"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             本人情報
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/jp/mypage/sms confirmation/"}
+          = link_to mypage_posts_path, class: "mypage-nav-list-item" do
             電話番号の確認
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
         %li.mypage-nav-list-wrapper
-          %a.mypage-nav-list-item{:href => "/posts/signout/"}
+          = link_to signout_posts_path, class: "mypage-nav-list-item" do
             ログアウト
             %i.icon-arrow-right
             =fa_icon "chevron-right", class: "icon-arrow-right"
