@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20191213050728) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
-    t.integer  "prefeture"
+    t.string   "prefecture"
     t.string   "city"
     t.string   "block"
     t.string   "building"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20191213050728) do
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number", null: false
-    t.integer  "exp_month",   null: false
-    t.integer  "ep_year",     null: false
+    t.integer  "card_number"
+    t.integer  "exp_month"
+    t.integer  "ep_year"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -49,18 +49,19 @@ ActiveRecord::Schema.define(version: 20191213050728) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.string   "description"
+    t.string   "name",            null: false
+    t.string   "description",     null: false
     t.string   "size"
     t.string   "status",          null: false
     t.integer  "price",           null: false
     t.string   "region",          null: false
     t.integer  "brand_id"
     t.integer  "category_id"
-    t.integer  "user_id"
-    t.string   "shipping_date"
+    t.integer  "buyer_id"
+    t.integer  "seller_id"
+    t.string   "shipping_date",   null: false
+    t.string   "shipping_fee",    null: false
     t.string   "shipping_method"
-    t.string   "shipping_fee"
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -92,8 +93,6 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.integer  "birth_month"
     t.integer  "birth_day"
     t.string   "encrypted_password",     default: "", null: false
-    t.integer  "seller_id"
-    t.integer  "buyer_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
