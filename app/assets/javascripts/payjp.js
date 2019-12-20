@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded",sampleEvent, false);
               $('<input type="hidden" name="payjp-token">').val(response.id)
             );
             document.inputForm.submit();
-            alert("登録が完了しました");
-          } else {
-            alert("カード情報が正しくありません。");
           }
         });
       });
