@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   resources :address, only: [ :new, :create ]
 
-  resources :credit, only: :index do
+  resources :credit, only: [:index] do
     collection do
-      get 'done'
+      get 'step4'
+      post 'pay'
+      get 'step5'
     end
   end
 
@@ -30,6 +32,7 @@ Rails.application.routes.draw do
       get 'exp'
       post 'exp'
       post 'pay'
+      get 'creditConfirm'
     end
   end
 
@@ -53,5 +56,7 @@ Rails.application.routes.draw do
       get 'exhibit'
     end
   end
+
+  
 
 end
