@@ -33,7 +33,6 @@ class ItemsController < ApplicationController
   end
 
   def exhibit
-
     @items = Item.all.includes(:images)
   end 
 
