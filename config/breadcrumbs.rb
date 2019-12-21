@@ -6,6 +6,21 @@ crumb :mypage do
   link "マイページ", users_path
 end
 
+crumb :editprofile do
+  link "プロフィール", editprofile_users_path
+  parent :mypage
+end
+
+crumb :creditConfirm do
+  link "支払い方法", creditConfirm_card_index_path
+  parent :mypage
+end
+
+crumb :signout do
+  link "ログアウト", signout_users_path
+  parent :mypage
+end
+
 # crumb : do
 #   link "マイページ", mypage_users_path
 # end

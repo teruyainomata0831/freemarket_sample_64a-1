@@ -1,5 +1,7 @@
 = render 'layouts/header_login'
-.c-crum
+-breadcrumb :creditConfirm
+= render "layouts/breadcrumbs"
+-# .c-crum
 .wrapper-card
   =render "users/mypageSidebar"
   .c-contents.clearfix
@@ -18,7 +20,7 @@
               .c-add-setting-content__text
                 クレジットカードを追加する
         .c-card-exp
-          =link_to "#", class: "explain" do
+          =link_to "new_card_path", class: "explain" do
             %span 支払い方法について
             =fa_icon "chevron-right",class: "chevron"
 = render 'layouts/footer'

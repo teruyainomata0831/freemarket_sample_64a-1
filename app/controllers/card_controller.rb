@@ -5,6 +5,11 @@ class CardController < ApplicationController
     redirect_to action: "exp" if card.exists?
   end
 
+  def creditConfirm
+    card = Card.where(user_id: current_user.id)
+    redirect_to action: "exp" if card.exists?
+  end
+
   def pay
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
     if params['payjp-token'].blank?

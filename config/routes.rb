@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       get 'exp'
       post 'exp'
       post 'pay'
+      get 'creditConfirm'
     end
   end
 
@@ -38,6 +39,7 @@ Rails.application.routes.draw do
     collection do
       post 'pay'
       get 'fin'
+
     end
   end
 
