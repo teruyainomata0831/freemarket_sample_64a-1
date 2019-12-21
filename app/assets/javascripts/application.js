@@ -19,6 +19,7 @@
 $(document).on('turbolinks:load', function() { 
   $(function() {
     $('.slider').slick({
+        centerMode: true,
         dots: true,
         accessibility: true,
         autoplay: true,

@@ -203,3 +203,8 @@
     opacity: .75;
     color: black;
 }
+
+.slider__page1, .slider__page2, .slider__page3{
+    width: 100%;
+    height: 390px;
+}
