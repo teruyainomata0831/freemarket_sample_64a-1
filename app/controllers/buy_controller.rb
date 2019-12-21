@@ -1,4 +1,6 @@
 class BuyController < ApplicationController
+  before_action :set_item, only: :pay
+
   def index
     card = Card.where(user_id: current_user.id).first
     if card.blank?
@@ -13,7 +15,7 @@ class BuyController < ApplicationController
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
     Payjp::Charge.create(
-    :amount => 6000, 
+    amount: @item.price
     :customer => card.customer_id, 
     :currency => 'jpy',
   )
@@ -21,5 +23,10 @@ class BuyController < ApplicationController
   end
 
   def fin
+  end
+  private
+
+  def set_item
+    @item = Item.find([:id])
   end
 end
