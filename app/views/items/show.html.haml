@@ -90,7 +90,7 @@
       .edit-and-delete
         = link_to "", class: "item-edit-button" do
           編集
-        = link_to "#", class: "item-delete-button" do
+        = link_to "/items/#{@item.id}", class: "item-delete-button", method: :delete do
           削除
     - else
       = link_to item_buy_index_path(@item.id), class: "item-buy-btn" do
