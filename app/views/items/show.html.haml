@@ -28,7 +28,7 @@
           %tr
             %th 出品者
             %td
-              = link_to(@item.seller.nickname, {})
+              = link_to("#")
               %div
                 .item-user-ratings
                   %i.far.fa-smile-beam
@@ -84,8 +84,6 @@
         = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
-
-
     - if current_user.id == @item.seller_id 
       .edit-and-delete
         = link_to "", class: "item-edit-button" do
@@ -95,11 +93,6 @@
     - else
       = link_to item_buy_index_path(@item.id), class: "item-buy-btn" do
         購入画面に進む
-
-
-
-
-
     .item-description
       %p.item-description-inner
         = @item.description
