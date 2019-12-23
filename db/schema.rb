@@ -80,15 +80,6 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.integer  "user_id"
   end
 
-  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "avatar_image"
     t.string   "nickname",                            null: false
@@ -102,8 +93,6 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.integer  "birth_month"
     t.integer  "birth_day"
     t.string   "encrypted_password",     default: "", null: false
-    t.integer  "seller_id"
-    t.integer  "buyer_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -119,5 +108,4 @@ ActiveRecord::Schema.define(version: 20191213050728) do
   add_foreign_key "images", "items"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "seller_id"
-  add_foreign_key "sns_credentials", "users"
 end

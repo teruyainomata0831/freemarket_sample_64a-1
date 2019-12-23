@@ -7,9 +7,9 @@ class ItemsController < ApplicationController
 
 
 
-    def index
-      @items = Item.all.includes(:images).order(id: "DESC")
-    end
+  def index
+    @items = Item.all.includes(:images).order(id: "DESC")
+  end
 
   def new
     @item = Item.new
@@ -26,23 +26,27 @@ class ItemsController < ApplicationController
   end
 
   def buy
-
   end
 
   def show
   end
-
+  
   def exhibit
-
     @items = Item.all.includes(:images)
   end 
 
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to root_path
+  end
+
   def edit
   end
+  
   private
   def create_params
     params.require(:item).permit(:name, :description, :region, :size, :status, :shipping_fee, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
-   
   end
 
   def set_item
