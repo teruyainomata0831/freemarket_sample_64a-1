@@ -1,8 +1,9 @@
-= render 'layouts/header' 
-
+= render 'layouts/header'
+- breadcrumb :editprofile
+= render "layouts/breadcrumbs"
 .contents-space
   .main-contents
-    = render 'layouts/mypageSidebar'
+    = render 'users/mypageSidebar'
     .profile-contents
       %h2.profile-document
         プロフィール
@@ -15,5 +16,5 @@
         .setting-profile-content
           %textarea.textarea-default{name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
           %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
-          %button.btn-default.btn-red{type: "submit"} 変更する
+          = link_to "変更する", users_path, {class: "btn-default btn-red"}
 = render 'layouts/footer'

@@ -11,12 +11,12 @@
   height: 650px;
 }
 .fBgi{
-  background-image: url("bgciF.jpg");
+  background-image: image-url("bgciF.jpg");
   width: 100vw;
   height: 260px;
   display: flex;
   &__content{
-    margin:50px 0 0 345px;
+    margin:50px 0 0 490px;
   }
 }
 .subComment{
@@ -61,7 +61,7 @@ li.footer-li{
 .fMain{
   width: 1020px;
   height: 296px;
-  margin: 0 190px;
+  margin: 0 350px;
   padding-top: 16px;
   display: flex;
   &__fAbout{
@@ -100,7 +100,7 @@ li.footer-li{
 .camera{
   background-color: rgb(234, 53, 45);
   width: 160px;
-  height: 128px;
+  height: 150px;
   border-radius:50%;
   padding-top: 32px;
   z-index: 1;
@@ -135,7 +135,7 @@ li.footer-li{
 .fbottom{
   width: 100vw;
   display: flex;
-  padding: 25px 190px 20px;
+  padding: 25px 350px 20px;
   &__cr{
     padding:10px 0 0 400px;
   }

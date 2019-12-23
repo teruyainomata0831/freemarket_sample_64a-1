@@ -1,8 +1,10 @@
 = render 'layouts/header' 
+- breadcrumb :signout
+= render "layouts/breadcrumbs"
 
 .contents-space
   .main-contents
-    = render 'layouts/mypageSidebar'
+    = render 'users/mypageSidebar'
     .lcrum
 
     .lcontents

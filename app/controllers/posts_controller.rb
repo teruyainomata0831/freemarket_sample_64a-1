@@ -41,6 +41,7 @@ class PostsController < ApplicationController
     
   end
 
+
   def step5
   
   end
