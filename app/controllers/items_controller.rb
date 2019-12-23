@@ -30,10 +30,11 @@ class ItemsController < ApplicationController
   end
 
   def show
+
   end
 
   def exhibit
-    @items = Item.all.includes(:images)
+    @items = Item.where(params[:id])
   end 
 
   def edit
