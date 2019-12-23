@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   resources :address, only: [ :new, :create ]
 
-  resources :credit, only: :index do
+  resources :credit, only: [:index] do
     collection do
-      get 'done'
+      get 'step4'
+      post 'pay'
+      get 'step5'
     end
   end
 
@@ -35,13 +37,6 @@ Rails.application.routes.draw do
   end
 
   #payjpで商品購入
-  resources :buy, only: [:index] do
-    collection do
-      post 'pay'
-      get 'fin'
-
-    end
-  end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -54,6 +49,15 @@ Rails.application.routes.draw do
     member do
       get 'exhibit'
     end
+
+    resources :buy, only: [:index] do
+      collection do
+        post 'pay'
+        get 'fin'
+      end
+    end
   end
+
+  
 
 end

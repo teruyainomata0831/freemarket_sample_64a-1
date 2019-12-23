@@ -1,5 +1,10 @@
 class CardController < ApplicationController
 
+  def creditConfirm
+    card = Card.where(user_id: current_user.id)
+    redirect_to action: "exp" if card.exists?
+  end
+
   def new
     card = Card.where(user_id: current_user.id)
     redirect_to action: "exp" if card.exists?
@@ -58,9 +63,10 @@ class CardController < ApplicationController
     customer = Payjp::Customer.retrieve(@card.customer_id)
     customer.delete
     if @card.destroy 
-      redirect_to action: "new"
+      redirect_to action: "creditConfirm"
     else 
       redirect_to action: 'exp'
     end
+
   end
 end
