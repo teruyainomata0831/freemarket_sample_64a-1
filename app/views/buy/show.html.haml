@@ -23,7 +23,8 @@
               %li.buy-price-row.buy-you-pay
                 .buy-price-cell.buy-price-cell-label 支払い金額
                 .buy-price-cell
-                  %span{"data-buy-pay": "1980"} ¥1,980
+                  %span{"data-buy-pay": @item.price} 
+                  = @item.price
             %ul.buy-accordion.buy-not-have-point
               %li.accordion-parent
                 .buy-use-point

@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   end
 
   #payjpで商品購入
-  resources :buy, only: [:index] do
+  resources :buy, only: [:show] do
     collection do
       post 'pay'
       get 'fin'

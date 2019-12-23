@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20191213050728) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "postcode",   null: false
-    t.string   "prefecture"
+    t.integer  "prefeture"
     t.string   "city"
     t.string   "block"
     t.string   "building"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20191213050728) do
   end
 
   create_table "credits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "card_number"
-    t.integer  "exp_month"
-    t.integer  "ep_year"
+    t.integer  "card_number", null: false
+    t.integer  "exp_month",   null: false
+    t.integer  "ep_year",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -49,24 +49,23 @@ ActiveRecord::Schema.define(version: 20191213050728) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",            null: false
-    t.string   "description",     null: false
+    t.string   "name"
+    t.string   "description"
     t.string   "size"
-    t.string   "status",          null: false
-    t.integer  "price",           null: false
-    t.string   "region",          null: false
+    t.string   "status"
+    t.string   "method"
+    t.string   "date"
+    t.integer  "price"
+    t.integer  "prefecture_id"
     t.integer  "brand_id"
     t.integer  "category_id"
-    t.integer  "buyer_id"
-    t.integer  "seller_id"
-    t.string   "shipping_date",   null: false
-    t.string   "shipping_fee",    null: false
+    t.integer  "user_id"
+    t.string   "shipping_date"
     t.string   "shipping_method"
+    t.string   "shipping_fee"
     t.integer  "profit"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["buyer_id"], name: "index_items_on_buyer_id", using: :btree
-    t.index ["seller_id"], name: "index_items_on_seller_id", using: :btree
   end
 
   create_table "job_administrations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -78,15 +77,6 @@ ActiveRecord::Schema.define(version: 20191213050728) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-  end
-
-  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -117,7 +107,4 @@ ActiveRecord::Schema.define(version: 20191213050728) do
 
   add_foreign_key "cards", "users"
   add_foreign_key "images", "items"
-  add_foreign_key "items", "users", column: "buyer_id"
-  add_foreign_key "items", "users", column: "seller_id"
-  add_foreign_key "sns_credentials", "users"
 end
