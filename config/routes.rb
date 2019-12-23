@@ -37,12 +37,6 @@ Rails.application.routes.draw do
   end
 
   #payjpで商品購入
-  resources :buy, only: [:index] do
-    collection do
-      post 'pay'
-      get 'fin'
-    end
-  end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -54,6 +48,13 @@ Rails.application.routes.draw do
     end
     member do
       get 'exhibit'
+    end
+
+    resources :buy, only: [:index] do
+      collection do
+        post 'pay'
+        get 'fin'
+      end
     end
   end
 
