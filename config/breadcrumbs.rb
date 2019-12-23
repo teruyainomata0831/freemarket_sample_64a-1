@@ -21,6 +21,11 @@ crumb :signout do
   parent :mypage
 end
 
+crumb :exhibit do
+  link "出品した商品-出品中", exhibit_item_path
+  parent :mypage
+end
+
 # crumb : do
 #   link "マイページ", mypage_users_path
 # end
