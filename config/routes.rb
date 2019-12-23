@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # マイページ
   resources :users, only: :index do
     collection do
+      get 'mypage'
       get 'signout'
       get 'editprofile'
     end

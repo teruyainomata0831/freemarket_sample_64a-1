@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def index
+  def mypage
   end
 
   def editprofile
