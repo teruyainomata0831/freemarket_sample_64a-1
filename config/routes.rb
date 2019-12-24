@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # マイページ
   resources :users, only: :index do
     collection do
+      get 'mypage'
       get 'signout'
       get 'editprofile'
     end
@@ -36,13 +37,7 @@ Rails.application.routes.draw do
     end
   end
 
-  #payjpで商品購入
-  resources :buy, only: [:index] do
-    collection do
-      post 'pay'
-      get 'fin'
-    end
-  end
+ 
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -54,6 +49,14 @@ Rails.application.routes.draw do
     end
     member do
       get 'exhibit'
+    end
+
+     #payjpで商品購入
+    resources :buy, only: [:index] do
+      collection do
+        post 'pay'
+        get 'fin'
+      end
     end
   end
 

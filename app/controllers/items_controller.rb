@@ -7,9 +7,9 @@ class ItemsController < ApplicationController
 
 
 
-    def index
-      @items = Item.all.includes(:images).order(id: "DESC")
-    end
+  def index
+    @items = Item.all.includes(:images).order(id: "DESC")
+  end
 
   def new
     @item = Item.new
@@ -26,16 +26,21 @@ class ItemsController < ApplicationController
   end
 
   def buy
-
   end
 
   def show
 
   end
-
+  
   def exhibit
-    @items = Item.where(params[:id])
+    @items = Item.all.includes(:images)
   end 
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to root_path
+  end
 
   def edit
   end

@@ -6,10 +6,9 @@
           = link_to root_path, {class: "mercari"} do
             =image_tag "fmarket_logo_red.svg", size: "130x70", alt: "logo"
         %form.text-box{action: "/jp/search"}
-          %input.intext-box{name: "keyword", placeholder: "何かお探しですか？", type: "sarch/", value: ""}/
-          %button.botton-center
-            %svg.Insect.negative{"aria-hidden" => "true", height: "16", viewbox: "0 0 16 16", width: "16"}
-              %path{:d => "M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.437-3.87 5.946 5.946 0 1 0-5.947 5.947 5.92 5.92 0 0 0 3.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 0 1 1.83 5.946 4.111 4.111 0 0 1 5.946 1.83a4.111 4.111 0 0 1 4.117 4.116 4.111 4.111 0 0 1-4.117 4.117z", fill: "currentColor", "fill-rule" => "nonzero"}
+          %input.intext-box{name: "keyword", placeholder: "何かお探しですか？", type: "sarch/", value: ""}
+          %svg.Insect.negative{"aria-hidden" => "true", height: "16", viewbox: "0 0 16 16", width: "16"}
+            %path{:d => "M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.437-3.87 5.946 5.946 0 1 0-5.947 5.947 5.92 5.92 0 0 0 3.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 0 1 1.83 5.946 4.111 4.111 0 0 1 5.946 1.83a4.111 4.111 0 0 1 4.117 4.116 4.111 4.111 0 0 1-4.117 4.117z", fill: "currentColor", "fill-rule" => "nonzero"}
       .under-center
         .under-left
           .category
@@ -41,7 +40,7 @@
                     =fa_icon "fal check", class: "icon-check"
                     %span &#x3084;&#x308B;&#x3053;&#x3068;&#x30EA;&#x30B9;&#x30C8;
               %li{:class => "login-bottom-main-content-right-right"}
-                = link_to users_path, class: "login-bottom-main-content-right-right-content" do
+                = link_to mypage_users_path, class: "login-bottom-main-content-right-right-content" do
                   %figure
                     %div
                       = image_tag src="beauty-fashion-portrait-smiling-young-600w-521684347.webp", size: "32x32"
