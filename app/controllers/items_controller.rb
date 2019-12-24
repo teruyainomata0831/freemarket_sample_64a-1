@@ -46,8 +46,8 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item.update(create_params)
-    if  @item.save
+    
+    if  @item.update(create_params)
       redirect_to item_path(@item.id)
     else
       redirect_to edit_item_path
@@ -67,8 +67,8 @@ class ItemsController < ApplicationController
   end
 
   def set_image
-    @images = Image.find(params[:id])
-    @image = @images.image
+    @image = Image.find(params[:id])
+    @image_url = @image.image
   end
   
   

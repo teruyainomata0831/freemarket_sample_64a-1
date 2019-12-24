@@ -29,6 +29,7 @@ before_action :buy_link, only: [:index, :pay]
 
   def set_item
     @item = Item.find([:id])
+  end
 
 
   def buy_link
