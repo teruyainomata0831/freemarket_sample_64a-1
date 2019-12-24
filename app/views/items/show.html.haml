@@ -6,10 +6,11 @@
     .item-main-content-detail
       .item-photo-detail
         .item-photo-content
-          = image_tag @item.images.first.image , class: 'main-img', alt: @item.name, style: 'opacity: 1;'
+          = image_tag @image_url , class: 'main-img', alt: 'ジャスティンデイビス チェルシー リング', style: 'opacity: 1;'
         .item-dots
-          .item-dot.is-active
-            = image_tag @item.images.first.image 
+          - @item.images.each do |i|
+            .item-dot.is-active
+              = image_tag i.image
       %table.item-detail-table
         %tbody.table-body
           %tr
@@ -71,15 +72,22 @@
         = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
+
+
     - if current_user.id == @item.seller_id 
       .edit-and-delete
-        = link_to "", class: "item-edit-button" do
+        = link_to edit_item_path, class: "item-edit-button" do
           編集
-        = link_to "/items/#{@item.id}", class: "item-delete-button", method: :delete do
+        = link_to "#", class: "item-delete-button" do
           削除
     - else
-      = link_to item_buy_index_path(@item.id), class: "item-buy-btn" do
+      = link_to "#", class: "item-buy-btn" do
         購入画面に進む
+
+
+
+
+
     .item-description
       %p.item-description-inner
         = @item.description
@@ -206,39 +214,13 @@
   .items-in-user-profile2
     %h2.items-box-head-detail
       = link_to "#" do
-        パンダ(☆∀☆)さんのその他の出品
-    .items-box-content-detail
-      %section.items-box-detail
-        = link_to "#" do
-          %figure.items-box-photo-detail
-            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
-          .items-box-body-detail
-            %h3.items-box-name-detail 冬ウールスカート
-            .items-box-num-detail
-              .items-box-price-detail ¥1,000
-              .font-2-detail
-                %i.far.fa-heart.fa-heart2
-                %span 1
-      %section.items-box-detail
-        = link_to "#" do
-          %figure.items-box-photo-detail
-            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
-          .items-box-body-detail
-            %h3.items-box-name-detail 冬ウールスカート
-            .items-box-num-detail
-              .items-box-price-detail ¥1,000
-              .font-2-detail
-                %i.far.fa-heart.fa-heart2
-                %span 1
-      %section.items-box-detail
-        = link_to "#" do
-          %figure.items-box-photo-detail
-            = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
-          .items-box-body-detail
-            %h3.items-box-name-detail 冬ウールスカート
-            .items-box-num-detail
-              .items-box-price-detail ¥1,000
-              .font-2-detail
-                %i.far.fa-heart.fa-heart2
-                %span 1
+        %figure.items-box-photo-detail
+          = image_tag 'https://static.mercdn.net/thumb/photos/m84152729616_1.jpg?1542253481', alt: '冬ウールスカート', class: "lazyloaded is-higher-width"
+        .items-box-body-detail
+          %h3.items-box-name-detail 冬ウールスカート
+          .items-box-num-detail
+            .items-box-price-detail ¥1,000
+            .font-2-detail
+              %i.far.fa-heart.fa-heart2
+              %span 1
 = render 'layouts/footer'

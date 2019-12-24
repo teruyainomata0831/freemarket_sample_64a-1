@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   before_action :set_item, except: [:index, :new, :create]
-  before_action :set_image, only: [:buy, :show, :exhibit]
+  before_action :set_image, only: [:buy, :show, :exhibit, :edit]
 
   
 
@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+
   end
   
   def exhibit
@@ -43,10 +44,22 @@ class ItemsController < ApplicationController
 
   def edit
   end
-  
+
+  def update
+    
+    if  @item.update(create_params)
+      redirect_to item_path(@item.id)
+    else
+      redirect_to edit_item_path
+    end
+  end
+
+
   private
   def create_params
-    params.require(:item).permit(:name, :description, :region, :size, :status, :shipping_fee, :shipping_date, :price, :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :description,:category_id, :region, :size, :status, :shipping_fee, :shipping_date, :price, 
+    :shipping_method,  :profit, images_attributes: [:image, :id, :_destroy]).merge(seller_id: current_user.id)
+   
   end
 
   def set_item
@@ -54,8 +67,8 @@ class ItemsController < ApplicationController
   end
 
   def set_image
-    @images = Image.find(params[:id])
-    @images = @images.image
+    @image = Image.find(params[:id])
+    @image_url = @image.image
   end
   
   

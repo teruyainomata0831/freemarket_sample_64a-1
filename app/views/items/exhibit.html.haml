@@ -25,7 +25,7 @@
                 - @items.each do |item|
                   %li
                     .list-item__index
-                      = image_tag @images, class: "index__image" 
+                      = image_tag @image, class: "index__image" 
                       .list-item__index--lists
                         %p.item_index-test #{item.name}
                         %p.item_index-test #{item.created_at}
