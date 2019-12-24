@@ -9,7 +9,7 @@
           = image_tag @item.images.first.image , class: 'main-img', alt: @item.name, style: 'opacity: 1;'
         .item-dots
           .item-dot.is-active
-            = image_tag @item.images.first.image 
+            = image_tag @images
       %table.item-detail-table
         %tbody.table-body
           %tr
