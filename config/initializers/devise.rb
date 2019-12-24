@@ -301,4 +301,10 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], scope: 'email', redirect_uri: "#{ENV['HOST']}/users/auth/google_oauth2/callback"
   OmniAuth.config.logger = Rails.logger if Rails.env.development? # debug用
 
+  config.omniauth :google_oauth2,
+    Rails.application.secrets.google_client_id,
+    Rails.application.secrets.google_client_secret
+  config.omniauth :facebook,
+    Rails.application.secrets.facebook_client_id,
+    Rails.application.secrets.facebook_client_secret
 end
