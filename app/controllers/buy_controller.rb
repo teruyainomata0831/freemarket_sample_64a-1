@@ -1,5 +1,4 @@
 class BuyController < ApplicationController
-  before_action :set_item, only: :pay
 before_action :buy_link, only: [:index, :pay]
 
   def index
@@ -24,11 +23,6 @@ before_action :buy_link, only: [:index, :pay]
   end
 
   def fin
-  end
-  private
-
-  def set_item
-    @item = Item.find([:id])
   end
 
 
