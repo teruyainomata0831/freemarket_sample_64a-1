@@ -37,7 +37,7 @@ Rails.application.routes.draw do
     end
   end
 
-  #payjpで商品購入
+ 
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -51,6 +51,7 @@ Rails.application.routes.draw do
       get 'exhibit'
     end
 
+     #payjpで商品購入
     resources :buy, only: [:index] do
       collection do
         post 'pay'
