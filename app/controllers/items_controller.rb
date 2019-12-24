@@ -46,6 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def update
+    binding.pry
     item = Item.find(params[:id])
     item.update(create_params)
     redirect_to item_path(item.id)
