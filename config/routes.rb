@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   # マイページ
-  resources :users do
+  resources :users, except: [:index] do
     collection do
       get 'mypage'
       get 'signout'
