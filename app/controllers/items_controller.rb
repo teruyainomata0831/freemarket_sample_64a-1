@@ -18,10 +18,14 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(create_params)
-      if @item.save
-        redirect_to root_path
-      else
-        redirect_to new_item_path
+    unless create_params[:images_attributes].present?
+      redirect_to new_item_path
+      return
+    end
+    if @item.save
+      redirect_to root_path
+    else
+      redirect_to new_item_path
     end
   end
 
@@ -46,7 +50,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    
     if  @item.update(create_params)
       redirect_to item_path(@item.id)
     else
