@@ -14,14 +14,6 @@
             必須       
           .item-sell__upload--box
             最大5枚までアップロードできます
-          .item-sell__upload--state
-            .item-sell__upload--state--block
-              - @item.images.each do |i|
-                .itemBlocks
-                  .block-size
-                    = image_tag i.image
-                  -# .upload-image__prev--btn
-                  -#   .delete-btn 削除
           .item-sell__upload--drop#click-btn
             .item-sell__upload--drop--post
               = f.fields_for :images do |image_field|
