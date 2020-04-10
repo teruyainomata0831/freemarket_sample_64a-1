@@ -120,4 +120,5 @@ Things you may want to cover:
 - belongs_to :category
 
 デプロイしたサイトは下記参照。
+
 http://3.114.158.164/
