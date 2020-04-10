@@ -118,3 +118,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :item
 - belongs_to :category
+
+デプロイしたサイトは下記参照。
+http://3.114.158.164/
