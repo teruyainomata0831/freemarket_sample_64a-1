@@ -121,4 +121,4 @@ Things you may want to cover:
 
 デプロイしたサイト(下記リンク参照)。
 
-http://3.114.158.164/
+http://3.114.158.164/  ■ ID: 64_mercari_a ■ Pass: 64a
