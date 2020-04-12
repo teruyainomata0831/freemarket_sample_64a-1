@@ -1,8 +1,8 @@
 # README
 
-デプロイしたサイト(下記リンク参照)。
+デプロイしたサイト(下記リンク参照)。 ■ ID: 64_mercari_a ■ Pass: 64a
 
-http://3.114.158.164/  ■ ID: 64_mercari_a ■ Pass: 64a
+http://3.114.158.164/ 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
